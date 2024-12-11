@@ -1,0 +1,101 @@
+@import '../../vars.css';
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    background-color: rgba(12, 12, 12, .8);
+    border-radius: 16px;
+    padding: 2rem;
+    z-index: 1;
+    gap: 2rem;
+}
+
+.contentImage {
+    display: flex;
+    align-items: center;
+}
+
+.image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.description {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.skills {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    list-style: none;
+}
+
+.skill {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: var(--color-secondary);
+
+    border-radius: 100px;
+    padding: .5rem 1rem;
+    font-size: 1rem;
+}
+
+.links {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding-top: 2rem;
+}
+
+.link {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: var(--color-secondary);
+    padding: 1rem 2rem;
+    border-radius: 100px;
+    transition: background-color 0.3s ease;
+}
+
+.link:hover {
+    background-color: var(--color-highlight);
+    color: black;
+}
+
+@media screen and (min-width: 830px) {
+    .container {
+        padding: 3rem;
+        flex-direction: row;
+        gap: 3rem;
+    }
+
+    .content {
+        width: 60%;
+    }
+
+    .contentImage {
+        width: 40%;
+    }
+
+    .image {
+        width: 100%;
+    }
+}

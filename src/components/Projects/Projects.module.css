@@ -1,0 +1,21 @@
+@import '../../vars.css';
+
+.container {
+    padding: 2rem;
+    color: var(--color-text);
+}
+
+.title {
+    color: var(--color-text);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}

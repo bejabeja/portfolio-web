@@ -1,0 +1,83 @@
+@import '../../vars.css';
+
+/* Estilo Base (Mobile-First) */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--color-text);
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+}
+
+.text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.text p {
+    font-size: 1.25rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    list-style: none;
+    padding: 0;
+    margin-top: 1.5rem;
+    gap: 1.25rem;
+}
+
+.link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.link a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.link a:hover {
+    color: var(--color-primary);
+}
+
+.link i {
+    font-size: 2rem;
+    color: var(--color-primary);
+}
+
+
+@media (min-width: 768px) {
+    .container {
+        padding: 3rem 2rem;
+    }
+
+    .text h2 {
+        font-size: 3rem;
+    }
+
+    .text p {
+        font-size: 1.75rem;
+    }
+
+    .links {
+        padding: 2rem 0;
+    }
+
+    .link a {
+        font-size: 1.25rem;
+    }
+
+    .link i {
+        font-size: 2.5rem;
+    }
+}

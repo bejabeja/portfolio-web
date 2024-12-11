@@ -1,0 +1,117 @@
+@import "../../vars.css";
+
+.container {
+    padding: 2rem;
+    color: var(--color-text);
+}
+
+.title {
+    color: var(--color-text);
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding-bottom: 1.5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    justify-content: center;
+    width: 100%;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    width: 100px;
+    justify-content: center;
+    flex-grow: 0;
+}
+
+.skillIcon {
+    font-size: 3rem;
+    background-color: var(--color-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    width: 80px;
+    height: 80px;
+}
+
+.skillTitle {
+    font-size: 1.25rem;
+    font-family: var(--font-roboto);
+    font-weight: 500;
+}
+
+.workExperiences {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+}
+
+.workExperience {
+    display: flex;
+    flex-direction: column;
+    font-family: var(--font-roboto);
+    padding: 2rem;
+    border-radius: 1.5rem;
+    background-color: rgba(12, 12, 12, 0.8);
+}
+
+.workExperience h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.workExperience p {
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+.workExperience ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
+    list-style-type: disc;
+    list-style-position: inside;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 830px) {
+    .content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        width: 35%;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+
+    .skillIcon {
+        font-size: 4rem;
+        width: 120px;
+        height: 120px;
+    }
+
+    .workExperiences {
+        width: 60%;
+    }
+}
