@@ -63,6 +63,20 @@
     ],
     "projects": [
         {
+            "title": "CSV Manager",
+            "image": "/projects/csvManager.png",
+            "description": "This project provides a user-friendly interface and robust backend to upload, search, and manage CSV data. It is ideal for applications requiring efficient CSV file handling with features like real-time search and pagination.",
+            "skills": [
+                "React",
+                "TypeScript",
+                "Node",
+                "Express",
+                "Styled Components"
+            ],
+            "demo": "https://csv-manager-nine.vercel.app/",
+            "repository": "https://github.com/bejabeja/csv_manager"
+        },
+        {
             "title": "Geodata Dashboard",
             "image": "/projects/geodataDashboard.png",
             "description": "This project is an interactive dashboard that allows politicians and other stakeholders to visualize geospatial data. The goal is to provide a user-friendly interface for non-technical users, enabling informed decision-making based on available geospatial data.",
@@ -86,20 +100,6 @@
             ],
             "demo": "https://curriculum-three-brown.vercel.app/",
             "repository": "https://github.com/bejabeja/curriculum-portfolio"
-        },
-        {
-            "title": "CSV Manager",
-            "image": "/projects/csvManager.png",
-            "description": "This project provides a user-friendly interface and robust backend to upload, search, and manage CSV data. It is ideal for applications requiring efficient CSV file handling with features like real-time search and pagination.",
-            "skills": [
-                "React",
-                "TypeScript",
-                "Node",
-                "Express",
-                "Styled Components"
-            ],
-            "demo": "",
-            "repository": "https://github.com/bejabeja/csv-manager"
         },
         {
             "title": "To Be A Traveller",
