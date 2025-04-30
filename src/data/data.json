@@ -63,6 +63,20 @@
     ],
     "projects": [
         {
+            "title": "To Be A Traveller (Work in Progress)",
+            "image": "/projects/toBeATraveller.png",
+            "description": "Web platform that will serve as a showcase of cities from around the world and will provide itinerary recommendations. Registered users will be able to add cities they have visited and share itinerary recommendations for each day of their trip.",
+            "skills": [
+                "React",
+                "Node",
+                "Express",
+                "CSS",
+                "PostgreSQL"
+            ],
+            "demo": "https://tfm-tobeatraveller.vercel.app/",
+            "repository": "https://github.com/bejabeja/tfm"
+        },
+        {
             "title": "CSV Manager",
             "image": "/projects/csvManager.png",
             "description": "This project provides a user-friendly interface and robust backend to upload, search, and manage CSV data. It is ideal for applications requiring efficient CSV file handling with features like real-time search and pagination.",
@@ -100,20 +114,6 @@
             ],
             "demo": "https://curriculum-three-brown.vercel.app/",
             "repository": "https://github.com/bejabeja/curriculum-portfolio"
-        },
-        {
-            "title": "To Be A Traveller",
-            "image": "/projects/toBeATraveller.png",
-            "description": "Web platform that will serve as a showcase of cities from around the world and will provide itinerary recommendations. Registered users will be able to add cities they have visited and share itinerary recommendations for each day of their trip.",
-            "skills": [
-                "React",
-                "Node",
-                "Express",
-                "CSS",
-                "PostgreSQL"
-            ],
-            "demo": "https://www.tobeatraveller.com/",
-            "repository": "https://github.com/bejabeja/tobetraveller"
         }
     ]
 }
