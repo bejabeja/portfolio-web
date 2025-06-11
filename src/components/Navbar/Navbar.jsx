@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
@@ -23,7 +23,7 @@ const Navbar = () => {
         </button>
 
         <ul
-          className={`${styles.menuItems} ${isMenuOpen && styles.menuOpen}`}
+          className={`${styles.menuItems} ${isMenuOpen ? styles.menuOpen : ""}`}
           onClick={toggleMenu}
         >
           <li>

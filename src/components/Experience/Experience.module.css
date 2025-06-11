@@ -3,6 +3,9 @@
 .container {
     padding: 2rem;
     color: var(--color-text);
+    border-radius: 1rem;
+    max-width: 1200px;
+    margin: 4rem auto;
 }
 
 .title {
@@ -12,18 +15,19 @@
     letter-spacing: 3px;
     text-transform: uppercase;
     padding-bottom: 1.5rem;
+    text-align: center;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
 }
 
 .skills {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 2rem;
     justify-content: center;
     width: 100%;
 }
@@ -32,63 +36,71 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    width: 100px;
+    gap: 0.75rem;
     justify-content: center;
-    flex-grow: 0;
+    transition: transform 0.3s ease;
+}
+
+.skill:hover {
+    transform: translateY(-6px);
 }
 
 .skillIcon {
-    font-size: 3rem;
-    background-color: var(--color-secondary);
+    font-size: 2.5rem;
+    background-color: var(--color-surface);
+    border: 2px solid var(--color-secondary);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 100%;
     width: 80px;
     height: 80px;
+    color: var(--color-secondary);
+    transition: background-color 0.3s ease;
 }
 
 .skillTitle {
-    font-size: 1.25rem;
-    font-family: var(--font-roboto);
+    font-size: 1rem;
+    font-family: var(--font-sans);
     font-weight: 500;
+    color: #d0d4e0;
 }
 
 .workExperiences {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 1.5rem;
 }
 
 .workExperience {
-    display: flex;
-    flex-direction: column;
-    font-family: var(--font-roboto);
-    padding: 2rem;
-    border-radius: 1.5rem;
-    background-color: rgba(12, 12, 12, 0.8);
+    border-radius: 1.25rem;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
 }
 
 .workExperience h3 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
 }
 
 .workExperience p {
     font-size: 1rem;
     font-weight: 300;
+    color: var(--color-text-soft);
+    margin-bottom: 0.5rem;
 }
 
 .workExperience ul {
+    padding-top: 0.75rem;
+    padding-left: 1rem;
+    list-style: disc inside;
+    font-size: 1rem;
+    color: var(--color-text);
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    padding-top: 1rem;
-    padding-left: 1rem;
-    list-style-type: disc;
-    list-style-position: inside;
-    font-size: 1rem;
 }
 
 @media screen and (min-width: 830px) {
@@ -98,17 +110,17 @@
     }
 
     .skills {
+        width: 35%;
         display: flex;
         flex-wrap: wrap;
-        width: 35%;
         justify-content: flex-start;
-        gap: 2rem;
+        gap: 1.5rem;
     }
 
     .skillIcon {
-        font-size: 4rem;
-        width: 120px;
-        height: 120px;
+        font-size: 3rem;
+        width: 100px;
+        height: 100px;
     }
 
     .workExperiences {

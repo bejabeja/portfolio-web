@@ -1,117 +1,104 @@
-@import "../../vars.css";
-
-.container {
+.aboutSection {
     position: relative;
-    background-color: rgba(12, 12, 12, 0.8);
-    border-radius: 12px;
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 2rem;
-    margin: 5%;
+    background: var(--color-surface);
+    border-radius: 16px;
+    color: var(--color-text);
+    box-shadow: var(--shadow-md);
     z-index: 1;
 }
 
-.title {
-    color: var(--color-text);
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 3px;
+.sectionTitle {
+    font-family: "Inter", sans-serif;
+    font-weight: 800;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
     text-transform: uppercase;
-    padding-bottom: 1.5rem;
+    text-align: center;
+    color: var(--color-text);
 }
 
-.content {
+.aboutWrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .aboutImage {
-    width: 80%;
-    border-radius: 16px;
-    display: block;
-    margin: 0 auto;
+    width: 90%;
+    max-width: 350px;
+    border-radius: 20px;
+    box-shadow: var(--shadow-md);
+    object-fit: cover;
 }
 
-.aboutItems {
-    color: var(--color-text);
+.aboutList {
+    list-style: none;
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    padding: 0;
+    margin: 0;
 }
 
 .aboutItem {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    list-style: none;
-    padding: 1rem;
-    border-radius: 12px;
-    background: linear-gradient(135deg, rgba(33, 45, 78, 0.5), rgba(25, 55, 109, 0.7));
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+    align-items: flex-start;
+    background: linear-gradient(135deg, #252a3a, #121621);
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
+    cursor: default;
 }
 
 .aboutItem:hover {
-    transform: translateY(-5px);
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-md);
 }
 
 .aboutItem i {
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: var(--color-secondary);
-    margin-bottom: 0.5rem;
+    margin-right: 1.2rem;
+    flex-shrink: 0;
+    margin-top: 4px;
 }
 
-.aboutItem h3 {
-    font-size: 1.2rem;
-    font-weight: 600;
+.textContent h3 {
+    font-family: "Inter", sans-serif;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-bottom: 0.4rem;
     color: var(--color-text);
-    margin-bottom: 0.5rem;
-    text-align: center;
 }
 
-.aboutItem p {
+.textContent p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
     font-size: 1rem;
-    text-align: center;
+    color: var(--color-text-soft);
+    line-height: 1.5;
 }
 
-
-@media screen and (min-width: 831px) {
-    .container {
-        padding: 3rem;
-        margin: 10%;
-    }
-
-    .content {
+@media screen and (min-width: 768px) {
+    .aboutWrapper {
         flex-direction: row;
+        gap: 3rem;
         align-items: flex-start;
-        gap: 2rem;
     }
 
     .aboutImage {
-        width: 35%;
-        display: block;
+        flex: 0 0 40%;
     }
 
-    .aboutItems {
+    .aboutList {
+        flex: 1;
         gap: 2rem;
-    }
-
-    .aboutItem {
-        flex-direction: row;
-        align-items: center;
-        text-align: left;
-    }
-
-    .aboutItem i {
-        margin-right: 1rem;
-        margin-bottom: 0;
-    }
-
-    .aboutItem h3 {
-        font-size: 1.5rem;
-    }
-
-    .aboutItem p {
-        font-size: 1.2rem;
     }
 }

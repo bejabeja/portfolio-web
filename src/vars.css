@@ -1,23 +1,37 @@
 :root {
-    /* Colors */
-    --color-text: #ececec;
-    --color-primary: #5c6bc0;
-    --color-secondary: #2d8b3f;
-
-    --color-highlight: #f39c12;
+    /* Base colors */
     --color-bg: #0a0e14;
+    --color-surface: #121621;
+    --color-overlay: rgba(18, 22, 33, 0.7);
+    --color-secondary: #ffcc00;
 
-    /* Fonts */
-    --font-roboto: "Roboto";
+    /* Text */
+    --color-text: #e0e0e0;
+    --color-text-soft: #b0b4c0;
+
+    /* Gradients and effects */
+    --color-blur: rgba(25, 55, 109, 0.7);
+    --color-shadow-dark: rgba(0, 0, 0, 0.8);
+    --color-shadow-light: rgba(255, 204, 0, 0.6);
+
+    /* Tipografy */
+    --font-sans: "Inter", sans-serif;
+
+    /* Space */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 3rem;
+
+    /* Shadows */
+    --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.6);
+
+    /* borders */
+    --radius-sm: 8px;
+    --radius-md: 16px;
+    --radius-lg: 24px;
+    --radius-pill: 50px;
+
+    /* max width */
+    --max-width-content: 1200px;
 }
-
-/* :root {
-    --color-text: #ffff;
-    --color-primary: #576cbc;
-    --color-secondary: #19376d;
-    --color-dark: #0b2447;
-    --color-bg: #04152d;
-    --color-icon-green: #2d8b3f;
-
-    --font-roboto: "Roboto";
-} */

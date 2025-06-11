@@ -32,16 +32,15 @@
             "startDate": "2020",
             "endDate": "2023",
             "tasks": [
-                "Developed the company's real estate websites.",
-                "Styled and programmed frontend features.",
-                "Designed and implemented backend features.",
-                "Created RESTful APIs.",
-                "Managed databases.",
-                "Ensured all features were covered by tests.",
-                "Programming tools: React JS, CSS, PHP, SQL, RoR.",
-                "Testing tools: Jest, PHPUnit, RSpec.",
-                "Applied Agile methodology: participated in sprint planning, daily stand-ups, and retrospective meetings.",
-                "Practiced TDD, testing strategies, hexagonal architecture, refactoring, pair programming, and clean code."
+                "Developed and maintained high-traffic real estate platforms for various international markets.",
+                "Implemented responsive frontend features using ReactJS and CSS.",
+                "Designed and built scalable backend services using PHP and Ruby on Rails.",
+                "Created and maintained RESTful APIs to support frontend functionality.",
+                "Managed and optimized relational databases with MySQL and PostgreSQL.",
+                "Ensured high code quality and reliability through unit tests and TDD.",
+                "Used Jest, PHPUnit, and RSpec for comprehensive test coverage.",
+                "Worked in Agile teams: participated in sprint planning, stand-ups, and retrospectives.",
+                "Practiced clean code principles, refactoring, pair programming, and hexagonal architecture."
             ],
             "image": "path_to_image_of_your_experience_2.jpg"
         },
@@ -51,21 +50,20 @@
             "startDate": "2017",
             "endDate": "2018",
             "tasks": [
-                "Developed Unity 3D applications in C#.",
-                "Designed and implemented Canvas UI.",
-                "Programmed UI interactions.",
-                "Conducted manual testing of VR apps.",
-                "Reported and documented bugs.",
-                "Quickly understood and adapted to new tools and frameworks, demonstrating strong learning ability."
+                "Built interactive 3D applications with Unity and C#.",
+                "Designed and programmed dynamic Canvas-based UIs.",
+                "Developed intuitive UI interactions for VR applications.",
+                "Performed hands-on testing and reported bugs for continuous improvements.",
+                "Quickly adapted to new frameworks and tools, demonstrating a strong learning curve."
             ],
             "image": "path_to_image_of_your_experience_1.jpg"
         }
     ],
     "projects": [
         {
-            "title": "To Be A Traveller (Work in Progress)",
+            "title": "To Be A Traveller",
             "image": "/projects/toBeATraveller.png",
-            "description": "Web platform that will serve as a showcase of cities from around the world and will provide itinerary recommendations. Registered users will be able to add cities they have visited and share itinerary recommendations for each day of their trip.",
+            "description": "A social travel platform where users can share and explore custom itineraries, and showcase the cities they've visited. Designed to inspire and connect travelers from around the world.",
             "skills": [
                 "React",
                 "Node",
@@ -79,7 +77,7 @@
         {
             "title": "CSV Manager",
             "image": "/projects/csvManager.png",
-            "description": "This project provides a user-friendly interface and robust backend to upload, search, and manage CSV data. It is ideal for applications requiring efficient CSV file handling with features like real-time search and pagination.",
+            "description": "User-friendly platform to upload, search, and manage CSV data with features like real-time filtering and pagination. Built to simplify CSV workflows for non-technical users.",
             "skills": [
                 "React",
                 "TypeScript",
@@ -93,7 +91,7 @@
         {
             "title": "Geodata Dashboard",
             "image": "/projects/geodataDashboard.png",
-            "description": "This project is an interactive dashboard that allows politicians and other stakeholders to visualize geospatial data. The goal is to provide a user-friendly interface for non-technical users, enabling informed decision-making based on available geospatial data.",
+            "description": "An interactive dashboard for visualizing geospatial data. Aimed at non-technical users like public administrators and decision-makers to support informed urban planning.",
             "skills": [
                 "React",
                 "TypeScript",
@@ -105,9 +103,9 @@
             "repository": "https://github.com/bejabeja/geodata-dashboard"
         },
         {
-            "title": "Resume printable",
+            "title": "Resume Printable",
             "image": "/projects/resumePrintable.png",
-            "description": "You can easily print my curriculum from any web browser using the standard print option. The responsive design ensures that the printed version maintains the structure and style, providing a professional presentation both on screen and on paper.",
+            "description": "Responsive digital resume that maintains its layout and style when printed directly from any browser. Optimized for a clean, professional presentation in both digital and paper formats.",
             "skills": [
                 "React",
                 "CSS"
