@@ -48,6 +48,8 @@
 
 .aboutItem {
     display: flex;
+    flex-direction: column;
+    gap: 1rem;
     align-items: flex-start;
     background: linear-gradient(135deg, #252a3a, #121621);
     padding: 1.5rem;
@@ -100,5 +102,9 @@
     .aboutList {
         flex: 1;
         gap: 2rem;
+    }
+
+    .aboutItem {
+        flex-direction: row;
     }
 }

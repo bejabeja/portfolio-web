@@ -32,15 +32,8 @@
             "startDate": "2020",
             "endDate": "2023",
             "tasks": [
-                "Developed and maintained high-traffic real estate platforms for various international markets.",
-                "Implemented responsive frontend features using ReactJS and CSS.",
-                "Designed and built scalable backend services using PHP and Ruby on Rails.",
-                "Created and maintained RESTful APIs to support frontend functionality.",
-                "Managed and optimized relational databases with MySQL and PostgreSQL.",
-                "Ensured high code quality and reliability through unit tests and TDD.",
-                "Used Jest, PHPUnit, and RSpec for comprehensive test coverage.",
-                "Worked in Agile teams: participated in sprint planning, stand-ups, and retrospectives.",
-                "Practiced clean code principles, refactoring, pair programming, and hexagonal architecture."
+                "I worked as a Full Stack Developer at a company managing real estate platforms across multiple countries. On the B2B side, I was responsible for developing a back-office system used by real estate agents to manage their property listings. Agents could add, edit, modify and publish rental or sale properties, which were then propagated to multiple public websites. I built the frontend using React.js and Redux, and developed backend features with PHP (Symfony) and MariaDB. I also wrote unit and integration tests with Jest and PHPUnit. Some of the core features I implemented included property status workflows, image uploading and gallery management, multi-language support for international listings..",
+                "On the B2C side, I worked on real estate portals like Hipflat and DotProperty. My role focused on maintaining and refactoring backend features in Ruby on Rails, with MongoDB for data storage. These platforms allowed users to search and filter properties by location, price, and other criteria. I also improved data synchronization services between different property sources and optimized backend endpoints to enhance performance. Throughout both projects, I worked closely with cross-functional teams, maintained code quality standards, and contributed to scalable, production-ready systems."
             ],
             "image": "path_to_image_of_your_experience_2.jpg"
         },
@@ -50,11 +43,7 @@
             "startDate": "2017",
             "endDate": "2018",
             "tasks": [
-                "Built interactive 3D applications with Unity and C#.",
-                "Designed and programmed dynamic Canvas-based UIs.",
-                "Developed intuitive UI interactions for VR applications.",
-                "Performed hands-on testing and reported bugs for continuous improvements.",
-                "Quickly adapted to new frameworks and tools, demonstrating a strong learning curve."
+                "I worked on an immersive VR project for a medical school aimed at training students in pre-operative procedures. We captured 360° photographs of a real surgery room and imported them into Unity to recreate the environment. I was responsible for designing the UI canvas, implementing interactive elements in C#, and integrating them into the VR experience. Users wearing a wired VR headset  could navigate the virtual operating room and follow step-by-step protocols, including hand sanitization, equipment selection, and preparation for surgery. I also conducted manual testing of each implemented feature, in-headset testing, and logging tools. My tasks included identifying and documenting bugs, reporting them through a tracking system like Jira, and verifying fixes to ensure a smooth and realistic user experience."
             ],
             "image": "path_to_image_of_your_experience_1.jpg"
         }
@@ -112,6 +101,68 @@
             ],
             "demo": "https://curriculum-three-brown.vercel.app/",
             "repository": "https://github.com/bejabeja/curriculum-portfolio"
+        }
+    ],
+    "professionalProjects": [
+        {
+            "title": "Proppit Backoffice",
+            "company": "Lifull Connect",
+            "description": "Backoffice system for real estate agents to manage listings distributed to public portals. I worked across the stack, building and maintaining features in both the frontend and backend in close collaboration with product stakeholders.",
+            "skills": [
+                "React",
+                "Redux",
+                "Symfony",
+                "PHP",
+                "MariaDB",
+                "Jest",
+                "PHPUnit"
+            ],
+            "years": "2020-2023",
+            "link": "https://proppit.com/"
+        },
+        {
+            "title": "Hipflat Portal",
+            "company": "Lifull Connect",
+            "description": "Public-facing real estate portal used across Southeast Asia. I maintained and refactored backend systems, improved data synchronization with external providers, and optimized overall performance.",
+            "skills": [
+                "Ruby on Rails",
+                "MongoDB"
+            ],
+            "years": "2020-2023",
+            "link": "https://www.hipflat.com/"
+        },
+        {
+            "title": "DotProperty Portal",
+            "company": "Lifull Connect",
+            "description": "Online real estate portal focused on property search. I supported backend stability and performance through regular maintenance, code refactoring, and data reliability improvements.",
+            "skills": [
+                "PHP",
+                "Laravel"
+            ],
+            "years": "2020-2023",
+            "link": "https://www.dotproperty.co.th/en"
+        },
+        {
+            "title": "VR Surgery Training",
+            "company": "Seidor",
+            "description": "VR training experience designed to teach surgical pre-op procedures to medical students. I developed interactive elements, UI components, and tested usability in-headset to ensure clarity and realism. (no public link)",
+            "skills": [
+                "Unity",
+                "C#",
+                "VR"
+            ],
+            "years": "2017-2018"
+        },
+        {
+            "title": "Novatilu Product Environment",
+            "company": "Seidor",
+            "description": "Custom interactive 3D environment for product demonstration. Developed features for a custom interactive environment, involving simulation or product showcasing. (no public link)",
+            "skills": [
+                "Unity",
+                "C#",
+                "VR"
+            ],
+            "years": "2017-2018"
         }
     ]
 }

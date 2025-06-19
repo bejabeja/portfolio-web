@@ -1,7 +1,6 @@
 @import "../../vars.css";
 
 .container {
-    padding: 2rem;
     color: var(--color-text);
     border-radius: 1rem;
     max-width: 1200px;
@@ -94,8 +93,7 @@
 
 .workExperience ul {
     padding-top: 0.75rem;
-    padding-left: 1rem;
-    list-style: disc inside;
+    list-style: none;
     font-size: 1rem;
     color: var(--color-text);
     display: flex;

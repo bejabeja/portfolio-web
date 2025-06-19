@@ -1,14 +1,42 @@
 @import '../../vars.css';
 
-.container {
-    padding: 3rem 2rem;
+.sectionContainer {
     max-width: 1200px;
     margin: 0 auto;
     color: var(--color-text);
 }
 
+.tabs {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.tabButton {
+    background: transparent;
+    color: var(--color-secondary);
+    border: 2px solid var(--color-secondary);
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tabButton:hover {
+    background: var(--color-secondary);
+    color: var(--color-bg);
+}
+
+.active {
+    background: var(--color-secondary);
+    color: var(--color-bg);
+}
+
 .title {
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 800;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -18,16 +46,12 @@
 }
 
 .projects {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2rem;
 }
 
 @media (min-width: 830px) {
-    .projects {
-        gap: 3rem;
-    }
-
     .title {
         font-size: 3rem;
     }
