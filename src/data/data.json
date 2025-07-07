@@ -60,7 +60,7 @@
                 "CSS",
                 "PostgreSQL"
             ],
-            "demo": "https://tfm-tobeatraveller.vercel.app/",
+            "demo": "https://tobeatraveller-client.vercel.app/",
             "repository": "https://github.com/bejabeja/tfm"
         },
         {
