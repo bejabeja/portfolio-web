@@ -1,8 +1,15 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleNavigation = (sectionId) => {
+    navigate(`/#${sectionId}`);
+    setIsMenuOpen(false);
+  };
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -10,9 +17,10 @@ const Navbar = () => {
 
   return (
     <nav className={styles.navbar}>
-      <a className={styles.title} href="/">
+      <button className={styles.title} onClick={() => navigate("/#hero")}>
         Mabella Portfolio
-      </a>
+      </button>
+
       <div className={styles.menu}>
         <button
           className={styles.menuBtn}
@@ -24,19 +32,22 @@ const Navbar = () => {
 
         <ul
           className={`${styles.menuItems} ${isMenuOpen ? styles.menuOpen : ""}`}
-          onClick={toggleMenu}
         >
           <li>
-            <a href="#about">About</a>
+            <button onClick={() => handleNavigation("about")}>About</button>
           </li>
           <li>
-            <a href="#experience">Experience</a>
+            <button onClick={() => handleNavigation("experience")}>
+              Experience
+            </button>
           </li>
           <li>
-            <a href="#projects">Projects</a>
+            <button onClick={() => handleNavigation("projects")}>
+              Projects
+            </button>
           </li>
           <li>
-            <a href="#contact">Contact</a>
+            <button onClick={() => handleNavigation("contact")}>Contact</button>
           </li>
         </ul>
       </div>

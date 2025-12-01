@@ -1,17 +1,30 @@
 import styles from "./ProjectCard.module.css";
 
 const ProjectCard = ({ project, isProfessional = false }) => {
-  const { title, description, skills, demo, repository, company, years, link } =
-    project;
+  const {
+    title,
+    description,
+    skills,
+    demo,
+    repository,
+    company,
+    years,
+    link,
+    figma,
+    video,
+  } = project;
   return (
     <div className={styles.container}>
-      {project.image && (
-        <div className={styles.contentImage}>
-          <img
-            src={project.image}
-            alt={`${title} Project Preview`}
-            className={styles.image}
-          />
+      {project.images && (
+        <div className={styles.imageSlider}>
+          {project.images.map((imgSrc, index) => (
+            <img
+              key={index}
+              src={imgSrc}
+              alt={`${title} Screenshot ${index + 1}`}
+              className={styles.image}
+            />
+          ))}
         </div>
       )}
 
@@ -55,8 +68,26 @@ const ProjectCard = ({ project, isProfessional = false }) => {
               Repo
             </a>
           )}
-        </div>
-        <div className={styles.links}>
+          {figma && (
+            <a
+              href={figma}
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Figma
+            </a>
+          )}
+          {video && (
+            <a
+              href={video}
+              className={styles.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Video
+            </a>
+          )}
           {link && (
             <a
               href={link}
@@ -64,7 +95,7 @@ const ProjectCard = ({ project, isProfessional = false }) => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Visit site
+              Visit Site
             </a>
           )}
         </div>

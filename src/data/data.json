@@ -60,7 +60,7 @@
                 "CSS",
                 "PostgreSQL"
             ],
-            "demo": "https://tobeatraveller-client.vercel.app/",
+            "link": "https://tobeatraveller-client.vercel.app/",
             "repository": "https://github.com/bejabeja/tfm"
         },
         {
@@ -74,7 +74,7 @@
                 "Express",
                 "Styled Components"
             ],
-            "demo": "https://csv-manager-nine.vercel.app/",
+            "link": "https://csv-manager-nine.vercel.app/",
             "repository": "https://github.com/bejabeja/csv_manager"
         },
         {
@@ -88,7 +88,7 @@
                 "Express",
                 "CSS"
             ],
-            "demo": "https://geodata-dashboard-client.vercel.app/",
+            "link": "https://geodata-dashboard-client.vercel.app/",
             "repository": "https://github.com/bejabeja/geodata-dashboard"
         },
         {
@@ -99,7 +99,7 @@
                 "React",
                 "CSS"
             ],
-            "demo": "https://curriculum-three-brown.vercel.app/",
+            "link": "https://curriculum-three-brown.vercel.app/",
             "repository": "https://github.com/bejabeja/curriculum-portfolio"
         }
     ],
@@ -163,6 +163,23 @@
                 "VR"
             ],
             "years": "2017-2018"
+        }
+    ],
+    "designProjects": [
+        {
+            "title": "To Be A Traveller",
+            "description": "Design of a social travel platform where users can share and explore custom itineraries, and showcase the cities they've visited.",
+            "images": [
+                "/designs/portfolio1.png",
+                "/designs/portfolio2.png",
+                "/designs/portfolio3.png"
+            ],
+            "skills": [
+                "Figma",
+                "UI/UX",
+                "Accessibility"
+            ],
+            "process": "User research through surveys and interviews, wireframing in Figma, prototyping and usability testing."
         }
     ]
 }

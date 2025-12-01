@@ -102,6 +102,26 @@
     box-shadow: 0 6px 16px rgba(255, 214, 51, 0.4);
 }
 
+.imageSlider {
+    display: flex;
+    overflow-x: auto;
+    gap: 0.5rem;
+    border-radius: 0.75rem;
+}
+
+.imageSlider img {
+    width: 100%;
+    max-width: 200px;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.imageSlider img:hover {
+    transform: scale(1.05);
+}
+
 
 @media screen and (min-width: 830px) {
     .container {}

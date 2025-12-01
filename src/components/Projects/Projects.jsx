@@ -5,6 +5,8 @@ import styles from "./Projects.module.css";
 
 const Projects = () => {
   const [activeTab, setActiveTab] = useState("professional");
+  // const tabs = ["professional", "personal", "design"];
+  const tabs = ["professional", "personal"];
 
   const renderProjects = (projects, isProfessional = false) => (
     <div className={styles.projects}>
@@ -19,36 +21,43 @@ const Projects = () => {
   );
 
   return (
-    <section className={styles.sectionContainer}>
+    <section id="projects" className={styles.sectionContainer}>
       <div className={styles.tabs}>
-        <button
-          className={`${styles.tabButton} ${
-            activeTab === "professional" ? styles.active : ""
-          }`}
-          onClick={() => setActiveTab("professional")}
-        >
-          Professional Projects
-        </button>
-
-        <button
-          className={`${styles.tabButton} ${
-            activeTab === "personal" ? styles.active : ""
-          }`}
-          onClick={() => setActiveTab("personal")}
-        >
-          Personal Projects
-        </button>
+        {tabs.map((tab) => (
+          <button
+            key={tab}
+            className={`${styles.tabButton} ${
+              activeTab === tab ? styles.active : ""
+            }`}
+            onClick={() => setActiveTab(tab)}
+          >
+            {tab === "professional"
+              ? "Professional Projects"
+              : tab === "personal"
+              ? "Personal Projects"
+              : "Designs"}
+          </button>
+        ))}
       </div>
 
       <h2 className={styles.title}>
         {activeTab === "personal"
           ? "Personal Projects"
-          : "Professional Projects"}
+          : activeTab === "professional"
+          ? "Professional Projects"
+          : "Designs"}
       </h2>
 
-      {activeTab === "personal"
-        ? renderProjects(data.projects)
-        : renderProjects(data.professionalProjects, true)}
+      {activeTab === "personal" && renderProjects(data.projects)}
+      {activeTab === "professional" &&
+        renderProjects(data.professionalProjects, true)}
+      {/* {activeTab === "design" && (
+        <div className={styles.projects}>
+          {data.designProjects.map((project, id) => (
+            <DesignCard key={id} project={project} />
+          ))}
+        </div>
+      )} */}
     </section>
   );
 };
