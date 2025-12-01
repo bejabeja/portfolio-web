@@ -1,14 +1,6 @@
 {
     "skills": [
         {
-            "title": "HTML",
-            "icon": "fab fa-html5"
-        },
-        {
-            "title": "CSS",
-            "icon": "fab fa-css3-alt"
-        },
-        {
             "title": "JavaScript",
             "icon": "fab fa-js-square"
         },
@@ -23,16 +15,49 @@
         {
             "title": "SQL",
             "icon": "fas fa-database"
+        },
+        {
+            "title": "HTML",
+            "icon": "fab fa-html5"
+        },
+        {
+            "title": "CSS",
+            "icon": "fab fa-css3-alt"
+        },
+        {
+            "title": "Git",
+            "icon": "fab fa-git-alt"
+        },
+        {
+            "title": "Figma",
+            "icon": "fab fa-figma"
+        },
+        {
+            "title": "UI/UX Design",
+            "icon": "fab fa-uikit"
         }
     ],
     "works": [
+        {
+            "role": "Software Developer",
+            "organisation": "Visaflow",
+            "startDate": "2025",
+            "endDate": "Present",
+            "tasks": [
+                "Drive end-to-end development of core product features using Next.js, delivering scalable and reliable functionality across the stack.",
+                "Defined the long-term technical strategy for a robust, maintainable frontend and backend architecture, aligning the platform for future growth.",
+                "Led major refactoring efforts and established engineering guidelines that improved code quality.",
+                "Redesigned the most critical part of the application in to elevate user engagement."
+            ],
+            "image": "path_to_image_of_your_experience_3.jpg"
+        },
         {
             "role": "Full Stack Developer",
             "organisation": "Lifull Connect",
             "startDate": "2020",
             "endDate": "2023",
             "tasks": [
-                "I worked as a Full Stack Developer at a company managing real estate platforms across multiple countries. On the B2B side, I was responsible for developing a back-office system used by real estate agents to manage their property listings. Agents could add, edit, modify and publish rental or sale properties, which were then propagated to multiple public websites. I built the frontend using React.js and Redux, and developed backend features with PHP (Symfony) and MariaDB. I also wrote unit and integration tests with Jest and PHPUnit. Some of the core features I implemented included property status workflows, image uploading and gallery management, multi-language support for international listings..",
+                "I worked as a Full Stack Developer at a company managing real estate platforms across multiple countries. On the B2B side, I was responsible for developing a back-office system used by real estate agents to manage their property listings. Agents could add, edit, modify and publish rental or sale properties, which were then propagated to multiple public websites. I built the frontend using React.js and Redux, and developed backend features with PHP (Symfony) and MariaDB. I also wrote unit and integration tests with Jest and PHPUnit. Some of the core features I implemented included property status workflows, image uploading and gallery management, multi-language support for international listings.",
                 "On the B2C side, I worked on real estate portals like Hipflat and DotProperty. My role focused on maintaining and refactoring backend features in Ruby on Rails, with MongoDB for data storage. These platforms allowed users to search and filter properties by location, price, and other criteria. I also improved data synchronization services between different property sources and optimized backend endpoints to enhance performance. Throughout both projects, I worked closely with cross-functional teams, maintained code quality standards, and contributed to scalable, production-ready systems."
             ],
             "image": "path_to_image_of_your_experience_2.jpg"
@@ -43,7 +68,10 @@
             "startDate": "2017",
             "endDate": "2018",
             "tasks": [
-                "I worked on an immersive VR project for a medical school aimed at training students in pre-operative procedures. We captured 360° photographs of a real surgery room and imported them into Unity to recreate the environment. I was responsible for designing the UI canvas, implementing interactive elements in C#, and integrating them into the VR experience. Users wearing a wired VR headset  could navigate the virtual operating room and follow step-by-step protocols, including hand sanitization, equipment selection, and preparation for surgery. I also conducted manual testing of each implemented feature, in-headset testing, and logging tools. My tasks included identifying and documenting bugs, reporting them through a tracking system like Jira, and verifying fixes to ensure a smooth and realistic user experience."
+                "I worked on an immersive VR project for a medical school aimed at training students in pre-operative procedures.",
+                "We captured 360° photographs of a real surgery room and imported them into Unity to recreate the environment.",
+                "I was responsible for designing the UI canvas, implementing interactive elements in C#, and integrating them into the VR experience. Users wearing a wired VR headset  could navigate the virtual operating room and follow step-by-step protocols, including hand sanitization, equipment selection, and preparation for surgery.",
+                "I also conducted manual testing of each implemented feature, in-headset testing, and logging tools. My tasks included identifying and documenting bugs, reporting them through a tracking system like Jira, and verifying fixes to ensure a smooth and realistic user experience."
             ],
             "image": "path_to_image_of_your_experience_1.jpg"
         }
