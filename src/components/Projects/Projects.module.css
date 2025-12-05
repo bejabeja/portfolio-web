@@ -4,13 +4,14 @@
     max-width: 1200px;
     margin: 0 auto;
     color: var(--color-text);
+    padding: 2rem 1rem;
 }
 
 .tabs {
     display: flex;
     justify-content: center;
     gap: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     flex-wrap: wrap;
 }
 
@@ -18,21 +19,29 @@
     background: transparent;
     color: var(--color-secondary);
     border: 2px solid var(--color-secondary);
-    padding: 0.5rem 1.5rem;
+    padding: 0.45rem 1.25rem;
     border-radius: 999px;
-    font-weight: 700;
+    font-weight: 800;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.18s ease;
+    outline: none;
 }
 
 .tabButton:hover {
+    transform: translateY(-3px);
     background: var(--color-secondary);
     color: var(--color-bg);
+}
+
+.tabButton:focus-visible {
+    box-shadow: 0 0 0 4px rgba(123, 97, 255, 0.12);
 }
 
 .active {
     background: var(--color-secondary);
     color: var(--color-bg);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(123, 97, 255, 0.08);
 }
 
 .title {
@@ -41,18 +50,22 @@
     text-transform: uppercase;
     letter-spacing: 4px;
     text-align: center;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2.25rem;
     color: var(--color-secondary);
 }
 
 .projects {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-    gap: 2rem;
+    gap: 1.6rem;
 }
 
 @media (min-width: 830px) {
     .title {
-        font-size: 3rem;
+        font-size: 2.6rem;
+    }
+
+    .projects {
+        gap: 2rem;
     }
 }
