@@ -48,12 +48,11 @@
             "startDate": "2025",
             "endDate": "Present",
             "tasks": [
-                "Led the full frontend architecture redesign, defining technical guidelines, component structure, and long-term maintainability strategy for a React/TypeScript codebase.",
-                "Designed and prototyped the new application UI in Figma, ensuring responsive, accessible, and engagement-optimized layouts aligned with product goals.",
-                "Drove backend refactoring initiatives to improve scalability, separation of concerns, and clean architecture adherence across the platform.",
-                "Owned key technical decisions in a small cross-functional team, bridging design, backend, and frontend concerns from requirements to production.",
-                "Established code review practices, coding standards, and CI/CD workflow improvements to raise overall engineering quality.",
-                "Preparing and driving monthly learning sessions for junior developers on topics including Trunk-Based Development, Clean Code, and Agile methodologies."
+                "Led frontend architecture redesign for a React/TypeScript codebase — guidelines, component structure, and long-term maintainability strategy.",
+                "Designed and prototyped the new UI in Figma, ensuring responsive and accessible layouts aligned with product goals.",
+                "Drove backend refactoring to improve scalability, separation of concerns, and clean architecture across the platform.",
+                "Established code review practices, coding standards, and CI/CD improvements to raise engineering quality.",
+                "Running monthly learning sessions for junior developers on Clean Code, TDD, and Agile methodologies."
             ]
         },
         {
@@ -62,12 +61,11 @@
             "startDate": "2020",
             "endDate": "2023",
             "tasks": [
-                "Developed and maintained real estate web applications used by thousands of users, contributing to both frontend (React, TypeScript, HTML, CSS) and backend (PHP, Ruby on Rails, Node.js) layers.",
-                "Designed and implemented RESTful APIs and managed relational databases (MySQL, PostgreSQL), ensuring performance and data integrity.",
-                "Applied Test-Driven Development using PHPUnit, RSpec, and Jest; authored and maintained automated test suites that significantly reduced regression bugs.",
-                "Applied Clean Code principles and hexagonal architecture patterns, improving codebase readability and long-term maintainability.",
-                "Contributed to CI/CD pipeline management, supporting continuous integration and deployment practices using Git-based workflows.",
-                "Actively participated in Agile ceremonies including sprint planning, daily stand-ups, and retrospectives within a collaborative engineering team."
+                "Built and maintained real estate platforms (B2B and B2C) used by thousands of users across Europe and Southeast Asia.",
+                "Developed full-stack features across React/TypeScript frontends and PHP/Ruby on Rails/Node.js backends.",
+                "Applied TDD with PHPUnit, RSpec, and Jest, significantly reducing regression bugs.",
+                "Improved codebase maintainability through Clean Code and hexagonal architecture patterns.",
+                "Worked in Agile teams with CI/CD pipelines and Git-based workflows."
             ]
         },
         {
@@ -190,7 +188,7 @@
         {
             "title": "VR Surgery Training",
             "company": "Seidor",
-            "description": "VR training experience designed to teach surgical pre-op procedures to medical students. I developed interactive elements, UI components, and tested usability in-headset to ensure clarity and realism. (no public link)",
+            "description": "VR training experience designed to teach surgical pre-op procedures to medical students. I developed interactive elements, UI components, and tested usability in-headset to ensure clarity and realism.",
             "skills": [
                 "Unity",
                 "C#",
@@ -201,7 +199,7 @@
         {
             "title": "Novatilu Product Environment",
             "company": "Seidor",
-            "description": "Custom interactive 3D environment for product demonstration. Developed features for a custom interactive environment, involving simulation or product showcasing. (no public link)",
+            "description": "Custom interactive 3D environment for product demonstration, involving simulation and product showcasing.",
             "skills": [
                 "Unity",
                 "C#",

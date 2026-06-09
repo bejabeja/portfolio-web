@@ -19,3 +19,15 @@
     padding: 1rem 2rem;
     box-sizing: border-box;
 }
+
+.App section,
+.App footer {
+    margin-bottom: 5rem;
+}
+
+@media (max-width: 768px) {
+    .App section,
+    .App footer {
+        margin-bottom: 3rem;
+    }
+}

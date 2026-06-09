@@ -4,13 +4,12 @@ import ProjectCard from "./ProjectCard";
 import styles from "./Projects.module.css";
 
 const tabs = [
-  { id: "professional", label: "Professional Projects" },
   { id: "personal", label: "Personal Projects" },
-  // { id: "design", label: "Design Projects" },
+  { id: "professional", label: "Professional Projects" },
 ];
 
 const Projects = () => {
-  const [activeTab, setActiveTab] = useState("professional");
+  const [activeTab, setActiveTab] = useState("personal");
   const tabListRef = useRef(null);
 
   const onKeyDown = (e) => {
@@ -26,17 +25,39 @@ const Projects = () => {
     }
   };
 
-  const renderProjects = (projects, isProfessional = false) => (
-    <div key={activeTab} className={styles.projects}>
-      {projects.map((project, id) => (
-        <ProjectCard
-          key={`${isProfessional ? "professional" : "personal"}-${id}`}
-          project={project}
-          isProfessional={isProfessional}
-        />
-      ))}
-    </div>
-  );
+  const renderProjects = (projects, isProfessional = false) => {
+    if (!isProfessional) {
+      return (
+        <div key={activeTab} className={styles.projects}>
+          {projects.map((project, id) => (
+            <ProjectCard key={`personal-${id}`} project={project} isProfessional={false} />
+          ))}
+        </div>
+      );
+    }
+
+    const grouped = projects.reduce((acc, project) => {
+      const company = project.company || "Other";
+      if (!acc[company]) acc[company] = [];
+      acc[company].push(project);
+      return acc;
+    }, {});
+
+    return (
+      <div key={activeTab} className={styles.groupedProjects}>
+        {Object.entries(grouped).map(([company, companyProjects]) => (
+          <div key={company} className={styles.companyGroup}>
+            <h3 className={styles.companyTitle}>{company}</h3>
+            <div className={styles.projects}>
+              {companyProjects.map((project, id) => (
+                <ProjectCard key={`professional-${company}-${id}`} project={project} isProfessional={true} />
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <section

@@ -90,6 +90,30 @@
     line-height: 1.5;
 }
 
+@media screen and (max-width: 767px) {
+    .aboutItem {
+        flex-direction: row;
+        align-items: center;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .aboutItem svg {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0;
+        flex-shrink: 0;
+    }
+
+    .textContent h3 {
+        font-size: 1.1rem;
+    }
+
+    .textContent p {
+        font-size: 0.9rem;
+    }
+}
+
 @media screen and (min-width: 768px) {
     .aboutWrapper {
         flex-direction: row;

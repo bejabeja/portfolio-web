@@ -61,6 +61,14 @@
     margin-bottom: 2rem;
     line-height: 1.6;
     color: var(--color-text-soft);
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+@media (max-width: 600px) {
+    .heroSubtitle {
+        font-size: 1.1rem;
+    }
 }
 
 .heroActions {
