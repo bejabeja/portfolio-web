@@ -1,3 +1,4 @@
+import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import styles from "./Contact.module.css";
 
 const Contact = () => {
@@ -10,13 +11,13 @@ const Contact = () => {
 
       <address className={styles.links}>
         <li className={styles.link}>
-          <i className="fas fa-envelope" aria-hidden="true"></i>
+          <FaEnvelope aria-hidden="true" />
           <a href="mailto:miriam.abella211@gmail.com" aria-label="Email Miriam">
             miriam.abella211@gmail.com
           </a>
         </li>
         <li className={styles.link}>
-          <i className="fab fa-linkedin" aria-hidden="true"></i>
+          <FaLinkedin aria-hidden="true" />
           <a
             href="https://www.linkedin.com/in/miriamabella/"
             target="_blank"
@@ -27,7 +28,7 @@ const Contact = () => {
           </a>
         </li>
         <li className={styles.link}>
-          <i className="fab fa-github" aria-hidden="true"></i>
+          <FaGithub aria-hidden="true" />
           <a
             href="https://github.com/bejabeja"
             target="_blank"

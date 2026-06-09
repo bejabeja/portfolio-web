@@ -1,5 +1,9 @@
+import { FaCss3Alt, FaDatabase, FaFigma, FaGitAlt, FaHtml5, FaJs, FaNodeJs, FaPencilRuler, FaReact } from "react-icons/fa";
+import { SiTypescript } from "react-icons/si";
 import data from "../../data/data.json";
 import styles from "./Experience.module.css";
+
+const SKILL_ICONS = { FaJs, FaReact, FaNodeJs, FaDatabase, FaHtml5, FaCss3Alt, FaGitAlt, FaFigma, SiTypescript, FaPencilRuler };
 
 const Experience = () => {
   return (
@@ -17,11 +21,9 @@ const Experience = () => {
             const key = `${skill.title}-${idx}`;
             return (
               <figure key={key} className={styles.skill} role="listitem">
-                <i
-                  className={`${skill.icon} ${styles.skillIcon}`}
-                  title={skill.skillsItemTitle || skill.title}
-                  aria-hidden="true"
-                />
+                <div className={styles.skillIcon}>
+                  {(() => { const Icon = SKILL_ICONS[skill.icon]; return Icon ? <Icon aria-hidden="true" /> : null; })()}
+                </div>
                 <figcaption className={styles.skillTitle}>
                   {skill.title}
                 </figcaption>

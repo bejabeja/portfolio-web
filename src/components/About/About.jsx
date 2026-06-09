@@ -1,3 +1,4 @@
+import { FaLaptopCode, FaPaintBrush, FaServer } from "react-icons/fa";
 import styles from "./About.module.css";
 
 const About = () => {
@@ -13,7 +14,7 @@ const About = () => {
         />
         <ul className={styles.aboutList}>
           <li className={styles.aboutItem}>
-            <i className="fas fa-laptop-code" aria-hidden="true"></i>
+            <FaLaptopCode aria-hidden="true" />
             <div className={styles.textContent}>
               <h3>Frontend Developer</h3>
               <p>
@@ -24,7 +25,7 @@ const About = () => {
             </div>
           </li>
           <li className={styles.aboutItem}>
-            <i className="fas fa-server" aria-hidden="true"></i>
+            <FaServer aria-hidden="true" />
             <div className={styles.textContent}>
               <h3>Backend Developer</h3>
               <p>
@@ -35,7 +36,7 @@ const About = () => {
             </div>
           </li>
           <li className={styles.aboutItem}>
-            <i className="fas fa-paint-brush" aria-hidden="true"></i>
+            <FaPaintBrush aria-hidden="true" />
             <div className={styles.textContent}>
               <h3>Web Designer</h3>
               <p>

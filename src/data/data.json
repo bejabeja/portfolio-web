@@ -2,39 +2,39 @@
     "skills": [
         {
             "title": "JavaScript",
-            "icon": "fa-brands fa-js"
+            "icon": "FaJs"
         },
         {
             "title": "ReactJS",
-            "icon": "fa-brands fa-react"
+            "icon": "FaReact"
         },
         {
             "title": "Node.js",
-            "icon": "fa-brands fa-node-js"
+            "icon": "FaNodeJs"
         },
         {
             "title": "SQL",
-            "icon": "fa-solid fa-database"
+            "icon": "FaDatabase"
         },
         {
             "title": "HTML",
-            "icon": "fa-brands fa-html5"
+            "icon": "FaHtml5"
         },
         {
             "title": "CSS",
-            "icon": "fa-brands fa-css3-alt"
+            "icon": "FaCss3Alt"
         },
         {
             "title": "Git",
-            "icon": "fa-brands fa-git-alt"
+            "icon": "FaGitAlt"
         },
         {
             "title": "Figma",
-            "icon": "fa-brands fa-figma"
+            "icon": "FaFigma"
         },
         {
             "title": "UI/UX Design",
-            "icon": "fa-solid fa-pencil-ruler"
+            "icon": "FaPencilRuler"
         }
     ],
     "works": [

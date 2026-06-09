@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FaBars, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
@@ -27,7 +28,7 @@ const Navbar = () => {
           onClick={toggleMenu}
           aria-label="Toggle menu"
         >
-          <i className={`fas ${isMenuOpen ? "fa-times" : "fa-bars"}`}></i>
+          {isMenuOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
         </button>
 
         <ul

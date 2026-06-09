@@ -1,3 +1,4 @@
+import { FaPaperPlane } from "react-icons/fa";
 import styles from "./Hero.module.css";
 
 const Hero = () => {
@@ -29,7 +30,7 @@ const Hero = () => {
           href="mailto:miriam.abella211@gmail.com"
           className={styles.contactBtn}
         >
-          Contact Me <i className="fas fa-paper-plane" />
+          Contact Me <FaPaperPlane aria-hidden="true" />
         </a>
       </div>
       <div className={styles.heroImageWrapper}>
