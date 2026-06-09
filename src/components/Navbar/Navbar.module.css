@@ -83,6 +83,23 @@
     color: var(--color-bg);
 }
 
+.activeLink {
+    color: var(--color-secondary) !important;
+    position: relative;
+}
+
+.activeLink::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 18px;
+    height: 2px;
+    background: var(--color-secondary);
+    border-radius: 2px;
+}
+
 .menuBtn {
     display: none;
     background: none;

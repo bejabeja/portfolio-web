@@ -54,6 +54,28 @@
     }
 }
 
+.heroRole {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    margin-bottom: 1.25rem;
+    letter-spacing: 0.03em;
+    min-height: 1.6em;
+}
+
+.cursor {
+    display: inline-block;
+    color: var(--color-secondary);
+    margin-left: 1px;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 .heroSubtitle {
     font-family: "Inter", sans-serif;
     font-weight: 400;

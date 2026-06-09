@@ -1,7 +1,26 @@
+import { useEffect, useState } from "react";
 import { FaPaperPlane } from "react-icons/fa";
 import styles from "./Hero.module.css";
 
+const TYPED_ROLE = "Senior Software Developer · React · TypeScript";
+
 const Hero = () => {
+  const [typed, setTyped] = useState("");
+  const [showCursor, setShowCursor] = useState(true);
+
+  useEffect(() => {
+    let i = 0;
+    const interval = setInterval(() => {
+      setTyped(TYPED_ROLE.slice(0, i + 1));
+      i++;
+      if (i >= TYPED_ROLE.length) {
+        clearInterval(interval);
+        setTimeout(() => setShowCursor(false), 1800);
+      }
+    }, 42);
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <section className={styles.heroSection} id="hero">
       <div className={styles.topBlur}></div>
@@ -10,9 +29,12 @@ const Hero = () => {
         <h1 className={styles.heroTitle}>
           Hi, I'm Miriam <span className={styles.wave}>👋</span>
         </h1>
+        <p className={styles.heroRole} aria-label={TYPED_ROLE}>
+          {typed}
+          {showCursor && <span className={styles.cursor} aria-hidden="true">|</span>}
+        </p>
         <p className={styles.heroSubtitle}>
-          Senior Software Developer with 5+ years of experience building
-          full-stack web apps. I specialize in{" "}
+          5+ years building full-stack web apps. I specialize in{" "}
           <strong>React and TypeScript</strong>, care deeply about clean code
           and architecture, and bring a design background that helps me bridge
           the gap between product and engineering.

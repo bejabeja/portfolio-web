@@ -3,13 +3,29 @@ import { FaBars, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
 
+const SECTIONS = ["hero", "about", "experience", "projects", "contact"];
+
 const Navbar = () => {
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [activeSection, setActiveSection] = useState("hero");
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 20);
+
+      const threshold = window.innerHeight * 0.35;
+      let current = "hero";
+      for (const id of SECTIONS) {
+        const el = document.getElementById(id);
+        if (el && el.getBoundingClientRect().top <= threshold) {
+          current = id;
+        }
+      }
+      setActiveSection(current);
+    };
+
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -41,22 +57,22 @@ const Navbar = () => {
         <ul
           className={`${styles.menuItems} ${isMenuOpen ? styles.menuOpen : ""}`}
         >
-          <li>
-            <button onClick={() => handleNavigation("about")}>About</button>
-          </li>
-          <li>
-            <button onClick={() => handleNavigation("experience")}>
-              Experience
-            </button>
-          </li>
-          <li>
-            <button onClick={() => handleNavigation("projects")}>
-              Projects
-            </button>
-          </li>
-          <li>
-            <button onClick={() => handleNavigation("contact")}>Contact</button>
-          </li>
+          {[
+            { id: "about", label: "About" },
+            { id: "experience", label: "Experience" },
+            { id: "projects", label: "Projects" },
+            { id: "contact", label: "Contact" },
+          ].map(({ id, label }) => (
+            <li key={id}>
+              <button
+                onClick={() => handleNavigation(id)}
+                className={activeSection === id ? styles.activeLink : ""}
+                aria-current={activeSection === id ? "true" : undefined}
+              >
+                {label}
+              </button>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

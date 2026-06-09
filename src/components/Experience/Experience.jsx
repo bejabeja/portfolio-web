@@ -21,7 +21,13 @@ const Experience = () => {
           {data.skills.map((skill, idx) => {
             const key = `${skill.title}-${idx}`;
             return (
-              <figure key={key} className={styles.skill} role="listitem">
+              <figure
+                key={key}
+                className={styles.skill}
+                role="listitem"
+                data-animate
+                style={{ transitionDelay: `${idx * 0.07}s` }}
+              >
                 <div className={styles.skillIcon}>
                   {(() => { const Icon = SKILL_ICONS[skill.icon]; return Icon ? <Icon aria-hidden="true" /> : null; })()}
                 </div>
