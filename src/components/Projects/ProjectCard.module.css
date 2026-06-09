@@ -50,7 +50,7 @@
 
 .imageSlider img {
     width: 100%;
-    max-width: 260px;
+    aspect-ratio: 16 / 9;
     object-fit: cover;
     border-radius: 0.5rem;
     flex-shrink: 0;

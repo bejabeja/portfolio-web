@@ -79,7 +79,7 @@
     "projects": [
         {
             "title": "To Be A Traveller",
-            "image": "/projects/toBeATraveller.png",
+            "images": ["/projects/toBeATraveller.webp"],
             "description": "A social travel platform where users can share and explore custom itineraries, and showcase the cities they've visited. Designed to inspire and connect travelers from around the world.",
             "skills": [
                 "React",
@@ -93,7 +93,7 @@
         },
         {
             "title": "CSV Manager",
-            "image": "/projects/csvManager.png",
+            "images": ["/projects/csvManager.webp"],
             "description": "User-friendly platform to upload, search, and manage CSV data with features like real-time filtering and pagination. Built to simplify CSV workflows for non-technical users.",
             "skills": [
                 "React",
@@ -107,7 +107,7 @@
         },
         {
             "title": "Geodata Dashboard",
-            "image": "/projects/geodataDashboard.png",
+            "images": ["/projects/geodataDashboard.webp"],
             "description": "An interactive dashboard for visualizing geospatial data. Aimed at non-technical users like public administrators and decision-makers to support informed urban planning.",
             "skills": [
                 "React",
@@ -121,7 +121,7 @@
         },
         {
             "title": "Resume Printable",
-            "image": "/projects/resumePrintable.png",
+            "images": ["/projects/resumePrintable.webp"],
             "description": "Responsive digital resume that maintains its layout and style when printed directly from any browser. Optimized for a clean, professional presentation in both digital and paper formats.",
             "skills": [
                 "React",
