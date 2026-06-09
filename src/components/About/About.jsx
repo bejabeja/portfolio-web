@@ -4,7 +4,7 @@ import styles from "./About.module.css";
 const About = () => {
   return (
     <section className={styles.aboutSection} id="about" data-animate>
-      <h2 className={styles.sectionTitle} data-section-label="01 — About">About Me</h2>
+      <h2 className={styles.sectionTitle} data-section-label="01 — About">A Bit About Me</h2>
       <div className={styles.aboutWrapper}>
         <div className={styles.aboutImageWrap}>
           <img
@@ -18,33 +18,33 @@ const About = () => {
           <li className={styles.aboutItem}>
             <FaLaptopCode aria-hidden="true" />
             <div className={styles.textContent}>
-              <h3>Frontend Developer</h3>
+              <h3>I obsess over the UI</h3>
               <p>
-                I craft responsive, accessible UIs with React and TypeScript,
-                focused on clean architecture and long-term maintainability. I
-                enjoy turning complex requirements into intuitive interfaces.
+                I build responsive, accessible interfaces with React and
+                TypeScript — the kind that feel obvious to use and are just as
+                easy to maintain six months later.
               </p>
             </div>
           </li>
           <li className={styles.aboutItem}>
             <FaServer aria-hidden="true" />
             <div className={styles.textContent}>
-              <h3>Backend Developer</h3>
+              <h3>I write the code behind the code</h3>
               <p>
-                I build scalable APIs and backend systems with Node.js, Express,
-                and PostgreSQL, applying TDD and Clean Architecture principles
-                to write code that's reliable and easy to evolve.
+                APIs, databases, TDD, Clean Architecture — I genuinely enjoy
+                the backend challenge. Writing solid, scalable systems that are
+                easy to evolve is deeply satisfying.
               </p>
             </div>
           </li>
           <li className={styles.aboutItem}>
             <FaPaintBrush aria-hidden="true" />
             <div className={styles.textContent}>
-              <h3>Web Designer</h3>
+              <h3>Design is part of the package</h3>
               <p>
-                With a background in audiovisual communication and design, I
-                bridge the gap between product and engineering, from Figma
-                prototypes to pixel-perfect implementation.
+                I studied audiovisual communication before I wrote a line of
+                code, so design thinking comes naturally. From Figma prototype
+                to pixel-perfect build, I cover the full picture.
               </p>
             </div>
           </li>

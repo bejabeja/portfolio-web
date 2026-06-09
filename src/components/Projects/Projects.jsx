@@ -4,8 +4,8 @@ import ProjectCard from "./ProjectCard";
 import styles from "./Projects.module.css";
 
 const tabs = [
-  { id: "personal", label: "Personal Projects" },
-  { id: "professional", label: "Professional Projects" },
+  { id: "personal", label: "Side Projects" },
+  { id: "professional", label: "Client Work" },
 ];
 
 const Projects = () => {
