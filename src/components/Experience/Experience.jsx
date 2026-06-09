@@ -11,6 +11,7 @@ const Experience = () => {
       id="experience"
       className={styles.container}
       aria-labelledby="experience-title"
+      data-animate
     >
       <h2 id="experience-title" className={styles.title}>
         Experience

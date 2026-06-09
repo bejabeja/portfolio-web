@@ -64,6 +64,7 @@ const Projects = () => {
       id="projects"
       className={styles.sectionContainer}
       aria-labelledby="projects-title"
+      data-animate
     >
       <div
         className={styles.tabs}

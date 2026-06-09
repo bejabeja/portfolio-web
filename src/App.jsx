@@ -34,10 +34,38 @@ const ScrollToHash = () => {
   return null;
 };
 
+const ScrollAnimations = () => {
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.08 }
+    );
+
+    const timeout = setTimeout(() => {
+      document.querySelectorAll("[data-animate]").forEach((el) => observer.observe(el));
+    }, 50);
+
+    return () => {
+      clearTimeout(timeout);
+      observer.disconnect();
+    };
+  }, []);
+
+  return null;
+};
+
 const AppRoutes = () => (
   <div className={styles.App}>
     <Navbar />
     <ScrollToHash />
+    <ScrollAnimations />
 
     <Routes>
       <Route
