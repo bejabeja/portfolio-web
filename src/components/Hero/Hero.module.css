@@ -172,6 +172,33 @@
 }
 
 
+@media (min-width: 830px) {
+    .heroSection {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+        margin: 5rem auto;
+        text-align: left;
+    }
+
+    .heroContent {
+        text-align: left;
+        max-width: none;
+        flex: 1;
+    }
+
+    .heroActions {
+        justify-content: flex-start;
+    }
+
+    .heroImageWrapper {
+        width: 380px;
+        flex-shrink: 0;
+        margin-bottom: 0;
+    }
+}
+
 .topBlur,
 .bottomBlur {
     position: absolute;

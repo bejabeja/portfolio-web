@@ -5,7 +5,7 @@ const Contact = () => {
   return (
     <footer className={styles.container} id="contact" data-animate>
       <div className={styles.text}>
-        <h2>Contact</h2>
+        <h2 data-section-label="04 — Contact">Let's Work Together</h2>
         <p>Feel free to reach out!</p>
       </div>
 

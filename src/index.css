@@ -33,3 +33,15 @@ body {
     transition: none;
   }
 }
+
+[data-section-label]::before {
+  content: attr(data-section-label);
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #ffcc00;
+  margin-bottom: 0.4rem;
+  font-family: "Inter", sans-serif;
+}

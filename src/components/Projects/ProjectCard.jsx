@@ -39,10 +39,10 @@ const ProjectCard = ({ project, isProfessional = false }) => {
   const primaryLabel = demo
     ? "Open demo"
     : repository
-    ? "Open repository"
-    : link
-    ? "Visit site"
-    : null;
+      ? "Open repository"
+      : link
+        ? "Visit site"
+        : null;
 
   return (
     <article
@@ -82,7 +82,7 @@ const ProjectCard = ({ project, isProfessional = false }) => {
       <div className={styles.content}>
         <h3 id={`project-${title}`} className={styles.title}>
           {title}
-          {isProfessional && company ? ` — ${company}` : ""}
+          {isProfessional && company ? ` - ${company}` : ""}
         </h3>
 
         {isProfessional && years && (

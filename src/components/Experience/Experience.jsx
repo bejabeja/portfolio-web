@@ -13,8 +13,8 @@ const Experience = () => {
       aria-labelledby="experience-title"
       data-animate
     >
-      <h2 id="experience-title" className={styles.title}>
-        Experience
+      <h2 id="experience-title" className={styles.title} data-section-label="02 — Experience">
+        My Journey
       </h2>
       <div className={styles.content}>
         <div className={styles.skills} aria-label="Skills" role="list">

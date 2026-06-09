@@ -48,7 +48,7 @@
             "startDate": "2025",
             "endDate": "Present",
             "tasks": [
-                "Led frontend architecture redesign for a React/TypeScript codebase — guidelines, component structure, and long-term maintainability strategy.",
+                "Led frontend architecture redesign for a React/TypeScript codebase, guidelines, component structure, and long-term maintainability strategy.",
                 "Designed and prototyped the new UI in Figma, ensuring responsive and accessible layouts aligned with product goals.",
                 "Drove backend refactoring to improve scalability, separation of concerns, and clean architecture across the platform.",
                 "Established code review practices, coding standards, and CI/CD improvements to raise engineering quality.",

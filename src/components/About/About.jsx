@@ -4,7 +4,7 @@ import styles from "./About.module.css";
 const About = () => {
   return (
     <section className={styles.aboutSection} id="about" data-animate>
-      <h2 className={styles.sectionTitle}>About Me</h2>
+      <h2 className={styles.sectionTitle} data-section-label="01 — About">About Me</h2>
       <div className={styles.aboutWrapper}>
         <img
           className={styles.aboutImage}
@@ -41,7 +41,7 @@ const About = () => {
               <h3>Web Designer</h3>
               <p>
                 With a background in audiovisual communication and design, I
-                bridge the gap between product and engineering — from Figma
+                bridge the gap between product and engineering, from Figma
                 prototypes to pixel-perfect implementation.
               </p>
             </div>
