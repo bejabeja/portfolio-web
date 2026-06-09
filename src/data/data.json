@@ -88,7 +88,7 @@
                 "CSS",
                 "PostgreSQL"
             ],
-            "link": "https://tobeatraveller-client.vercel.app/",
+            "link": "https://tobeatraveller.mabella.dev",
             "repository": "https://github.com/bejabeja/tfm"
         },
         {
@@ -127,11 +127,26 @@
                 "React",
                 "CSS"
             ],
-            "link": "https://curriculum-three-brown.vercel.app/",
+            "link": "https://resume.mabella.dev",
             "repository": "https://github.com/bejabeja/curriculum-portfolio"
         }
     ],
     "professionalProjects": [
+        {
+            "title": "Visaflow",
+            "company": "Visaflow",
+            "description": "B2B and B2C platform for German visa applications. The HR portal is a backoffice that allows companies to manage their employees' visa processes, while the consumer-facing app guides individuals through their German visa application end to end.",
+            "skills": [
+                "React",
+                "Next.js",
+                "TypeScript",
+                "Node",
+                "Express",
+                "PostgreSQL"
+            ],
+            "years": "2025-present",
+            "link": "https://www.visaflow.app/"
+        },
         {
             "title": "Proppit Backoffice",
             "company": "Lifull Connect",
