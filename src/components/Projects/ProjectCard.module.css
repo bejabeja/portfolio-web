@@ -28,6 +28,29 @@
     transform: translateY(-6px);
 }
 
+/* Live preview iframe */
+.previewWrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 0.75rem;
+    overflow: hidden;
+}
+
+.preview {
+    width: 1280px;
+    height: 720px;
+    border: none;
+    transform-origin: top left;
+    pointer-events: none;
+}
+
+.previewOverlay {
+    position: absolute;
+    inset: 0;
+    background: transparent;
+}
+
 /* Image slider with scroll-snap */
 .imageSlider {
     display: flex;

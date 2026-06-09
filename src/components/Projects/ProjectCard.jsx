@@ -1,3 +1,4 @@
+import { useEffect, useRef, useState } from "react";
 import styles from "./ProjectCard.module.css";
 
 const ProjectCard = ({ project, isProfessional = false }) => {
@@ -14,6 +15,18 @@ const ProjectCard = ({ project, isProfessional = false }) => {
     video,
     images = [],
   } = project;
+
+  const wrapperRef = useRef(null);
+  const [scale, setScale] = useState(0.25);
+
+  useEffect(() => {
+    if (!wrapperRef.current) return;
+    const observer = new ResizeObserver(([entry]) => {
+      setScale(entry.contentRect.width / 1280);
+    });
+    observer.observe(wrapperRef.current);
+    return () => observer.disconnect();
+  }, []);
 
   const handleKeyDown = (e) => {
     // Enter or Space opens primary destination (demo -> repo -> link)
@@ -39,7 +52,20 @@ const ProjectCard = ({ project, isProfessional = false }) => {
       aria-labelledby={`project-${title}`}
       role="article"
     >
-      {images.length > 0 && (
+      {!isProfessional && link && (
+        <div className={styles.previewWrapper} ref={wrapperRef}>
+          <iframe
+            src={link}
+            title={`${title} preview`}
+            className={styles.preview}
+            style={{ transform: `scale(${scale})` }}
+            loading="lazy"
+            tabIndex={-1}
+          />
+          <div className={styles.previewOverlay} aria-hidden="true" />
+        </div>
+      )}
+      {!isProfessional && !link && images.length > 0 && (
         <div className={styles.imageSlider} aria-hidden="false">
           {images.map((imgSrc, index) => (
             <img
