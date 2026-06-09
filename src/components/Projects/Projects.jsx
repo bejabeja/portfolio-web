@@ -27,7 +27,7 @@ const Projects = () => {
   };
 
   const renderProjects = (projects, isProfessional = false) => (
-    <div className={styles.projects}>
+    <div key={activeTab} className={styles.projects}>
       {projects.map((project, id) => (
         <ProjectCard
           key={`${isProfessional ? "professional" : "personal"}-${id}`}
