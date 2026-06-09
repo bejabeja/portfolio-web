@@ -48,6 +48,42 @@
     to { --card-border-angle: 360deg; }
 }
 
+/* Featured card */
+.featured {
+    grid-column: 1 / -1;
+}
+
+.inner {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 1rem;
+}
+
+.featuredInner {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+}
+
+@media (min-width: 830px) {
+    .featuredInner {
+        flex-direction: row;
+        align-items: stretch;
+        gap: 1.5rem;
+    }
+
+    .featuredPreview {
+        flex: 0 0 55%;
+    }
+
+    .featured .content {
+        flex: 1;
+        justify-content: center;
+    }
+}
+
 /* Live preview iframe */
 .previewWrapper {
     position: relative;
@@ -69,6 +105,29 @@
     position: absolute;
     inset: 0;
     background: transparent;
+}
+
+.previewSkeleton {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(12, 16, 24, 0.9);
+    border-radius: 0.75rem;
+    color: rgba(176, 180, 192, 0.4);
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    z-index: 1;
+}
+
+.preview {
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.previewVisible {
+    opacity: 1;
 }
 
 /* Image slider with scroll-snap */

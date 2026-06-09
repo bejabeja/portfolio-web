@@ -33,10 +33,13 @@ const Hero = () => {
           {typed}
           {showCursor && <span className={styles.cursor} aria-hidden="true">|</span>}
         </p>
+
         <p className={styles.heroSubtitle}>
-          I turn complex problems into clean, fast web apps — 5+ years of{" "}
-          <strong>React, TypeScript</strong>, and a design eye that makes
-          working with product teams feel effortless.
+          Senior Software Developer with 5+ years of experience building
+          full-stack web apps. I specialize in{" "}
+          <strong>React and TypeScript</strong>, care deeply about clean code
+          and architecture, and bring a design background that helps me bridge
+          the gap between product and engineering.
         </p>
 
         <div className={styles.heroActions}>

@@ -92,7 +92,8 @@
                 "PostgreSQL"
             ],
             "link": "https://tobeatraveller.mabella.dev",
-            "repository": "https://github.com/bejabeja/tfm"
+            "repository": "https://github.com/bejabeja/tobeatraveller-web",
+            "featured": true
         },
         {
             "title": "CSV Manager",

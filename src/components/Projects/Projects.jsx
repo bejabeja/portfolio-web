@@ -30,7 +30,7 @@ const Projects = () => {
       return (
         <div key={activeTab} className={styles.projects}>
           {projects.map((project, id) => (
-            <ProjectCard key={`personal-${id}`} project={project} isProfessional={false} />
+            <ProjectCard key={`personal-${id}`} project={project} isProfessional={false} isFeatured={!!project.featured} />
           ))}
         </div>
       );
