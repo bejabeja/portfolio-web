@@ -192,6 +192,10 @@
         justify-content: flex-start;
     }
 
+    .heroTitle {
+        font-size: 4.5rem;
+    }
+
     .heroImageWrapper {
         width: 380px;
         flex-shrink: 0;

@@ -28,12 +28,30 @@
     gap: 2rem;
 }
 
-.aboutImage {
+.aboutImageWrap {
+    position: relative;
     width: 90%;
     max-width: 350px;
+    flex-shrink: 0;
+}
+
+.aboutImageWrap::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 23px;
+    background: linear-gradient(135deg, rgba(255, 204, 0, 0.55), rgba(123, 97, 255, 0.35));
+    z-index: 0;
+}
+
+.aboutImage {
+    position: relative;
+    z-index: 1;
+    width: 100%;
     border-radius: 20px;
     box-shadow: var(--shadow-md);
     object-fit: cover;
+    display: block;
 }
 
 .aboutList {
@@ -121,8 +139,10 @@
         align-items: flex-start;
     }
 
-    .aboutImage {
+    .aboutImageWrap {
         flex: 0 0 40%;
+        width: auto;
+        max-width: none;
     }
 
     .aboutList {

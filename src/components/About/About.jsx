@@ -6,12 +6,14 @@ const About = () => {
     <section className={styles.aboutSection} id="about" data-animate>
       <h2 className={styles.sectionTitle} data-section-label="01 — About">About Me</h2>
       <div className={styles.aboutWrapper}>
-        <img
-          className={styles.aboutImage}
-          src="/assets/about.webp"
-          alt="Miriam sitting with a laptop"
-          loading="lazy"
-        />
+        <div className={styles.aboutImageWrap}>
+          <img
+            className={styles.aboutImage}
+            src="/assets/about.webp"
+            alt="Miriam sitting with a laptop"
+            loading="lazy"
+          />
+        </div>
         <ul className={styles.aboutList}>
           <li className={styles.aboutItem}>
             <FaLaptopCode aria-hidden="true" />
