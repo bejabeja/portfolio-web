@@ -63,6 +63,13 @@
     color: var(--color-text-soft);
 }
 
+.heroActions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .contactBtn {
     display: inline-flex;
     align-items: center;
@@ -81,6 +88,29 @@
 .contactBtn:hover,
 .contactBtn:focus {
     background-color: #f7b500;
+    transform: scale(1.05);
+    outline: none;
+}
+
+.cvBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: transparent;
+    color: var(--color-secondary);
+    font-weight: 600;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    text-decoration: none;
+    border: 2px solid var(--color-secondary);
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.cvBtn:hover,
+.cvBtn:focus {
+    background-color: var(--color-secondary);
+    color: var(--color-bg);
     transform: scale(1.05);
     outline: none;
 }

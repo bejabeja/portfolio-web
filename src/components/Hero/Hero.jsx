@@ -18,12 +18,22 @@ const Hero = () => {
           the gap between product and engineering.
         </p>
 
-        <a
-          href="mailto:miriam.abella211@gmail.com"
-          className={styles.contactBtn}
-        >
-          Contact Me <FaPaperPlane aria-hidden="true" />
-        </a>
+        <div className={styles.heroActions}>
+          <a
+            href="mailto:miriam.abella211@gmail.com"
+            className={styles.contactBtn}
+          >
+            Contact Me <FaPaperPlane aria-hidden="true" />
+          </a>
+          <a
+            href="https://resume.mabella.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.cvBtn}
+          >
+            View Resume
+          </a>
+        </div>
       </div>
       <div className={styles.heroImageWrapper}>
         <img
