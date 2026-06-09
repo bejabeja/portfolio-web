@@ -18,9 +18,9 @@ const About = () => {
             <div className={styles.textContent}>
               <h3>Frontend Developer</h3>
               <p>
-                I craft responsive, accessible UIs with a focus on user
-                experience. I love turning designs into clean, interactive
-                interfaces using React, HTML, and CSS.
+                I craft responsive, accessible UIs with React and TypeScript,
+                focused on clean architecture and long-term maintainability. I
+                enjoy turning complex requirements into intuitive interfaces.
               </p>
             </div>
           </li>
@@ -29,9 +29,9 @@ const About = () => {
             <div className={styles.textContent}>
               <h3>Backend Developer</h3>
               <p>
-                I build reliable APIs and scalable backend systems using
-                Node.js, Express, and PostgreSQL. I write clean, tested code and
-                follow best practices like TDD and Agile.
+                I build scalable APIs and backend systems with Node.js, Express,
+                and PostgreSQL, applying TDD and Clean Architecture principles
+                to write code that's reliable and easy to evolve.
               </p>
             </div>
           </li>
@@ -40,9 +40,9 @@ const About = () => {
             <div className={styles.textContent}>
               <h3>Web Designer</h3>
               <p>
-                With a background in design and multimedia, I enjoy creating
-                visually appealing layouts and intuitive user flows that enhance
-                usability and brand identity.
+                With a background in audiovisual communication and design, I
+                bridge the gap between product and engineering — from Figma
+                prototypes to pixel-perfect implementation.
               </p>
             </div>
           </li>

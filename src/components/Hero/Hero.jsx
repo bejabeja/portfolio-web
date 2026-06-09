@@ -10,21 +10,13 @@ const Hero = () => {
         <h1 className={styles.heroTitle}>
           Hi, I'm Miriam <span className={styles.wave}>👋</span>
         </h1>
-        {/* <p className={styles.heroSubtitle}>
-          I build modern web apps using <strong>React</strong> &{" "}
-          <strong>Node.js</strong>.
-        </p> */}
         <p className={styles.heroSubtitle}>
-          I'm a software developer with a background in design and audiovisual
-          communication. I enjoy building web apps that are not only functional
-          but also beautiful and easy to use. I'm curious, love learning, and
-          truly care about clean code, thoughtful design, and good teamwork.
+          Senior Software Developer with 5+ years of experience building
+          full-stack web apps. I specialize in{" "}
+          <strong>React and TypeScript</strong>, care deeply about clean code
+          and architecture, and bring a design background that helps me bridge
+          the gap between product and engineering.
         </p>
-
-        {/* <p className={styles.heroSubtitle}>
-          Full Stack Developer with a design eye,I build web apps that feel as
-          good as they look.
-        </p> */}
 
         <a
           href="mailto:miriam.abella211@gmail.com"

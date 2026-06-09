@@ -19,7 +19,7 @@ const Navbar = () => {
   return (
     <nav className={styles.navbar}>
       <button className={styles.title} onClick={() => navigate("/#hero")}>
-        Mabella Portfolio
+        Miriam Abella
       </button>
 
       <div className={styles.menu}>
