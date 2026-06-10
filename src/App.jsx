@@ -9,7 +9,6 @@ import styles from "./App.module.css";
 import { useEffect } from "react";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
-import CustomCursor from "./components/CustomCursor/CustomCursor";
 import Experience from "./components/Experience/Experience";
 import Hero from "./components/Hero/Hero";
 import Navbar from "./components/Navbar/Navbar";
@@ -64,7 +63,6 @@ const ScrollAnimations = () => {
 
 const AppRoutes = () => (
   <div className={styles.App}>
-    <CustomCursor />
     <Navbar />
     <ScrollToHash />
     <ScrollAnimations />
