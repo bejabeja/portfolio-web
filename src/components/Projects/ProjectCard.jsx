@@ -5,6 +5,7 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
   const {
     title,
     description,
+    highlights = [],
     skills = [],
     demo,
     repository,
@@ -102,6 +103,14 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
           )}
 
           <p className={styles.description}>{description}</p>
+
+          {highlights.length > 0 && (
+            <ul className={styles.highlights}>
+              {(isFeatured ? highlights.slice(0, 2) : highlights).map((h, i) => (
+                <li key={i}>{h}</li>
+              ))}
+            </ul>
+          )}
 
           <ul className={styles.skills}>
             {skills.map((skill, id) => (

@@ -83,13 +83,22 @@
     "projects": [
         {
             "title": "To Be A Traveller",
-            "description": "A social travel platform where users can share and explore custom itineraries, and showcase the cities they've visited. Designed to inspire and connect travelers from around the world.",
+            "description": "Full-stack social travel platform where users create, discover, and share day-by-day itineraries with interactive maps. Features AI-powered trip generation, a social graph with follows, likes and comments, and a real-time notification system.",
+            "highlights": [
+                "Monorepo with a shared package unifying Redux store, API services, Zod schemas and i18n across the React 19 web app and React Native / Expo mobile app, zero code duplication between platforms.",
+                "AI itinerary generation via Groq / Llama 3.3 respecting user preferences and real coordinates.",
+                "Social feed with optimistic UI for likes, notification polling via Page Visibility API, and Open Graph meta tags for rich link previews."
+            ],
             "skills": [
-                "React",
-                "Node",
-                "Express",
-                "CSS",
-                "PostgreSQL"
+                "React 19",
+                "React Native",
+                "Node.js / Express 5",
+                "PostgreSQL",
+                "Redux Toolkit",
+                "Groq AI",
+                "Leaflet",
+                "Zod",
+                "Cloudinary"
             ],
             "link": "https://tobeatraveller.mabella.dev",
             "repository": "https://github.com/bejabeja/tobeatraveller-web",
