@@ -56,6 +56,7 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
       aria-labelledby={`project-${title}`}
       role="article"
     >
+      {isFeatured && <span className={styles.featuredBadge}>★ Featured Project</span>}
       <div className={isFeatured ? styles.featuredInner : styles.inner}>
         {showPreview && (
           <div

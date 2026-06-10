@@ -102,6 +102,12 @@
     border-right: none;
 }
 
+.stats strong {
+    font-size: 1.1rem;
+    color: var(--color-secondary);
+    font-variant-numeric: tabular-nums;
+}
+
 .credit {
     font-size: 0.78rem;
     color: rgba(176, 180, 192, 0.35);

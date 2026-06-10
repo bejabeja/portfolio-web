@@ -234,13 +234,30 @@
     }
 }
 
+.gradientName {
+    background: linear-gradient(120deg, #e2aa3a 0%, #c084fc 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
 .topBlur,
-.bottomBlur {
+.bottomBlur,
+.accentBlur {
     position: absolute;
     border-radius: 50%;
-    background: var(--color-blur);
     filter: blur(100px);
     z-index: -1;
+}
+
+.accentBlur {
+    width: 28vw;
+    height: 28vw;
+    min-width: 180px;
+    max-height: 380px;
+    bottom: -30px;
+    left: 5vw;
+    background: rgba(123, 97, 255, 0.18);
 }
 
 .topBlur {
@@ -250,6 +267,7 @@
     max-height: 1000px;
     top: -100px;
     left: -5vw;
+    background: var(--color-blur);
 }
 
 .bottomBlur {
@@ -259,4 +277,5 @@
     max-height: 1000px;
     top: 200px;
     right: -20vw;
+    background: var(--color-blur);
 }

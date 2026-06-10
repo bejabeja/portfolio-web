@@ -25,13 +25,14 @@ const Hero = () => {
     <section className={styles.heroSection} id="hero">
       <div className={styles.topBlur}></div>
       <div className={styles.bottomBlur}></div>
+      <div className={styles.accentBlur}></div>
       <div className={styles.heroContent}>
         <span className={styles.badge}>
           <span className={styles.badgeDot} aria-hidden="true" />
           Let's be in touch
         </span>
         <h1 className={styles.heroTitle}>
-          Hi, I'm Miriam <span className={styles.wave}>👋</span>
+          Hi, I'm <span className={styles.gradientName}>Miriam</span> <span className={styles.wave}>👋</span>
         </h1>
         <p className={styles.heroRole} aria-label={TYPED_ROLE}>
           {typed}
