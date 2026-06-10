@@ -1,44 +1,20 @@
 {
-    "skills": [
+    "skillCategories": [
         {
-            "title": "JavaScript",
-            "icon": "FaJs"
+            "label": "Frontend",
+            "skills": ["React", "TypeScript", "Next.js", "Redux Toolkit", "CSS", "Figma", "UI/UX"]
         },
         {
-            "title": "ReactJS",
-            "icon": "FaReact"
+            "label": "Backend",
+            "skills": ["Node.js", "PHP", "Ruby on Rails", "PostgreSQL", "MongoDB", "REST APIs"]
         },
         {
-            "title": "Node.js",
-            "icon": "FaNodeJs"
+            "label": "Testing & Quality",
+            "skills": ["Jest", "PHPUnit", "RSpec", "TDD", "Clean Architecture", "Hexagonal Arch."]
         },
         {
-            "title": "SQL",
-            "icon": "FaDatabase"
-        },
-        {
-            "title": "HTML",
-            "icon": "FaHtml5"
-        },
-        {
-            "title": "CSS",
-            "icon": "FaCss3Alt"
-        },
-        {
-            "title": "Git",
-            "icon": "FaGitAlt"
-        },
-        {
-            "title": "Figma",
-            "icon": "FaFigma"
-        },
-        {
-            "title": "TypeScript",
-            "icon": "SiTypescript"
-        },
-        {
-            "title": "UI/UX Design",
-            "icon": "FaPencilRuler"
+            "label": "Tools & Practices",
+            "skills": ["Git", "CI/CD", "Docker", "Agile", "Code Review", "Figma"]
         }
     ],
     "works": [

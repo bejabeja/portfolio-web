@@ -39,11 +39,11 @@ const Hero = () => {
         </p>
 
         <p className={styles.heroSubtitle}>
-          Senior Software Developer with 5+ years of experience building
-          full-stack web apps. I specialize in{" "}
-          <strong>React and TypeScript</strong>, care deeply about clean code
-          and architecture, and bring a design background that helps me bridge
-          the gap between product and engineering.
+          Senior Software Developer with 5+ years shipping full-stack products
+          in <strong>visa tech, real estate, and travel</strong>. I specialize
+          in React and TypeScript, care deeply about clean code and
+          architecture, and bring a design background that bridges product and
+          engineering.
         </p>
 
         <div className={styles.heroActions}>

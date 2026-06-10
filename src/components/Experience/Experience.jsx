@@ -1,13 +1,7 @@
-import { FaCss3Alt, FaDatabase, FaFigma, FaGitAlt, FaHtml5, FaJs, FaNodeJs, FaPencilRuler, FaReact } from "react-icons/fa";
-import { SiTypescript } from "react-icons/si";
 import data from "../../data/data.json";
 import styles from "./Experience.module.css";
 
-const SKILL_ICONS = { FaJs, FaReact, FaNodeJs, FaDatabase, FaHtml5, FaCss3Alt, FaGitAlt, FaFigma, SiTypescript, FaPencilRuler };
-
 const Experience = () => {
-  const doubledSkills = [...data.skills, ...data.skills];
-
   return (
     <section
       id="experience"
@@ -19,18 +13,17 @@ const Experience = () => {
         My Journey
       </h2>
 
-      <div className={styles.marqueeWrapper} aria-label="Skills">
-        <div className={styles.marqueeTrack}>
-          {doubledSkills.map((skill, idx) => {
-            const Icon = SKILL_ICONS[skill.icon];
-            return (
-              <span key={idx} className={styles.marqueeItem} aria-hidden={idx >= data.skills.length ? "true" : undefined}>
-                {Icon && <Icon aria-hidden="true" />}
-                {skill.title}
-              </span>
-            );
-          })}
-        </div>
+      <div className={styles.skillsGrid} aria-label="Tech stack">
+        {data.skillCategories.map((category) => (
+          <div key={category.label} className={styles.skillCategory}>
+            <span className={styles.categoryLabel}>{category.label}</span>
+            <div className={styles.categoryPills}>
+              {category.skills.map((skill) => (
+                <span key={skill} className={styles.pill}>{skill}</span>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
 
       <div className={styles.workExperiences} aria-label="Work experience">

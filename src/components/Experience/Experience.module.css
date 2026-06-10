@@ -26,70 +26,49 @@
     position: relative;
 }
 
-/* Marquee */
-.marqueeWrapper {
-    overflow: hidden;
-    position: relative;
-    padding: 0.5rem 0 2rem;
+/* Tech stack grid */
+.skillsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+    padding: 0.25rem 0 2rem;
 }
 
-.marqueeWrapper::before,
-.marqueeWrapper::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 80px;
-    z-index: 2;
-    pointer-events: none;
-}
-
-.marqueeWrapper::before {
-    left: 0;
-    background: linear-gradient(to right, var(--color-bg), transparent);
-}
-
-.marqueeWrapper::after {
-    right: 0;
-    background: linear-gradient(to left, var(--color-bg), transparent);
-}
-
-.marqueeTrack {
+.skillCategory {
     display: flex;
-    gap: 0.65rem;
-    width: max-content;
-    animation: marquee 30s linear infinite;
+    flex-direction: column;
+    gap: 0.6rem;
 }
 
-.marqueeTrack:hover {
-    animation-play-state: paused;
+.categoryLabel {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-secondary);
 }
 
-@keyframes marquee {
-    from { transform: translateX(0); }
-    to   { transform: translateX(-50%); }
+.categoryPills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
 }
 
-.marqueeItem {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.45rem;
+.pill {
+    font-size: 0.8rem;
+    font-weight: 500;
     color: var(--color-text-soft);
-    font-size: 0.82rem;
-    font-weight: 600;
-    white-space: nowrap;
-    padding: 0.42rem 0.9rem;
+    padding: 0.3rem 0.75rem;
     border-radius: 999px;
     border: 1px solid rgba(255, 255, 255, 0.07);
     background: rgba(255, 255, 255, 0.03);
-    letter-spacing: 0.02em;
-    transition: color 0.2s ease, border-color 0.2s ease;
+    letter-spacing: 0.01em;
 }
 
-.marqueeItem svg {
-    font-size: 0.9rem;
-    color: var(--color-secondary);
-    flex-shrink: 0;
+@media (min-width: 830px) {
+    .skillsGrid {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
 /* Work experience timeline */
@@ -199,10 +178,6 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-    .marqueeTrack {
-        animation: none;
-    }
-
     .workExperience {
         transition: none;
     }
