@@ -27,6 +27,7 @@ const Hero = () => {
       <div className={styles.bottomBlur}></div>
       <div className={styles.heroContent}>
         <span className={styles.badge}>
+          <span className={styles.badgeDot} aria-hidden="true" />
           Let's be in touch
         </span>
         <h1 className={styles.heroTitle}>

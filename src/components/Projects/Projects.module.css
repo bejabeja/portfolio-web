@@ -69,8 +69,6 @@
 .companyTitle {
     font-size: 1rem;
     font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
     color: var(--color-text-soft);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
     padding-bottom: 0.5rem;
