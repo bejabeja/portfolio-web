@@ -66,6 +66,7 @@ const Projects = () => {
       aria-labelledby="projects-title"
       data-animate
     >
+      <div className={styles.tabsWrapper}>
       <div
         className={styles.tabs}
         role="tablist"
@@ -89,6 +90,7 @@ const Projects = () => {
             {tab.label}
           </button>
         ))}
+      </div>
       </div>
 
       <h2 id="projects-title" className={styles.title} data-section-label="03 — Projects">

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaPaperPlane } from "react-icons/fa";
+import { FaExternalLinkAlt, FaPaperPlane } from "react-icons/fa";
 import styles from "./Hero.module.css";
 
 const TYPED_ROLE = "Senior Software Developer · React · TypeScript";
@@ -59,7 +59,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className={styles.cvBtn}
           >
-            View Resume
+            View Resume <FaExternalLinkAlt aria-hidden="true" />
           </a>
         </div>
       </div>

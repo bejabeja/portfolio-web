@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { FaExternalLinkAlt, FaFigma, FaGithub, FaPlay } from "react-icons/fa";
 import styles from "./ProjectCard.module.css";
 
 const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) => {
@@ -120,19 +121,19 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
 
           <div className={styles.links}>
             {demo && (
-              <a aria-label={`${primaryLabel} for ${title}`} href={demo} className={styles.link} target="_blank" rel="noopener noreferrer">Demo</a>
+              <a aria-label={`${primaryLabel} for ${title}`} href={demo} className={styles.link} target="_blank" rel="noopener noreferrer">Demo <FaPlay aria-hidden="true" /></a>
             )}
             {link && (
-              <a aria-label={`Visit ${title}`} href={link} className={styles.link} target="_blank" rel="noopener noreferrer">Visit Site</a>
+              <a aria-label={`Visit ${title}`} href={link} className={styles.link} target="_blank" rel="noopener noreferrer">Visit Site <FaExternalLinkAlt aria-hidden="true" /></a>
             )}
             {repository && (
-              <a aria-label={`Repository for ${title}`} href={repository} className={styles.linkGhost} target="_blank" rel="noopener noreferrer">Repo</a>
+              <a aria-label={`Repository for ${title}`} href={repository} className={styles.linkGhost} target="_blank" rel="noopener noreferrer"><FaGithub aria-hidden="true" /> Repo</a>
             )}
             {figma && (
-              <a aria-label={`Figma for ${title}`} href={figma} className={styles.linkGhost} target="_blank" rel="noopener noreferrer">Figma</a>
+              <a aria-label={`Figma for ${title}`} href={figma} className={styles.linkGhost} target="_blank" rel="noopener noreferrer"><FaFigma aria-hidden="true" /> Figma</a>
             )}
             {video && (
-              <a aria-label={`Video for ${title}`} href={video} className={styles.linkGhost} target="_blank" rel="noopener noreferrer">Video</a>
+              <a aria-label={`Video for ${title}`} href={video} className={styles.linkGhost} target="_blank" rel="noopener noreferrer"><FaPlay aria-hidden="true" /> Video</a>
             )}
           </div>
         </div>
