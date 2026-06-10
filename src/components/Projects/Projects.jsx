@@ -92,7 +92,7 @@ const Projects = () => {
       </div>
 
       <h2 id="projects-title" className={styles.title} data-section-label="03 — Projects">
-        {tabs.find((t) => t.id === activeTab)?.label}
+        Projects
       </h2>
 
       <div

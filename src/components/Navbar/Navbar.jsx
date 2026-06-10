@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import styles from "./Navbar.module.css";
@@ -7,10 +7,22 @@ const SECTIONS = ["hero", "about", "experience", "projects", "contact"];
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const menuRef = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
   const [progress, setProgress] = useState(0);
+
+  useEffect(() => {
+    if (!isMenuOpen) return;
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        setIsMenuOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [isMenuOpen]);
 
   useEffect(() => {
     const onScroll = () => {
@@ -52,7 +64,7 @@ const Navbar = () => {
         <span className={styles.titleLast}>Abella</span>
       </button>
 
-      <div className={styles.menu}>
+      <div className={styles.menu} ref={menuRef}>
         <button
           className={styles.menuBtn}
           onClick={toggleMenu}

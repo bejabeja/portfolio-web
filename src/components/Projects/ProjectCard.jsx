@@ -122,17 +122,17 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
             {demo && (
               <a aria-label={`${primaryLabel} for ${title}`} href={demo} className={styles.link} target="_blank" rel="noopener noreferrer">Demo</a>
             )}
-            {repository && (
-              <a aria-label={`Repository for ${title}`} href={repository} className={styles.link} target="_blank" rel="noopener noreferrer">Repo</a>
-            )}
-            {figma && (
-              <a aria-label={`Figma for ${title}`} href={figma} className={styles.link} target="_blank" rel="noopener noreferrer">Figma</a>
-            )}
-            {video && (
-              <a aria-label={`Video for ${title}`} href={video} className={styles.link} target="_blank" rel="noopener noreferrer">Video</a>
-            )}
             {link && (
               <a aria-label={`Visit ${title}`} href={link} className={styles.link} target="_blank" rel="noopener noreferrer">Visit Site</a>
+            )}
+            {repository && (
+              <a aria-label={`Repository for ${title}`} href={repository} className={styles.linkGhost} target="_blank" rel="noopener noreferrer">Repo</a>
+            )}
+            {figma && (
+              <a aria-label={`Figma for ${title}`} href={figma} className={styles.linkGhost} target="_blank" rel="noopener noreferrer">Figma</a>
+            )}
+            {video && (
+              <a aria-label={`Video for ${title}`} href={video} className={styles.linkGhost} target="_blank" rel="noopener noreferrer">Video</a>
             )}
           </div>
         </div>

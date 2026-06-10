@@ -30,9 +30,10 @@ const Experience = () => {
         {data.works.map((work, idx) => {
           const key = `${work.organisation}-${work.role}-${idx}`;
           return (
-            <article key={key} className={styles.workExperience}>
+            <article key={key} className={`${styles.workExperience} ${work.endDate === "Present" ? styles.current : ""}`}>
               <h3>
                 {work.role}, {work.organisation}
+                {work.endDate === "Present" && <span className={styles.currentBadge}>Now</span>}
               </h3>
               <p className={styles.date}>
                 <time dateTime={work.startDate}>{work.startDate}</time> -{" "}
