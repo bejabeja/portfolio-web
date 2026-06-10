@@ -10,6 +10,11 @@ const Contact = () => {
       <p className={styles.subtitle}>
         Open to new opportunities, collaborations, or just a good conversation.
       </p>
+      <div className={styles.stats} aria-label="Quick facts">
+        <span>5+ Years</span>
+        <span>Full-Stack</span>
+        <span>Remote-first</span>
+      </div>
       <a href="mailto:miriam.abella211@gmail.com" className={styles.ctaBtn}>
         Say Hello <FaPaperPlane aria-hidden="true" />
       </a>

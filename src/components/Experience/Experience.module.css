@@ -1,11 +1,9 @@
 @import "../../vars.css";
 
 :root {
-    --card-bg: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
     --accent-grad: linear-gradient(135deg, var(--color-secondary), #7b61ff);
 }
 
-/* Container + título */
 .container {
     color: var(--color-text);
     border-radius: 1.25rem;
@@ -20,87 +18,81 @@
 
 .title {
     color: var(--color-text);
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.01em;
     padding-bottom: 1.5rem;
     text-align: center;
     position: relative;
 }
 
-/* subtle underline */
-.title::after {
+/* Marquee */
+.marqueeWrapper {
+    overflow: hidden;
+    position: relative;
+    padding: 0.5rem 0 2rem;
+}
+
+.marqueeWrapper::before,
+.marqueeWrapper::after {
     content: "";
-    display: block;
-    width: 60px;
-    height: 4px;
-    margin: 0.75rem auto 0;
-    border-radius: 2px;
-    background: var(--accent-grad);
-    opacity: 0.95;
-}
-
-/* layout */
-.content {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-    align-items: stretch;
-}
-
-/* Skills grid */
-.skills {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 1.25rem;
-    justify-content: center;
-    width: 100%;
-}
-
-.skill {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    justify-content: center;
-    transition: transform 0.28s cubic-bezier(.2, .9, .2, 1), box-shadow 0.28s;
-    background: var(--card-bg);
-    padding: 1rem;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.03);
-}
-
-/* hover lift */
-.skill:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 10px 30px rgba(11, 12, 15, 0.45);
-}
-
-/* icon with soft gradient border and subtle glow */
-.skillIcon {
-    font-size: 2.5rem;
-    background-color: var(--color-surface);
-    border: 2px solid var(--color-secondary);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
     width: 80px;
-    height: 80px;
-    color: var(--color-secondary);
-    transition: all 0.3s ease;
+    z-index: 2;
+    pointer-events: none;
 }
 
-.skillTitle {
-    font-size: 0.98rem;
-    font-family: var(--font-sans);
+.marqueeWrapper::before {
+    left: 0;
+    background: linear-gradient(to right, var(--color-bg), transparent);
+}
+
+.marqueeWrapper::after {
+    right: 0;
+    background: linear-gradient(to left, var(--color-bg), transparent);
+}
+
+.marqueeTrack {
+    display: flex;
+    gap: 0.65rem;
+    width: max-content;
+    animation: marquee 30s linear infinite;
+}
+
+.marqueeTrack:hover {
+    animation-play-state: paused;
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+.marqueeItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    color: var(--color-text-soft);
+    font-size: 0.82rem;
     font-weight: 600;
-    color: #d0d4e0;
-    text-align: center;
+    white-space: nowrap;
+    padding: 0.42rem 0.9rem;
+    border-radius: 999px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    background: rgba(255, 255, 255, 0.03);
+    letter-spacing: 0.02em;
+    transition: color 0.2s ease, border-color 0.2s ease;
 }
 
-/* Experiencias laborales */
+.marqueeItem svg {
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+    flex-shrink: 0;
+}
+
+/* Work experience timeline */
 .workExperiences {
     display: flex;
     flex-direction: column;
@@ -110,7 +102,6 @@
     position: relative;
 }
 
-/* vertical timeline line */
 .workExperiences::before {
     content: "";
     position: absolute;
@@ -118,20 +109,19 @@
     top: 0.75rem;
     bottom: 0.75rem;
     width: 1px;
-    background: linear-gradient(to bottom, rgba(255, 204, 0, 0.7), rgba(123, 97, 255, 0.4), transparent);
+    background: linear-gradient(to bottom, rgba(226, 170, 58, 0.7), rgba(123, 97, 255, 0.4), transparent);
 }
 
 .workExperience {
     border-radius: 1rem;
     box-shadow: var(--shadow-md);
     transition: transform 0.28s ease, box-shadow 0.28s ease;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.005));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.015), rgba(255, 255, 255, 0.005));
     padding: 1.15rem 1.25rem;
-    border: 1px solid rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.03);
     position: relative;
 }
 
-/* timeline dot */
 .workExperience::before {
     content: "";
     position: absolute;
@@ -141,11 +131,10 @@
     height: 12px;
     border-radius: 50%;
     background: var(--color-secondary);
-    border: 2px solid #0a0e14;
-    box-shadow: 0 0 0 3px rgba(255, 204, 0, 0.18);
+    border: 2px solid var(--color-bg);
+    box-shadow: 0 0 0 3px rgba(226, 170, 58, 0.18);
 }
 
-/* hover effect */
 .workExperience:hover {
     transform: translateY(-6px);
     box-shadow: 0 18px 45px rgba(8, 9, 12, 0.55);
@@ -167,9 +156,7 @@
     padding-left: 0.75rem;
 }
 
-/* Task list styling */
 .workExperience ul {
-    padding-top: 0.75rem;
     list-style: none;
     font-size: 1rem;
     color: var(--color-text);
@@ -177,78 +164,45 @@
     flex-direction: column;
     gap: 0.5rem;
     margin: 0;
+    padding-top: 0.5rem;
     padding-left: 1.1rem;
 }
 
-/* custom bullet */
 .workExperience li {
     position: relative;
     padding-left: 1.1rem;
-    color: var(--color-text);
+    color: var(--color-text-soft);
+    line-height: 1.5;
 }
 
 .workExperience li::before {
-    content: "•";
+    content: "▸";
     position: absolute;
     left: 0;
     color: var(--color-secondary);
-    font-weight: 700;
-    transform: translateY(-1px);
+    font-size: 0.7rem;
+    top: 0.2rem;
 }
 
-/* Date style */
 .date {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--color-text-soft);
     padding-left: 0.75rem;
+    font-variant-numeric: tabular-nums;
 }
 
-/* small utility: visually hidden for accessibility */
-.srOnly {
-    position: absolute !important;
-    height: 1px;
-    width: 1px;
-    overflow: hidden;
-    clip: rect(1px, 1px, 1px, 1px);
-    white-space: nowrap;
-}
-
-/* responsive tweaks */
 @media screen and (min-width: 830px) {
-    .content {
-        flex-direction: row;
-        justify-content: space-between;
-        gap: 2.5rem;
-    }
-
-    .skills {
-        width: 35%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-        gap: 1rem;
-    }
-
-    .skill {
-        width: calc(50% - 0.75rem);
-    }
-
-    .skillIcon {
-        font-size: 2.9rem;
-        width: 100px;
-        height: 100px;
-    }
-
-    .workExperiences {
-        width: 62%;
+    .title {
+        font-size: 2.8rem;
+        text-align: left;
     }
 }
 
-/* Respect prefers-reduced-motion */
 @media (prefers-reduced-motion: reduce) {
+    .marqueeTrack {
+        animation: none;
+    }
 
-    .skill,
-    .skillIcon,
     .workExperience {
         transition: none;
     }

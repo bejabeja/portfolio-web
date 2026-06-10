@@ -26,6 +26,10 @@ const Hero = () => {
       <div className={styles.topBlur}></div>
       <div className={styles.bottomBlur}></div>
       <div className={styles.heroContent}>
+        <span className={styles.badge}>
+          <span className={styles.badgeDot} aria-hidden="true" />
+          Open to opportunities
+        </span>
         <h1 className={styles.heroTitle}>
           Hi, I'm Miriam <span className={styles.wave}>👋</span>
         </h1>

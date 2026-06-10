@@ -3,10 +3,10 @@ import styles from "./About.module.css";
 
 const About = () => {
   return (
-    <section className={styles.aboutSection} id="about" data-animate>
-      <h2 className={styles.sectionTitle} data-section-label="01 — About">A Bit About Me</h2>
+    <section className={styles.aboutSection} id="about">
+      <h2 className={styles.sectionTitle} data-section-label="01 — About" data-animate data-animate-from="blur">A Bit About Me</h2>
       <div className={styles.aboutWrapper}>
-        <div className={styles.aboutImageWrap}>
+        <div className={styles.aboutImageWrap} data-animate data-animate-from="left">
           <img
             className={styles.aboutImage}
             src="/assets/about.webp"
@@ -15,7 +15,7 @@ const About = () => {
           />
         </div>
         <ul className={styles.aboutList}>
-          <li className={styles.aboutItem}>
+          <li className={styles.aboutItem} data-animate data-animate-delay="1">
             <FaLaptopCode aria-hidden="true" />
             <div className={styles.textContent}>
               <h3>I obsess over the UI</h3>
@@ -26,7 +26,7 @@ const About = () => {
               </p>
             </div>
           </li>
-          <li className={styles.aboutItem}>
+          <li className={styles.aboutItem} data-animate data-animate-delay="2">
             <FaServer aria-hidden="true" />
             <div className={styles.textContent}>
               <h3>I write the code behind the code</h3>
@@ -37,7 +37,7 @@ const About = () => {
               </p>
             </div>
           </li>
-          <li className={styles.aboutItem}>
+          <li className={styles.aboutItem} data-animate data-animate-delay="3">
             <FaPaintBrush aria-hidden="true" />
             <div className={styles.textContent}>
               <h3>Design is part of the package</h3>
