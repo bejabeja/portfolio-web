@@ -47,7 +47,9 @@ const Navbar = () => {
   return (
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ""}`}>
       <button className={styles.title} onClick={() => navigate("/#hero")}>
-        Miriam Abella
+        <span className={styles.titleFirst}>Miriam</span>
+        {" "}
+        <span className={styles.titleLast}>Abella</span>
       </button>
 
       <div className={styles.menu}>

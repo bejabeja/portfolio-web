@@ -5,6 +5,11 @@
   font-family: sans-serif;
 }
 
+body.cursor-active,
+body.cursor-active * {
+  cursor: none !important;
+}
+
 html,
 body {
   background-color: #0a0e14;

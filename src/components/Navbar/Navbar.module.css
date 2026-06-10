@@ -26,17 +26,24 @@
 
 .title {
     all: unset;
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--color-secondary);
-    border-radius: 8px;
+    font-size: 1.5rem;
+    letter-spacing: -0.01em;
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: opacity 0.25s ease;
 }
 
 .title:hover {
+    opacity: 0.75;
+}
 
-    color: var(--color-text);
+.titleFirst {
+    font-weight: 300;
+    color: var(--color-text-soft);
+}
+
+.titleLast {
+    font-weight: 800;
+    color: var(--color-secondary);
 }
 
 .menu {
