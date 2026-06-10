@@ -69,8 +69,13 @@
     padding: 1.5rem;
     border-radius: 16px;
     box-shadow: var(--shadow-md);
-    transition: transform 0.3s ease;
+    border-left: 3px solid transparent;
+    transition: border-color 0.25s ease;
     cursor: default;
+}
+
+.aboutItem:hover {
+    border-left-color: var(--color-secondary);
 }
 
 

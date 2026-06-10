@@ -7,13 +7,12 @@ const Experience = () => {
       id="experience"
       className={styles.container}
       aria-labelledby="experience-title"
-      data-animate
     >
-      <h2 id="experience-title" className={styles.title} data-section-label="02 — Experience">
+      <h2 id="experience-title" className={styles.title} data-section-label="02 — Experience" data-animate data-animate-from="blur">
         My Journey
       </h2>
 
-      <div className={styles.skillsGrid} aria-label="Tech stack">
+      <div className={styles.skillsGrid} aria-label="Tech stack" data-animate data-animate-delay="1">
         {data.skillCategories.map((category) => (
           <div key={category.label} className={styles.skillCategory}>
             <span className={styles.categoryLabel}>{category.label}</span>
@@ -30,7 +29,7 @@ const Experience = () => {
         {data.works.map((work, idx) => {
           const key = `${work.organisation}-${work.role}-${idx}`;
           return (
-            <article key={key} className={`${styles.workExperience} ${work.endDate === "Present" ? styles.current : ""}`}>
+            <article key={key} className={`${styles.workExperience} ${work.endDate === "Present" ? styles.current : ""}`} data-animate data-animate-delay={String(idx + 2)}>
               <h3>
                 {work.role}, {work.organisation}
                 {work.endDate === "Present" && <span className={styles.currentBadge}>Now</span>}

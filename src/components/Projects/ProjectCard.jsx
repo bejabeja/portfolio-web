@@ -107,7 +107,7 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
 
           {highlights.length > 0 && (
             <ul className={styles.highlights}>
-              {(isFeatured ? highlights.slice(0, 2) : highlights).map((h, i) => (
+              {highlights.map((h, i) => (
                 <li key={i}>{h}</li>
               ))}
             </ul>
