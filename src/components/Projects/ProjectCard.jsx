@@ -50,11 +50,10 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
 
   return (
     <article
-      className={`${styles.container} ${isFeatured ? styles.featured : ""}`}
+      className={`${styles.container} ${isFeatured ? styles.featured : ""} ${isProfessional ? styles.professional : ""}`}
       tabIndex={0}
       onKeyDown={handleKeyDown}
       aria-labelledby={`project-${title}`}
-      role="article"
     >
       {isFeatured && <span className={styles.featuredBadge}>★ Featured Project</span>}
       <div className={isFeatured ? styles.featuredInner : styles.inner}>
@@ -97,11 +96,10 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
         <div className={styles.content}>
           <h3 id={`project-${title}`} className={styles.title}>
             {title}
-            {isProfessional && company ? ` - ${company}` : ""}
           </h3>
 
           {isProfessional && years && (
-            <p><em>{years}</em></p>
+            <p className={styles.years}>{years}</p>
           )}
 
           <p className={styles.description}>{description}</p>

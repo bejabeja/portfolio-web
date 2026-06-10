@@ -16,7 +16,7 @@
     backdrop-filter: blur(8px);
     border-radius: 1rem;
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.55);
-    padding: 1rem;
+    padding: 1.25rem;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     cursor: pointer;
     color: var(--color-text);
@@ -52,6 +52,18 @@
 /* Featured card */
 .featured {
     grid-column: 1 / -1;
+}
+
+/* Professional card */
+.professional {
+    border-top: 2px solid rgba(123, 97, 255, 0.35);
+}
+
+.professional:hover,
+.professional:focus-visible {
+    background:
+        linear-gradient(rgba(18, 22, 33, 0.85), rgba(18, 22, 33, 0.85)) padding-box,
+        conic-gradient(from var(--card-border-angle), transparent 20%, #7b61ff 55%, #a78bfa 65%, transparent 80%) border-box;
 }
 
 .featuredBadge {
@@ -186,7 +198,7 @@
 .content {
     display: flex;
     flex-direction: column;
-    gap: 0.6rem;
+    gap: 1rem;
     flex-grow: 1;
 }
 
@@ -200,8 +212,16 @@
 .description {
     font-size: 0.95rem;
     color: var(--color-text-soft);
-    line-height: 1.4;
+    line-height: 1.6;
     margin: 0;
+}
+
+.years {
+    font-size: 0.82rem;
+    color: var(--color-text-soft);
+    font-variant-numeric: tabular-nums;
+    margin: 0;
+    opacity: 0.75;
 }
 
 .highlights {
@@ -216,9 +236,9 @@
 .highlights li {
     position: relative;
     padding-left: 1rem;
-    font-size: 0.82rem;
+    font-size: 0.9rem;
     color: var(--color-text-soft);
-    line-height: 1.45;
+    line-height: 1.55;
 }
 
 .highlights li::before {
