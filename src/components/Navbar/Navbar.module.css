@@ -93,20 +93,18 @@
 
 .activeLink {
     color: var(--color-secondary) !important;
-    position: relative;
 }
 
-.activeLink::after {
-    content: "";
+.progressBar {
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 18px;
-    height: 2px;
-    background: var(--color-secondary);
-    border-radius: 2px;
+    left: 0;
+    height: 1.5px;
+    background: linear-gradient(to right, #ffcc00, #7b61ff);
+    transition: width 0.08s linear;
+    pointer-events: none;
 }
+
 
 .menuBtn {
     display: none;
