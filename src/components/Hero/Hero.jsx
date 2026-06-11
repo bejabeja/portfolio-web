@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { FaExternalLinkAlt, FaPaperPlane } from "react-icons/fa";
 import styles from "./Hero.module.css";
 
-const TYPED_ROLE = "Senior Software Developer · React · TypeScript";
+const TYPED_ROLE = "Full-Stack · React · TypeScript · Node.js";
 
 const Hero = () => {
   const [typed, setTyped] = useState("");
@@ -29,10 +29,11 @@ const Hero = () => {
       <div className={styles.heroContent}>
         <span className={styles.badge}>
           <span className={styles.badgeDot} aria-hidden="true" />
-          Let's be in touch
+          Open to new opportunities
         </span>
         <h1 className={styles.heroTitle}>
-          Hi, I'm <span className={styles.gradientName}>Miriam</span> <span className={styles.wave}>👋</span>
+          <span className={styles.heroIm}>I'm</span>
+          <span className={styles.heroName}>Miriam Abella</span>
         </h1>
         <p className={styles.heroRole} aria-label={TYPED_ROLE}>
           {typed}
@@ -40,11 +41,10 @@ const Hero = () => {
         </p>
 
         <p className={styles.heroSubtitle}>
-          Senior Software Developer with 5+ years shipping full-stack products
-          in <strong>visa tech, real estate, and travel</strong>. I specialize
-          in React and TypeScript, care deeply about clean code and
-          architecture, and bring a design background that bridges product and
-          engineering.
+          Senior Software Developer with 5+ years building full-stack products
+          across <strong>visa tech, real estate, and travel</strong>. I care
+          about clean code, solid architecture, and interfaces that feel
+          obvious to use. Design background included.
         </p>
 
         <div className={styles.heroActions}>
@@ -52,7 +52,7 @@ const Hero = () => {
             href="mailto:miriam.abella211@gmail.com"
             className={styles.contactBtn}
           >
-            Contact Me <FaPaperPlane aria-hidden="true" />
+            Get in touch <FaPaperPlane aria-hidden="true" />
           </a>
           <a
             href="https://resume.mabella.dev"
@@ -64,13 +64,24 @@ const Hero = () => {
           </a>
         </div>
       </div>
-      <div className={styles.heroImageWrapper}>
-        <img
-          src="/assets/hero1.webp"
-          alt="Portrait of Miriam"
-          className={styles.heroImage}
-          loading="lazy"
-        />
+      <div className={styles.codeBlock}>
+        <div className={styles.codeHeader}>
+          <span className={styles.codeDotRed} />
+          <span className={styles.codeDotYellow} />
+          <span className={styles.codeDotGreen} />
+          <span className={styles.codeFilename}>miriam.ts</span>
+        </div>
+        <pre className={styles.codePre}>
+          <span className={styles.codeLine}><span className={styles.cComment}>{"// life outside the terminal"}</span></span>
+          <span className={styles.codeLine}><span className={styles.cKw}>const</span>{" "}<span className={styles.cVar}>miriam</span>{" = {"}</span>
+          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>happiest</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"on fresh snow </span><span className={styles.skiAnim}>⛷️</span><span className={styles.cStr}>"</span><span className={styles.cPunct}>,</span></span>
+          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>recharges</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"beach walks at dusk </span><span className={styles.waveAnim}>🌊</span><span className={styles.cStr}>"</span><span className={styles.cPunct}>,</span></span>
+          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>morningFuel</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"oat milk flat white ☕"</span><span className={styles.cPunct}>,</span></span>
+          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>origin</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"Barcelona → Switzerland 🌍"</span><span className={styles.cPunct}>,</span></span>
+          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>background</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"film school → code 🎬"</span><span className={styles.cPunct}>,</span></span>
+          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>languages</span><span className={styles.cPunct}>: [</span><span className={styles.cStr}>"ES"</span><span className={styles.cPunct}>, </span><span className={styles.cStr}>"EN"</span><span className={styles.cPunct}>, </span><span className={styles.cStr}>"CA"</span><span className={styles.cPunct}>],</span></span>
+          <span className={styles.codeLine}><span className={styles.cPunct}>{"}"}</span><span className={styles.codeCursor} /></span>
+        </pre>
       </div>
     </section>
   );

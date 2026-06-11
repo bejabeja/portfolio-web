@@ -93,7 +93,7 @@ const Projects = () => {
       </div>
       </div>
 
-      <h2 id="projects-title" className={styles.title} data-section-label="03 — Projects">
+      <h2 id="projects-title" className={styles.title} data-section-label="03 · Projects">
         Projects
       </h2>
 

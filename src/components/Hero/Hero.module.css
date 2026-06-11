@@ -1,13 +1,14 @@
 .heroSection {
     position: relative;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     align-items: center;
     padding: 2rem;
     color: var(--color-text);
     max-width: 1200px;
     margin: 3rem auto;
     z-index: 0;
+    gap: 2.5rem;
 }
 
 .badge {
@@ -47,40 +48,29 @@
 }
 
 .heroTitle {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-bottom: 1rem;
+    line-height: 1;
+}
+
+.heroIm {
+    font-family: var(--font-heading);
+    font-weight: 400;
+    font-size: 1.4rem;
+    color: var(--color-text-soft);
+    letter-spacing: 0.01em;
+    margin-bottom: 0.15em;
+}
+
+.heroName {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    color: var(--color-text);
-}
-
-.wave {
-    display: inline-block;
-    animation: waveAnim 2s infinite;
-}
-
-@keyframes waveAnim {
-
-    0%,
-    100% {
-        transform: rotate(0deg);
-    }
-
-    20% {
-        transform: rotate(15deg);
-    }
-
-    40% {
-        transform: rotate(-10deg);
-    }
-
-    60% {
-        transform: rotate(15deg);
-    }
-
-    80% {
-        transform: rotate(-5deg);
-    }
+    font-size: 3.2rem;
+    color: var(--color-secondary);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
 }
 
 .heroRole {
@@ -176,36 +166,111 @@
     outline: none;
 }
 
-.heroImageWrapper {
-    position: relative;
-    max-width: 350px;
-    width: 80%;
-    margin-bottom: 2rem;
-    animation: floatUpDown 5s ease-in-out infinite;
-}
-
-.heroImageWrapper::before {
-    content: "";
-    position: absolute;
-    inset: -3px;
-    border-radius: 23px;
-    background: linear-gradient(135deg, rgba(226, 170, 58, 0.5), rgba(123, 97, 255, 0.3));
-    z-index: 0;
-}
-
-.heroImage {
-    position: relative;
-    z-index: 1;
+.codeBlock {
     width: 100%;
-    border-radius: 20px;
-    box-shadow: var(--shadow-md);
-    display: block;
-    object-fit: cover;
+    max-width: 460px;
+    background: #0d1117;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    overflow: hidden;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.6);
+    font-family: "JetBrains Mono", "Fira Code", ui-monospace, monospace;
+    flex-shrink: 0;
 }
 
-@keyframes floatUpDown {
+.codeHeader {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.6rem 0.9rem;
+    background: #161b22;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.codeDotRed, .codeDotYellow, .codeDotGreen {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+.codeDotRed    { background: #ff5f57; }
+.codeDotYellow { background: #febc2e; }
+.codeDotGreen  { background: #28c840; }
+
+.codeFilename {
+    margin-left: 0.4rem;
+    font-size: 0.72rem;
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.codePre {
+    margin: 0;
+    padding: 1rem 0;
+    counter-reset: line;
+    overflow-x: auto;
+}
+
+.codeLine {
+    display: block;
+    line-height: 1.75;
+    font-size: 0.85rem;
+    padding-right: 1.25rem;
+    counter-increment: line;
+    white-space: pre;
+}
+
+.codeLine::before {
+    content: counter(line);
+    display: inline-block;
+    min-width: 2.5rem;
+    padding-right: 0.75rem;
+    text-align: right;
+    color: rgba(255, 255, 255, 0.18);
+    font-size: 0.72rem;
+    user-select: none;
+}
+
+.cComment { color: #6a9955; font-style: italic; }
+.cKw    { color: #c084fc; }
+.cVar   { color: #60a5fa; }
+.cKey   { color: #7dd3fc; }
+.cStr   { color: #4ade80; }
+.cNum   { color: #fb923c; }
+.cPunct { color: #94a3b8; }
+
+.codeCursor {
+    display: inline-block;
+    width: 2px;
+    height: 0.9em;
+    background: var(--color-secondary);
+    vertical-align: text-bottom;
+    margin-left: 2px;
+    animation: cursorBlink 1s step-end infinite;
+}
+
+@keyframes cursorBlink {
+    0%, 100% { opacity: 1; }
+    50%       { opacity: 0; }
+}
+
+.skiAnim {
+    display: inline-block;
+    animation: skiSlide 2s ease-in-out infinite alternate;
+}
+
+@keyframes skiSlide {
+    0%   { transform: translateX(-3px) rotate(-6deg); }
+    100% { transform: translateX(4px) rotate(4deg); }
+}
+
+.waveAnim {
+    display: inline-block;
+    animation: waveFloat 2.5s ease-in-out infinite;
+}
+
+@keyframes waveFloat {
     0%, 100% { transform: translateY(0); }
-    50%       { transform: translateY(-8px); }
+    50%       { transform: translateY(-4px); }
 }
 
 
@@ -234,21 +299,20 @@
         font-size: 4.5rem;
     }
 
-    .heroImageWrapper {
-        width: 420px;
-        flex-shrink: 0;
-        margin-bottom: 0;
+    .codeBlock {
+        width: 460px;
+        max-width: 460px;
     }
 
-    .heroTitle {
-        font-size: 5rem;
-        letter-spacing: -0.02em;
+    .heroIm {
+        font-size: 1.7rem;
+    }
+
+    .heroName {
+        font-size: 4.8rem;
     }
 }
 
-.gradientName {
-    color: var(--color-secondary);
-}
 
 .topBlur,
 .bottomBlur,

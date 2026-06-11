@@ -1,177 +1,112 @@
+@import '../../vars.css';
+
 .aboutSection {
     position: relative;
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
-    padding: 2rem;
+    padding: 5rem 2rem 4rem;
     color: var(--color-text);
-    z-index: 1;
+}
+
+.label {
+    margin: 0 0 1.5rem;
 }
 
 .sectionTitle {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 2.5rem;
-    letter-spacing: -0.01em;
-    margin-bottom: 2rem;
-    text-align: center;
+    font-size: 2.8rem;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
     color: var(--color-text);
+    margin-bottom: 1.5rem;
 }
 
-.aboutWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 2rem;
+@media (min-width: 768px) {
+    .sectionTitle {
+        font-size: 4rem;
+    }
 }
 
-.aboutImageWrap {
-    position: relative;
-    width: 90%;
-    max-width: 350px;
-    flex-shrink: 0;
+.intro {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--color-text-soft);
+    line-height: 1.7;
+    max-width: 640px;
+    margin-bottom: 4rem;
 }
 
-.aboutImageWrap::before {
-    content: "";
-    position: absolute;
-    inset: -3px;
-    border-radius: 23px;
-    background: linear-gradient(135deg, rgba(255, 204, 0, 0.55), rgba(123, 97, 255, 0.35));
-    z-index: 0;
-}
-
-.aboutImage {
-    position: relative;
-    z-index: 1;
-    width: 100%;
-    border-radius: 20px;
-    box-shadow: var(--shadow-md);
-    object-fit: cover;
-    display: block;
+@media (min-width: 768px) {
+    .intro {
+        font-size: 1.2rem;
+    }
 }
 
 .aboutList {
     list-style: none;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+@media (min-width: 768px) {
+    .aboutList {
+        flex-direction: row;
+        border-top: none;
+        border-left: 1px solid rgba(255, 255, 255, 0.07);
+        gap: 0;
+    }
 }
 
 .aboutItem {
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    align-items: flex-start;
-    background: linear-gradient(135deg, #252a3a, #121621);
-    padding: 1.5rem;
-    border-radius: 16px;
-    box-shadow: var(--shadow-md);
-    border-left: 3px solid transparent;
-    transition: border-color 0.25s ease;
+    gap: 0.75rem;
     cursor: default;
+    transition: background 0.2s ease;
 }
 
-.aboutItem:hover {
-    border-left-color: var(--color-secondary);
+@media (min-width: 768px) {
+    .aboutItem {
+        flex: 1;
+        padding: 0 2.5rem 0;
+        border-bottom: none;
+        border-right: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .aboutItem:first-child {
+        padding-left: 0;
+    }
 }
 
-
-.iconWrap {
-    width: 3.4rem;
-    height: 3.4rem;
-    border-radius: 50%;
-    background: rgba(226, 170, 58, 0.08);
-    border: 1px solid rgba(226, 170, 58, 0.18);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-    transition: background 0.25s ease, box-shadow 0.25s ease;
-}
-
-.aboutItem:hover .iconWrap {
-    background: rgba(226, 170, 58, 0.14);
-    box-shadow: 0 0 20px rgba(226, 170, 58, 0.18);
-}
-
-.iconWrap svg {
-    font-size: 1.5rem;
+.num {
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
     color: var(--color-secondary);
-    width: 1.5rem;
-    height: 1.5rem;
+    opacity: 0.7;
+    margin-bottom: 0.25rem;
 }
 
-.textContent h3 {
+.aboutItem h3 {
     font-family: var(--font-heading);
     font-weight: 700;
-    font-size: 1.4rem;
-    margin-bottom: 0.4rem;
+    font-size: 1.3rem;
     color: var(--color-text);
+    margin: 0;
 }
 
-.textContent p {
+.aboutItem p {
     font-family: var(--font-body);
-    font-weight: 400;
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--color-text-soft);
-    line-height: 1.6;
-}
-
-@media screen and (max-width: 767px) {
-    .aboutItem {
-        flex-direction: row;
-        align-items: center;
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .iconWrap {
-        width: 2.8rem;
-        height: 2.8rem;
-        flex-shrink: 0;
-    }
-
-    .iconWrap svg {
-        width: 1.25rem;
-        height: 1.25rem;
-    }
-
-    .textContent h3 {
-        font-size: 1.1rem;
-    }
-
-    .textContent p {
-        font-size: 0.9rem;
-    }
-}
-
-@media screen and (min-width: 768px) {
-    .sectionTitle {
-        text-align: left;
-        font-size: 2.8rem;
-    }
-
-    .aboutWrapper {
-        flex-direction: row;
-        gap: 3rem;
-        align-items: flex-start;
-    }
-
-    .aboutImageWrap {
-        flex: 0 0 40%;
-        width: auto;
-        max-width: none;
-    }
-
-    .aboutList {
-        flex: 1;
-        gap: 2rem;
-    }
-
-    .aboutItem {
-        flex-direction: row;
-    }
+    line-height: 1.65;
+    margin: 0;
 }

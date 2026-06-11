@@ -8,7 +8,7 @@ const Experience = () => {
       className={styles.container}
       aria-labelledby="experience-title"
     >
-      <h2 id="experience-title" className={styles.title} data-section-label="02 — Experience" data-animate data-animate-from="blur">
+      <h2 id="experience-title" className={styles.title} data-section-label="02 · Experience" data-animate data-animate-from="blur">
         My Journey
       </h2>
 
