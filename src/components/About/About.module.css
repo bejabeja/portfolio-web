@@ -8,7 +8,7 @@
 }
 
 .sectionTitle {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-heading);
     font-weight: 800;
     font-size: 2.5rem;
     letter-spacing: -0.01em;
@@ -79,18 +79,33 @@
 }
 
 
-.aboutItem svg {
-    font-size: 2.5rem;
-    color: var(--color-secondary);
-    margin-right: 1.2rem;
+.iconWrap {
+    width: 3.4rem;
+    height: 3.4rem;
+    border-radius: 50%;
+    background: rgba(226, 170, 58, 0.08);
+    border: 1px solid rgba(226, 170, 58, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
     flex-shrink: 0;
-    margin-top: 4px;
-    width: 2.5rem;
-    height: 2.5rem;
+    transition: background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.aboutItem:hover .iconWrap {
+    background: rgba(226, 170, 58, 0.14);
+    box-shadow: 0 0 20px rgba(226, 170, 58, 0.18);
+}
+
+.iconWrap svg {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+    width: 1.5rem;
+    height: 1.5rem;
 }
 
 .textContent h3 {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 1.4rem;
     margin-bottom: 0.4rem;
@@ -98,11 +113,11 @@
 }
 
 .textContent p {
-    font-family: "Inter", sans-serif;
+    font-family: var(--font-body);
     font-weight: 400;
     font-size: 1rem;
     color: var(--color-text-soft);
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 @media screen and (max-width: 767px) {
@@ -113,11 +128,15 @@
         padding: 1rem;
     }
 
-    .aboutItem svg {
-        width: 2rem;
-        height: 2rem;
-        margin-right: 0;
+    .iconWrap {
+        width: 2.8rem;
+        height: 2.8rem;
         flex-shrink: 0;
+    }
+
+    .iconWrap svg {
+        width: 1.25rem;
+        height: 1.25rem;
     }
 
     .textContent h3 {

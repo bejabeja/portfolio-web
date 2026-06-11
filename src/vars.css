@@ -4,6 +4,7 @@
     --color-surface: #121621;
     --color-overlay: rgba(18, 22, 33, 0.7);
     --color-secondary: #e2aa3a;
+    --color-accent-purple: #7b61ff;
 
     /* Text */
     --color-text: #e0e0e0;
@@ -14,8 +15,10 @@
     --color-shadow-dark: rgba(0, 0, 0, 0.8);
     --color-shadow-light: rgba(226, 170, 58, 0.5);
 
-    /* Tipografy */
-    --font-sans: "Inter", sans-serif;
+    /* Typography */
+    --font-heading: "Outfit", sans-serif;
+    --font-body: "Roboto", sans-serif;
+    --font-sans: "Outfit", sans-serif;
 
     /* Space */
     --space-xs: 0.5rem;
@@ -25,6 +28,7 @@
 
     /* Shadows */
     --shadow-md: 0 6px 16px rgba(0, 0, 0, 0.6);
+    --shadow-glow-gold: 0 0 24px rgba(226, 170, 58, 0.2);
 
     /* borders */
     --radius-sm: 8px;

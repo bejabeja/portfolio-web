@@ -327,6 +327,16 @@
     box-shadow: 0 0 0 4px rgba(123, 97, 255, 0.12);
 }
 
+@media screen and (max-width: 829px) {
+    .featuredBadge {
+        position: relative;
+        top: auto;
+        right: auto;
+        align-self: flex-start;
+        margin-bottom: 0.25rem;
+    }
+}
+
 @media screen and (min-width: 830px) {
     .title {
         font-size: 1.4rem;

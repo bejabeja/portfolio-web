@@ -10,13 +10,29 @@
     max-width: 700px;
     margin: 0 auto 2rem;
     color: var(--color-text);
+    position: relative;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 180px;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(226, 170, 58, 0.55), transparent);
 }
 
 .title {
+    font-family: var(--font-heading);
     font-size: 2.5rem;
     font-weight: 800;
-    color: var(--color-text);
     line-height: 1.15;
+    background: linear-gradient(135deg, var(--color-text) 30%, var(--color-secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 @media (min-width: 768px) {
