@@ -1,21 +1,42 @@
 @import '../../vars.css';
 
 .sectionContainer {
-    max-width: 1200px;
+    max-width: 1100px;
     margin: 0 auto;
     color: var(--color-text);
-    padding: 2rem 1rem;
+    padding: 5rem 2rem 4rem;
+}
+
+.title {
+    font-family: var(--font-heading);
+    font-size: 2.8rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+    text-align: left;
+    margin-bottom: 2rem;
+    color: var(--color-text);
+}
+
+@media (min-width: 768px) {
+    .title {
+        font-size: 4rem;
+    }
+}
+
+.tabsWrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 2.5rem;
 }
 
 .tabs {
     display: inline-flex;
-    justify-content: center;
     background: rgba(255, 255, 255, 0.04);
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 999px;
     padding: 4px;
     gap: 2px;
-    margin-bottom: 1.5rem;
 }
 
 .tabButton {
@@ -24,6 +45,7 @@
     border: none;
     padding: 0.45rem 1.4rem;
     border-radius: 999px;
+    font-family: var(--font-heading);
     font-weight: 700;
     font-size: 0.9rem;
     cursor: pointer;
@@ -42,20 +64,6 @@
 .active {
     background: var(--color-secondary);
     color: #111;
-}
-
-.tabsWrapper {
-    display: flex;
-    justify-content: center;
-}
-
-.title {
-    font-size: 2rem;
-    font-weight: 800;
-    letter-spacing: -0.01em;
-    text-align: center;
-    margin-bottom: 2.25rem;
-    color: var(--color-text);
 }
 
 .groupedProjects {
@@ -92,11 +100,6 @@
 }
 
 @media (min-width: 830px) {
-    .title {
-        font-size: 2.6rem;
-        text-align: left;
-    }
-
     .projects {
         gap: 2rem;
     }

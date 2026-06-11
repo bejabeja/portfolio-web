@@ -66,36 +66,36 @@ const Projects = () => {
       aria-labelledby="projects-title"
       data-animate
     >
-      <div className={styles.tabsWrapper}>
-      <div
-        className={styles.tabs}
-        role="tablist"
-        aria-label="Project categories"
-        ref={tabListRef}
-        onKeyDown={onKeyDown}
-      >
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            id={`tab-${tab.id}`}
-            role="tab"
-            aria-selected={activeTab === tab.id}
-            aria-controls={`panel-${tab.id}`}
-            tabIndex={activeTab === tab.id ? 0 : -1}
-            className={`${styles.tabButton} ${
-              activeTab === tab.id ? styles.active : ""
-            }`}
-            onClick={() => setActiveTab(tab.id)}
-          >
-            {tab.label}
-          </button>
-        ))}
-      </div>
-      </div>
-
       <h2 id="projects-title" className={styles.title} data-section-label="03 · Projects">
-        Projects
+        Things I've Built
       </h2>
+
+      <div className={styles.tabsWrapper}>
+        <div
+          className={styles.tabs}
+          role="tablist"
+          aria-label="Project categories"
+          ref={tabListRef}
+          onKeyDown={onKeyDown}
+        >
+          {tabs.map((tab) => (
+            <button
+              key={tab.id}
+              id={`tab-${tab.id}`}
+              role="tab"
+              aria-selected={activeTab === tab.id}
+              aria-controls={`panel-${tab.id}`}
+              tabIndex={activeTab === tab.id ? 0 : -1}
+              className={`${styles.tabButton} ${
+                activeTab === tab.id ? styles.active : ""
+              }`}
+              onClick={() => setActiveTab(tab.id)}
+            >
+              {tab.label}
+            </button>
+          ))}
+        </div>
+      </div>
 
       <div
         id={`panel-professional`}

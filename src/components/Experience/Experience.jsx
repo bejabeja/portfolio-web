@@ -1,13 +1,13 @@
+import { useState } from "react";
 import data from "../../data/data.json";
 import styles from "./Experience.module.css";
 
 const Experience = () => {
+  const [active, setActive] = useState(0);
+  const work = data.works[active];
+
   return (
-    <section
-      id="experience"
-      className={styles.container}
-      aria-labelledby="experience-title"
-    >
+    <section id="experience" className={styles.container} aria-labelledby="experience-title">
       <h2 id="experience-title" className={styles.title} data-section-label="02 · Experience" data-animate data-animate-from="blur">
         My Journey
       </h2>
@@ -25,27 +25,36 @@ const Experience = () => {
         ))}
       </div>
 
-      <div className={styles.workExperiences} aria-label="Work experience">
-        {data.works.map((work, idx) => {
-          const key = `${work.organisation}-${work.role}-${idx}`;
-          return (
-            <article key={key} className={`${styles.workExperience} ${work.endDate === "Present" ? styles.current : ""}`} data-animate data-animate-delay={String(idx + 2)}>
-              <h3>
-                {work.role}, {work.organisation}
-                {work.endDate === "Present" && <span className={styles.currentBadge}>Now</span>}
-              </h3>
-              <p className={styles.date}>
-                <time dateTime={work.startDate}>{work.startDate}</time> -{" "}
-                <time dateTime={work.endDate}>{work.endDate}</time>
-              </p>
-              <ul>
-                {work.tasks.map((task, tIdx) => (
-                  <li key={`${idx}-${tIdx}`}>{task}</li>
-                ))}
-              </ul>
-            </article>
-          );
-        })}
+      <div className={styles.timeline} data-animate data-animate-delay="2">
+        <div className={styles.tabList} role="tablist" aria-label="Work experience">
+          {data.works.map((w, i) => (
+            <button
+              key={i}
+              role="tab"
+              aria-selected={active === i}
+              className={`${styles.tab} ${active === i ? styles.tabActive : ""}`}
+              onClick={() => setActive(i)}
+            >
+              <span className={styles.tabOrg}>{w.organisation}</span>
+              <span className={styles.tabDate}>{w.startDate} – {w.endDate}</span>
+            </button>
+          ))}
+        </div>
+
+        <div key={active} className={styles.detail} role="tabpanel">
+          <div className={styles.detailHeader}>
+            <h3 className={styles.detailRole}>{work.role}</h3>
+            {work.endDate === "Present" && <span className={styles.currentBadge}>Now</span>}
+          </div>
+          <p className={styles.detailMeta}>
+            {work.organisation} · {work.startDate} – {work.endDate}
+          </p>
+          <ul className={styles.taskList}>
+            {work.tasks.map((task, i) => (
+              <li key={i}>{task}</li>
+            ))}
+          </ul>
+        </div>
       </div>
     </section>
   );
