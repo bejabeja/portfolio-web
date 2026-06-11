@@ -94,11 +94,12 @@ body::after {
 [data-section-label]::before {
   content: attr(data-section-label);
   display: block;
-  font-size: 0.72rem;
+  font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.35);
-  margin-bottom: 0.4rem;
+  color: var(--color-secondary);
+  opacity: 0.75;
+  margin-bottom: 0.75rem;
   font-family: var(--font-body);
 }

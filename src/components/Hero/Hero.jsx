@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
 import { FaExternalLinkAlt, FaPaperPlane } from "react-icons/fa";
+import Marquee from "../Marquee/Marquee";
 import styles from "./Hero.module.css";
 
-const TYPED_ROLE = "Full-Stack · React · TypeScript · Node.js";
+const TYPED_ROLE = "Full-Stack Developer · Technical Lead · Design Background";
 
 const Hero = () => {
   const [typed, setTyped] = useState("");
@@ -29,10 +30,10 @@ const Hero = () => {
       <div className={styles.heroContent}>
         <span className={styles.badge}>
           <span className={styles.badgeDot} aria-hidden="true" />
-          Open to new opportunities
+          Open to chat
         </span>
         <h1 className={styles.heroTitle}>
-          <span className={styles.heroIm}>I'm</span>
+          <span className={styles.heroIm}>Hi <span className={styles.wave}>👋</span></span>
           <span className={styles.heroName}>Miriam Abella</span>
         </h1>
         <p className={styles.heroRole} aria-label={TYPED_ROLE}>
@@ -40,11 +41,12 @@ const Hero = () => {
           {showCursor && <span className={styles.cursor} aria-hidden="true">|</span>}
         </p>
 
+        <Marquee />
+
         <p className={styles.heroSubtitle}>
-          Senior Software Developer with 5+ years building full-stack products
-          across <strong>visa tech, real estate, and travel</strong>. I care
-          about clean code, solid architecture, and interfaces that feel
-          obvious to use. Design background included.
+          Several years shipping full-stack products across <strong>startup and enterprise</strong> environments,
+          from API design to user interface. I lead technical decisions and stay hands-on,
+          with a design eye that keeps both sides of the stack connected.
         </p>
 
         <div className={styles.heroActions}>

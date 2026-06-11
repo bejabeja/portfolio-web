@@ -93,19 +93,21 @@
     gap: 0.6rem;
     background: var(--color-secondary);
     color: #111;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     font-weight: 700;
-    padding: 1rem 2.5rem;
-    border-radius: 999px;
+    letter-spacing: 0.02em;
+    padding: 0.8rem 1.6rem;
+    border-radius: 10px;
     text-decoration: none;
-    box-shadow: 0 8px 28px rgba(226, 170, 58, 0.35);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 2px 12px rgba(226, 170, 58, 0.25);
+    transition: background 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
     margin-top: 0.5rem;
 }
 
 .ctaBtn:hover {
-    transform: translateY(-4px) scale(1.03);
-    box-shadow: 0 16px 36px rgba(226, 170, 58, 0.45);
+    background: #f0c040;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(226, 170, 58, 0.4);
 }
 
 .socials {

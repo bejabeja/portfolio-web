@@ -11,7 +11,6 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState("hero");
-  const [progress, setProgress] = useState(0);
 
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -27,10 +26,6 @@ const Navbar = () => {
   useEffect(() => {
     const onScroll = () => {
       setScrolled(window.scrollY > 20);
-
-      const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-      const total = scrollHeight - clientHeight;
-      setProgress(total > 0 ? (scrollTop / total) * 100 : 0);
 
       const threshold = window.innerHeight * 0.35;
       let current = "hero";
@@ -94,11 +89,6 @@ const Navbar = () => {
           ))}
         </ul>
       </div>
-      <div
-        className={styles.progressBar}
-        style={{ width: `${progress}%` }}
-        aria-hidden="true"
-      />
     </nav>
   );
 };

@@ -9,7 +9,7 @@
 
 .title {
     font-family: var(--font-heading);
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: 800;
     letter-spacing: -0.02em;
     line-height: 1.1;
@@ -19,7 +19,7 @@
 
 @media (min-width: 768px) {
     .title {
-        font-size: 4rem;
+        font-size: 2.6rem;
     }
 }
 
@@ -76,143 +76,89 @@
     background: rgba(226, 170, 58, 0.07);
 }
 
-/* Tab timeline layout */
+/* Timeline */
 .timeline {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
-}
-
-@media (min-width: 640px) {
-    .timeline {
-        flex-direction: row;
-        gap: 0;
-        align-items: flex-start;
-    }
-}
-
-.tabList {
-    display: flex;
-    flex-direction: row;
-    overflow-x: auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
     gap: 0;
-    flex-shrink: 0;
-    scrollbar-width: none;
 }
 
-.tabList::-webkit-scrollbar {
-    display: none;
+.entry {
+    position: relative;
+    padding: 1.75rem 1.5rem;
+    border-left: 2px solid rgba(255, 255, 255, 0.07);
+    border-radius: 0 8px 8px 0;
 }
 
-@media (min-width: 640px) {
-    .tabList {
-        flex-direction: column;
-        border-bottom: none;
-        border-left: 1px solid rgba(255, 255, 255, 0.07);
-        min-width: 180px;
-        overflow-x: visible;
-    }
+.entry::before {
+    content: "";
+    position: absolute;
+    left: -5px;
+    top: 2rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid var(--color-bg);
 }
 
-.tab {
+.entryCurrent {
+    border-left-color: rgba(226, 170, 58, 0.35);
+}
+
+.entryCurrent::before {
+    background: var(--color-secondary);
+    box-shadow: 0 0 0 4px rgba(226, 170, 58, 0.15);
+    animation: pulseDot 2.4s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(226, 170, 58, 0.4); }
+    50%       { box-shadow: 0 0 0 6px rgba(226, 170, 58, 0); }
+}
+
+.entryHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.entryLeft {
     display: flex;
     flex-direction: column;
-    gap: 0.2rem;
-    padding: 0.85rem 1.25rem;
-    text-align: left;
-    background: none;
-    border: none;
-    cursor: pointer;
-    position: relative;
-    white-space: nowrap;
-    border-bottom: 2px solid transparent;
-    transition: background 0.2s ease;
+    gap: 0.25rem;
 }
 
-@media (min-width: 640px) {
-    .tab {
-        border-bottom: none;
-        border-left: 2px solid transparent;
-        white-space: normal;
-        padding: 1rem 1.5rem;
-    }
-}
-
-.tab:hover {
-    background: rgba(255, 255, 255, 0.03);
-}
-
-.tabActive {
-    border-bottom-color: var(--color-secondary);
-    background: rgba(226, 170, 58, 0.04);
-}
-
-@media (min-width: 640px) {
-    .tabActive {
-        border-bottom-color: transparent;
-        border-left-color: var(--color-secondary);
-    }
-}
-
-.tabOrg {
+.entryRole {
     font-family: var(--font-heading);
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: var(--color-text-soft);
-    transition: color 0.2s ease;
-}
-
-.tabActive .tabOrg {
-    color: var(--color-text);
-}
-
-.tabDate {
-    font-size: 0.72rem;
-    color: rgba(255, 255, 255, 0.3);
-    font-variant-numeric: tabular-nums;
-    letter-spacing: 0.02em;
-}
-
-/* Detail panel */
-.detail {
-    flex: 1;
-    padding: 0;
-    animation: fadeUp 0.3s cubic-bezier(0.22, 1, 0.36, 1) both;
-}
-
-@media (min-width: 640px) {
-    .detail {
-        padding: 0 0 0 2.5rem;
-    }
-}
-
-@keyframes fadeUp {
-    from { opacity: 0; transform: translateY(10px); }
-    to   { opacity: 1; transform: translateY(0); }
-}
-
-.detailHeader {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    flex-wrap: wrap;
-    margin-bottom: 0.4rem;
-}
-
-.detailRole {
-    font-family: var(--font-heading);
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: var(--color-text);
     margin: 0;
     letter-spacing: -0.01em;
 }
 
-@media (min-width: 768px) {
-    .detailRole {
-        font-size: 1.8rem;
-    }
+.entryOrg {
+    font-size: 0.9rem;
+    color: var(--color-secondary);
+    font-weight: 600;
+}
+
+.entryRight {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    flex-shrink: 0;
+}
+
+.entryDates {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.35);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: 0.02em;
 }
 
 .currentBadge {
@@ -226,13 +172,6 @@
     background: rgba(226, 170, 58, 0.08);
     padding: 0.15rem 0.55rem;
     border-radius: 999px;
-}
-
-.detailMeta {
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.35);
-    margin-bottom: 1.5rem;
-    letter-spacing: 0.02em;
 }
 
 .taskList {
@@ -259,8 +198,4 @@
     color: var(--color-secondary);
     font-size: 0.65rem;
     top: 0.25rem;
-}
-
-@media (prefers-reduced-motion: reduce) {
-    .detail { animation: none; }
 }
