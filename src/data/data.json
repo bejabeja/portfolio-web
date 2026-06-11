@@ -59,7 +59,7 @@
     "projects": [
         {
             "title": "To Be A Traveller",
-            "description": "Full-stack social travel platform where users create, discover, and share day-by-day itineraries with interactive maps. Features AI-powered trip generation, a social graph with follows, likes and comments, and a real-time notification system.",
+            "description": "Full-stack travel platform where users build and share day-by-day itineraries with interactive maps. Includes AI-powered trip generation, a social graph with follows, likes and comments, and real-time notifications.",
             "highlights": [
                 "Monorepo with a shared package unifying Redux store, API services, Zod schemas and i18n across the React 19 web app and React Native / Expo mobile app, zero code duplication between platforms.",
                 "AI itinerary generation via Groq / Llama 3.3 respecting user preferences and real coordinates.",
@@ -82,7 +82,7 @@
         },
         {
             "title": "CSV Manager",
-            "description": "User-friendly platform to upload, search, and manage CSV data with features like real-time filtering and pagination. Built to simplify CSV workflows for non-technical users.",
+            "description": "Full-stack tool to upload, filter, and manage CSV files with real-time search and pagination. Designed with non-technical users in mind: clean interface, fast feedback, no friction.",
             "skills": [
                 "React",
                 "TypeScript",
@@ -95,7 +95,7 @@
         },
         {
             "title": "Geodata Dashboard",
-            "description": "An interactive dashboard for visualizing geospatial data. Aimed at non-technical users like public administrators and decision-makers to support informed urban planning.",
+            "description": "Interactive dashboard for exploring and visualizing geospatial data. Built for public administrators and decision-makers who need spatial insights without technical knowledge.",
             "skills": [
                 "React",
                 "TypeScript",
@@ -121,7 +121,7 @@
         {
             "title": "Visaflow",
             "company": "Visaflow",
-            "description": "B2B and B2C platform for German visa applications. The HR portal is a backoffice that allows companies to manage their employees' visa processes, while the consumer-facing app guides individuals through their German visa application end to end.",
+            "description": "B2B and B2C platform for German visa applications. The HR portal lets companies manage employee visa processes at scale, while the consumer app guides individuals through each step of their application.",
             "skills": [
                 "React",
                 "Next.js",
@@ -136,7 +136,7 @@
         {
             "title": "Proppit Backoffice",
             "company": "Lifull Connect",
-            "description": "Backoffice system for real estate agents to manage listings distributed to public portals. I worked across the stack, building and maintaining features in both the frontend and backend in close collaboration with product stakeholders.",
+            "description": "Backoffice system for real estate agents to manage and distribute property listings across multiple public portals. Built and maintained full-stack features in React, Redux, PHP and Symfony, applying TDD throughout.",
             "skills": [
                 "React",
                 "Redux",
@@ -152,7 +152,7 @@
         {
             "title": "Hipflat Portal",
             "company": "Lifull Connect",
-            "description": "Public-facing real estate portal used across Southeast Asia. I maintained and refactored backend systems, improved data synchronization with external providers, and optimized overall performance.",
+            "description": "Public real estate portal operating across Southeast Asia. Maintained and refactored Ruby on Rails backend services, improved data sync with third-party listing providers, and optimized performance for high-traffic pages.",
             "skills": [
                 "Ruby on Rails",
                 "MongoDB"
@@ -163,7 +163,7 @@
         {
             "title": "DotProperty Portal",
             "company": "Lifull Connect",
-            "description": "Online real estate portal focused on property search. I supported backend stability and performance through regular maintenance, code refactoring, and data reliability improvements.",
+            "description": "Property search portal focused on the Thai market. Supported backend stability with PHP and Laravel, improving code quality through refactoring and ensuring reliable data pipelines.",
             "skills": [
                 "PHP",
                 "Laravel"
@@ -174,7 +174,7 @@
         {
             "title": "VR Surgery Training",
             "company": "Seidor",
-            "description": "VR training experience designed to teach surgical pre-op procedures to medical students. I developed interactive elements, UI components, and tested usability in-headset to ensure clarity and realism.",
+            "description": "Immersive VR training tool for medical students learning surgical pre-op procedures. Built interactive Unity scenes and UI components, and conducted in-headset usability testing to ensure clarity and realism.",
             "skills": [
                 "Unity",
                 "C#",
@@ -185,7 +185,7 @@
         {
             "title": "Novatilu Product Environment",
             "company": "Seidor",
-            "description": "Custom interactive 3D environment for product demonstration, involving simulation and product showcasing.",
+            "description": "Interactive 3D product demonstration environment built in Unity for enterprise clients. Designed the UI and simulation logic to showcase products in an immersive, engaging setting.",
             "skills": [
                 "Unity",
                 "C#",
