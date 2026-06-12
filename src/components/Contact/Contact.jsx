@@ -1,8 +1,10 @@
 import { useEffect, useRef, useState } from "react";
 import { FaGithub, FaLinkedin, FaPaperPlane } from "react-icons/fa";
+import { useLanguage } from "../../context/LanguageContext";
 import styles from "./Contact.module.css";
 
 const Contact = () => {
+  const { t } = useLanguage();
   const [count, setCount] = useState(0);
   const statsRef = useRef(null);
 
@@ -36,18 +38,18 @@ const Contact = () => {
           loading="lazy"
         />
         <div className={styles.textContent}>
-          <h2 className={styles.title} data-section-label="04 · Contact">
-            Let's Work Together
+          <h2 className={styles.title} data-section-label={t.contact.label}>
+            {t.contact.title}
           </h2>
           <p className={styles.subtitle}>
-            Open to new opportunities, collaborations, or just a good conversation.
+            {t.contact.subtitle}
           </p>
           <div className={styles.stats} ref={statsRef} aria-label="Quick facts">
-            <span><strong>{count}+</strong> Years</span>
-            <span>Full-Stack</span>
+            <span><strong>{count}+</strong> {t.contact.years}</span>
+            <span>{t.contact.stack}</span>
           </div>
           <a href="mailto:miriam.abella211@gmail.com" className={styles.ctaBtn}>
-            Say Hello <FaPaperPlane aria-hidden="true" />
+            {t.contact.cta} <FaPaperPlane aria-hidden="true" />
           </a>
           <div className={styles.socials}>
             <a
@@ -71,7 +73,7 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <p className={styles.credit}>Designed & built by Miriam Abella</p>
+      <p className={styles.credit}>{t.contact.credit}</p>
     </footer>
   );
 };

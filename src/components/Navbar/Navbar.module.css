@@ -48,6 +48,8 @@
 .menu {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    gap: 1rem;
 }
 
 .menuItems {
@@ -95,6 +97,32 @@
     color: var(--color-secondary) !important;
 }
 
+.langToggle {
+    background: none;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: var(--color-text-soft);
+    font-size: 1rem;
+    padding: 0.35rem 0.6rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: color 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    flex-shrink: 0;
+}
+
+.langToggle:hover {
+    color: var(--color-secondary);
+    border-color: rgba(226, 170, 58, 0.4);
+}
+
+.langCode {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
 .progressBar {
     position: absolute;
     bottom: 0;
@@ -116,6 +144,10 @@
 }
 
 @media screen and (max-width: 830px) {
+    .menu {
+        gap: 0.5rem;
+    }
+
     .menuBtn {
         display: block;
     }

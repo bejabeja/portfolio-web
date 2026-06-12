@@ -7,6 +7,7 @@ import {
 import styles from "./App.module.css";
 
 import { useEffect } from "react";
+import { LanguageProvider } from "./context/LanguageContext";
 import About from "./components/About/About";
 import Contact from "./components/Contact/Contact";
 import Experience from "./components/Experience/Experience";
@@ -88,9 +89,11 @@ const AppRoutes = () => (
 
 function App() {
   return (
-    <Router>
-      <AppRoutes />
-    </Router>
+    <LanguageProvider>
+      <Router>
+        <AppRoutes />
+      </Router>
+    </LanguageProvider>
   );
 }
 

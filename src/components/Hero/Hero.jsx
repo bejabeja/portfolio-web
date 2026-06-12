@@ -1,26 +1,28 @@
 import { useEffect, useState } from "react";
 import { FaExternalLinkAlt, FaPaperPlane } from "react-icons/fa";
+import { useLanguage } from "../../context/LanguageContext";
 import Marquee from "../Marquee/Marquee";
 import styles from "./Hero.module.css";
 
-const TYPED_ROLE = "Full-Stack Developer · Technical Lead · Design Background";
-
 const Hero = () => {
+  const { t } = useLanguage();
   const [typed, setTyped] = useState("");
   const [showCursor, setShowCursor] = useState(true);
 
   useEffect(() => {
+    setTyped("");
+    setShowCursor(true);
     let i = 0;
     const interval = setInterval(() => {
-      setTyped(TYPED_ROLE.slice(0, i + 1));
+      setTyped(t.hero.role.slice(0, i + 1));
       i++;
-      if (i >= TYPED_ROLE.length) {
+      if (i >= t.hero.role.length) {
         clearInterval(interval);
         setTimeout(() => setShowCursor(false), 1800);
       }
     }, 42);
     return () => clearInterval(interval);
-  }, []);
+  }, [t.hero.role]);
 
   return (
     <section className={styles.heroSection} id="hero">
@@ -30,13 +32,13 @@ const Hero = () => {
       <div className={styles.heroContent}>
         <span className={styles.badge}>
           <span className={styles.badgeDot} aria-hidden="true" />
-          Open to chat
+          {t.hero.badge}
         </span>
         <h1 className={styles.heroTitle}>
-          <span className={styles.heroIm}>Hi <span className={styles.wave}>👋</span></span>
+          <span className={styles.heroIm}>{t.hero.hi} <span className={styles.wave}>👋</span></span>
           <span className={styles.heroName}>Miriam Abella</span>
         </h1>
-        <p className={styles.heroRole} aria-label={TYPED_ROLE}>
+        <p className={styles.heroRole} aria-label={t.hero.role}>
           {typed}
           {showCursor && <span className={styles.cursor} aria-hidden="true">|</span>}
         </p>
@@ -44,9 +46,8 @@ const Hero = () => {
         <Marquee />
 
         <p className={styles.heroSubtitle}>
-          Several years shipping full-stack products across <strong>startup and enterprise</strong> environments,
-          from API design to user interface. I lead technical decisions and stay hands-on,
-          with a design eye that keeps both sides of the stack connected.
+          {t.hero.subtitle1} <strong>{t.hero.subtitle2}</strong> {t.hero.subtitle3}{" "}
+          {t.hero.subtitle4}
         </p>
 
         <div className={styles.heroActions}>
@@ -54,7 +55,7 @@ const Hero = () => {
             href="mailto:miriam.abella211@gmail.com"
             className={styles.contactBtn}
           >
-            Get in touch <FaPaperPlane aria-hidden="true" />
+            {t.hero.btn1} <FaPaperPlane aria-hidden="true" />
           </a>
           <a
             href="https://resume.mabella.dev"
@@ -62,7 +63,7 @@ const Hero = () => {
             rel="noopener noreferrer"
             className={styles.cvBtn}
           >
-            View Resume <FaExternalLinkAlt aria-hidden="true" />
+            {t.hero.btn2} <FaExternalLinkAlt aria-hidden="true" />
           </a>
         </div>
       </div>
@@ -74,13 +75,13 @@ const Hero = () => {
           <span className={styles.codeFilename}>miriam.ts</span>
         </div>
         <pre className={styles.codePre}>
-          <span className={styles.codeLine}><span className={styles.cComment}>{"// life outside the terminal"}</span></span>
+          <span className={styles.codeLine}><span className={styles.cComment}>{t.code.comment}</span></span>
           <span className={styles.codeLine}><span className={styles.cKw}>const</span>{" "}<span className={styles.cVar}>miriam</span>{" = {"}</span>
-          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>winter</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"skiing, always </span><span className={styles.skiAnim}>⛷️</span><span className={styles.cStr}>"</span><span className={styles.cPunct}>,</span></span>
-          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>summer</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"water activities & sea walks </span><span className={styles.waveAnim}>🌊</span><span className={styles.cStr}>"</span><span className={styles.cPunct}>,</span></span>
-          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>morningRule</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"coffee first, everything else second ☕"</span><span className={styles.cPunct}>,</span></span>
-          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>alsoBuilding</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"side projects that solve real things 🛠️"</span><span className={styles.cPunct}>,</span></span>
-          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>obsession</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"Pixar films, 3D animation 🎬"</span><span className={styles.cPunct}>,</span></span>
+          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>winter</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"{t.code.winter.split("⛷️")[0]}</span><span className={styles.skiAnim}>⛷️</span><span className={styles.cStr}>"</span><span className={styles.cPunct}>,</span></span>
+          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>summer</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"{t.code.summer.split("🌊")[0]}</span><span className={styles.waveAnim}>🌊</span><span className={styles.cStr}>"</span><span className={styles.cPunct}>,</span></span>
+          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>morningRule</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"{t.code.morningRule}"</span><span className={styles.cPunct}>,</span></span>
+          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>alsoBuilding</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"{t.code.alsoBuilding}"</span><span className={styles.cPunct}>,</span></span>
+          <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>obsession</span><span className={styles.cPunct}>: </span><span className={styles.cStr}>"{t.code.obsession}"</span><span className={styles.cPunct}>,</span></span>
           <span className={styles.codeLine}>{"  "}<span className={styles.cKey}>languages</span><span className={styles.cPunct}>: [</span><span className={styles.cStr}>"ES"</span><span className={styles.cPunct}>, </span><span className={styles.cStr}>"EN"</span><span className={styles.cPunct}>, </span><span className={styles.cStr}>"CA"</span><span className={styles.cPunct}>],</span></span>
           <span className={styles.codeLine}><span className={styles.cPunct}>{"}"}</span><span className={styles.codeCursor} /></span>
         </pre>

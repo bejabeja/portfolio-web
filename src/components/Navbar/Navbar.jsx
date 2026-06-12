@@ -1,11 +1,13 @@
 import { useEffect, useRef, useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
+import { FaBars, FaGlobe, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { useLanguage } from "../../context/LanguageContext";
 import styles from "./Navbar.module.css";
 
 const SECTIONS = ["hero", "about", "experience", "projects", "contact"];
 
 const Navbar = () => {
+  const { t, language, toggleLanguage } = useLanguage();
   const navigate = useNavigate();
   const menuRef = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -65,22 +67,14 @@ const Navbar = () => {
       </button>
 
       <div className={styles.menu} ref={menuRef}>
-        <button
-          className={styles.menuBtn}
-          onClick={toggleMenu}
-          aria-label="Toggle menu"
-        >
-          {isMenuOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
-        </button>
-
         <ul
           className={`${styles.menuItems} ${isMenuOpen ? styles.menuOpen : ""}`}
         >
           {[
-            { id: "about", label: "About" },
-            { id: "experience", label: "Experience" },
-            { id: "projects", label: "Projects" },
-            { id: "contact", label: "Contact" },
+            { id: "about", label: t.nav.about },
+            { id: "experience", label: t.nav.experience },
+            { id: "projects", label: t.nav.projects },
+            { id: "contact", label: t.nav.contact },
           ].map(({ id, label }) => (
             <li key={id}>
               <button
@@ -93,6 +87,24 @@ const Navbar = () => {
             </li>
           ))}
         </ul>
+
+        <button
+          className={styles.langToggle}
+          onClick={toggleLanguage}
+          aria-label={language === "en" ? "Switch to Spanish" : "Switch to English"}
+          title={language === "en" ? "Español" : "English"}
+        >
+          <FaGlobe aria-hidden="true" />
+          <span className={styles.langCode}>{language === "en" ? "ES" : "EN"}</span>
+        </button>
+
+        <button
+          className={styles.menuBtn}
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          {isMenuOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
+        </button>
       </div>
       <div
         className={styles.progressBar}

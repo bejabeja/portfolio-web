@@ -43,8 +43,10 @@
 
 .heroContent {
     text-align: center;
+    width: 100%;
     max-width: 600px;
     z-index: 1;
+    min-width: 0;
 }
 
 .heroTitle {
@@ -84,7 +86,7 @@
 .heroName {
     font-family: var(--font-heading);
     font-weight: 800;
-    font-size: 3.2rem;
+    font-size: clamp(2.2rem, 8vw, 3.2rem);
     color: var(--color-secondary);
     letter-spacing: -0.02em;
     line-height: 1.05;
@@ -194,6 +196,7 @@
 }
 
 .codeBlock {
+    display: none;
     width: 100%;
     max-width: 460px;
     background: #0d1117;
@@ -329,6 +332,7 @@
     }
 
     .codeBlock {
+        display: block;
         width: 460px;
         max-width: 460px;
     }

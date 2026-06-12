@@ -1,12 +1,14 @@
 import { useEffect, useRef, useState } from "react";
 import { FaExternalLinkAlt, FaFigma, FaGithub, FaPlay } from "react-icons/fa";
+import { useLanguage } from "../../context/LanguageContext";
 import styles from "./ProjectCard.module.css";
 
 const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) => {
+  const { t, language } = useLanguage();
   const {
     title,
-    description,
-    highlights = [],
+    description: rawDescription,
+    highlights: rawHighlights = [],
     skills = [],
     demo,
     repository,
@@ -17,6 +19,9 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
     video,
     images = [],
   } = project;
+
+  const description = typeof rawDescription === "object" ? (rawDescription[language] || rawDescription.en) : rawDescription;
+  const highlights = Array.isArray(rawHighlights) ? rawHighlights : (rawHighlights[language] || rawHighlights.en || []);
 
   const wrapperRef = useRef(null);
   const [scale, setScale] = useState(0.25);
@@ -39,11 +44,11 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
   };
 
   const primaryLabel = demo
-    ? "Open demo"
+    ? t.projects.demo
     : repository
-      ? "Open repository"
+      ? t.projects.repo
       : link
-        ? "Visit site"
+        ? t.projects.visitSite
         : null;
 
   const showPreview = !isProfessional && link;
@@ -55,7 +60,7 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
       onKeyDown={handleKeyDown}
       aria-labelledby={`project-${title}`}
     >
-      {isFeatured && <span className={styles.featuredBadge}>★ Featured Project</span>}
+      {isFeatured && <span className={styles.featuredBadge}>{t.projects.featuredBadge}</span>}
       <div className={isFeatured ? styles.featuredInner : styles.inner}>
         {showPreview && (
           <div
@@ -64,7 +69,7 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
           >
             {!previewReady && (
               <div className={styles.previewSkeleton} aria-hidden="true">
-                <span>Loading preview…</span>
+                <span>{t.projects.loadingPreview}</span>
               </div>
             )}
             <iframe
@@ -120,19 +125,19 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
 
           <div className={styles.links}>
             {demo && (
-              <a aria-label={`${primaryLabel} for ${title}`} href={demo} className={styles.link} target="_blank" rel="noopener noreferrer">Demo <FaPlay aria-hidden="true" /></a>
+              <a aria-label={`${primaryLabel} for ${title}`} href={demo} className={styles.link} target="_blank" rel="noopener noreferrer">{t.projects.demo} <FaPlay aria-hidden="true" /></a>
             )}
             {link && (
-              <a aria-label={`Visit ${title}`} href={link} className={styles.link} target="_blank" rel="noopener noreferrer">Visit Site <FaExternalLinkAlt aria-hidden="true" /></a>
+              <a aria-label={`Visit ${title}`} href={link} className={styles.link} target="_blank" rel="noopener noreferrer">{t.projects.visitSite} <FaExternalLinkAlt aria-hidden="true" /></a>
             )}
             {repository && (
-              <a aria-label={`Repository for ${title}`} href={repository} className={styles.linkGhost} target="_blank" rel="noopener noreferrer"><FaGithub aria-hidden="true" /> Repo</a>
+              <a aria-label={`Repository for ${title}`} href={repository} className={styles.linkGhost} target="_blank" rel="noopener noreferrer"><FaGithub aria-hidden="true" /> {t.projects.repo}</a>
             )}
             {figma && (
               <a aria-label={`Figma for ${title}`} href={figma} className={styles.linkGhost} target="_blank" rel="noopener noreferrer"><FaFigma aria-hidden="true" /> Figma</a>
             )}
             {video && (
-              <a aria-label={`Video for ${title}`} href={video} className={styles.linkGhost} target="_blank" rel="noopener noreferrer"><FaPlay aria-hidden="true" /> Video</a>
+              <a aria-label={`Video for ${title}`} href={video} className={styles.linkGhost} target="_blank" rel="noopener noreferrer"><FaPlay aria-hidden="true" /> {t.projects.video}</a>
             )}
           </div>
         </div>

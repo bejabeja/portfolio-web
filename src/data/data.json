@@ -23,48 +23,83 @@
             "organisation": "Visaflow",
             "startDate": "2025",
             "endDate": "Present",
-            "tasks": [
-                "Led frontend architecture redesign for a React/TypeScript codebase, guidelines, component structure, and long-term maintainability strategy.",
-                "Designed and prototyped the new UI in Figma, ensuring responsive and accessible layouts aligned with product goals.",
-                "Drove backend refactoring to improve scalability, separation of concerns, and clean architecture across the platform.",
-                "Established code review practices, coding standards, and CI/CD improvements to raise engineering quality.",
-                "Running monthly learning sessions for junior developers on Clean Code, TDD, and Agile methodologies."
-            ]
+            "tasks": {
+                "en": [
+                    "Led frontend architecture redesign for a React/TypeScript codebase, guidelines, component structure, and long-term maintainability strategy.",
+                    "Designed and prototyped the new UI in Figma, ensuring responsive and accessible layouts aligned with product goals.",
+                    "Drove backend refactoring to improve scalability, separation of concerns, and clean architecture across the platform.",
+                    "Established code review practices, coding standards, and CI/CD improvements to raise engineering quality.",
+                    "Running monthly learning sessions for junior developers on Clean Code, TDD, and Agile methodologies."
+                ],
+                "es": [
+                    "Lideré el rediseño de la arquitectura frontend de una codebase React/TypeScript, definiendo guidelines, estructura de componentes y estrategia de mantenibilidad a largo plazo.",
+                    "Diseñé y prototipé la nueva UI en Figma, asegurando layouts responsivos y accesibles alineados con los objetivos del producto.",
+                    "Impulsé la refactorización del backend para mejorar la escalabilidad, la separación de responsabilidades y la arquitectura limpia en toda la plataforma.",
+                    "Establecí prácticas de code review, estándares de codificación y mejoras en CI/CD para elevar la calidad del equipo de ingeniería.",
+                    "Imparto sesiones de aprendizaje mensuales para desarrolladores junior sobre Clean Code, TDD y metodologías Ágiles."
+                ]
+            }
         },
         {
             "role": "Full Stack Developer",
             "organisation": "Lifull Connect",
             "startDate": "2020",
             "endDate": "2023",
-            "tasks": [
-                "Built and maintained real estate platforms (B2B and B2C) used by thousands of users across Europe and Southeast Asia.",
-                "Developed full-stack features across React/TypeScript frontends and PHP/Ruby on Rails/Node.js backends.",
-                "Applied TDD with PHPUnit, RSpec, and Jest, significantly reducing regression bugs.",
-                "Improved codebase maintainability through Clean Code and hexagonal architecture patterns.",
-                "Worked in Agile teams with CI/CD pipelines and Git-based workflows."
-            ]
+            "tasks": {
+                "en": [
+                    "Built and maintained real estate platforms (B2B and B2C) used by thousands of users across Europe and Southeast Asia.",
+                    "Developed full-stack features across React/TypeScript frontends and PHP/Ruby on Rails/Node.js backends.",
+                    "Applied TDD with PHPUnit, RSpec, and Jest, significantly reducing regression bugs.",
+                    "Improved codebase maintainability through Clean Code and hexagonal architecture patterns.",
+                    "Worked in Agile teams with CI/CD pipelines and Git-based workflows."
+                ],
+                "es": [
+                    "Construí y mantuve plataformas inmobiliarias (B2B y B2C) usadas por miles de usuarios en Europa y el Sudeste Asiático.",
+                    "Desarrollé funcionalidades full-stack en frontends React/TypeScript y backends PHP/Ruby on Rails/Node.js.",
+                    "Apliqué TDD con PHPUnit, RSpec y Jest, reduciendo significativamente los bugs de regresión.",
+                    "Mejoré la mantenibilidad de la codebase mediante patrones de Clean Code y arquitectura hexagonal.",
+                    "Trabajé en equipos ágiles con pipelines CI/CD y flujos de trabajo basados en Git."
+                ]
+            }
         },
         {
             "role": "Unity Developer",
             "organisation": "SEIDOR S.L.",
             "startDate": "2017",
             "endDate": "2018",
-            "tasks": [
-                "Built Unity 3D applications in C#, designing UI interactions and immersive environments for enterprise VR solutions.",
-                "Conducted manual and in-headset testing of VR applications, identifying and resolving defects that measurably reduced reported bug counts.",
-                "Researched and adopted new tools and frameworks, improving overall team delivery efficiency."
-            ]
+            "tasks": {
+                "en": [
+                    "Built Unity 3D applications in C#, designing UI interactions and immersive environments for enterprise VR solutions.",
+                    "Conducted manual and in-headset testing of VR applications, identifying and resolving defects that measurably reduced reported bug counts.",
+                    "Researched and adopted new tools and frameworks, improving overall team delivery efficiency."
+                ],
+                "es": [
+                    "Desarrollé aplicaciones Unity 3D en C#, diseñando interacciones de UI y entornos inmersivos para soluciones VR empresariales.",
+                    "Realicé pruebas manuales y en visor de aplicaciones VR, identificando y resolviendo defectos que redujeron notablemente el número de bugs reportados.",
+                    "Investigué y adopté nuevas herramientas y frameworks, mejorando la eficiencia de entrega del equipo."
+                ]
+            }
         }
     ],
     "projects": [
         {
             "title": "To Be A Traveller",
-            "description": "Full-stack travel platform where users build and share day-by-day itineraries with interactive maps. Includes AI-powered trip generation, a social graph with follows, likes and comments, and real-time notifications.",
-            "highlights": [
-                "Monorepo with a shared package unifying Redux store, API services, Zod schemas and i18n across the React 19 web app and React Native / Expo mobile app, zero code duplication between platforms.",
-                "AI itinerary generation via Groq / Llama 3.3 respecting user preferences and real coordinates.",
-                "Social feed with optimistic UI for likes, notification polling via Page Visibility API, and Open Graph meta tags for rich link previews."
-            ],
+            "description": {
+                "en": "Full-stack travel platform where users build and share day-by-day itineraries with interactive maps. Includes AI-powered trip generation, a social graph with follows, likes and comments, and real-time notifications.",
+                "es": "Plataforma de viajes full-stack donde los usuarios crean y comparten itinerarios día a día con mapas interactivos. Incluye generación de viajes con IA, un grafo social con follows, likes y comentarios, y notificaciones en tiempo real."
+            },
+            "highlights": {
+                "en": [
+                    "Monorepo with a shared package unifying Redux store, API services, Zod schemas and i18n across the React 19 web app and React Native / Expo mobile app, zero code duplication between platforms.",
+                    "AI itinerary generation via Groq / Llama 3.3 respecting user preferences and real coordinates.",
+                    "Social feed with optimistic UI for likes, notification polling via Page Visibility API, and Open Graph meta tags for rich link previews."
+                ],
+                "es": [
+                    "Monorepo con un paquete compartido que unifica el store de Redux, servicios de API, schemas de Zod e i18n entre la app web en React 19 y la app móvil en React Native / Expo, sin duplicar código entre plataformas.",
+                    "Generación de itinerarios con IA vía Groq / Llama 3.3, respetando preferencias del usuario y coordenadas reales.",
+                    "Feed social con UI optimista para likes, polling de notificaciones via Page Visibility API, y meta tags Open Graph para previews enriquecidos en enlaces."
+                ]
+            },
             "skills": [
                 "React 19",
                 "React Native",
@@ -82,7 +117,10 @@
         },
         {
             "title": "CSV Manager",
-            "description": "Full-stack tool to upload, filter, and manage CSV files with real-time search and pagination. Designed with non-technical users in mind: clean interface, fast feedback, no friction.",
+            "description": {
+                "en": "Full-stack tool to upload, filter, and manage CSV files with real-time search and pagination. Designed with non-technical users in mind: clean interface, fast feedback, no friction.",
+                "es": "Herramienta full-stack para subir, filtrar y gestionar archivos CSV con búsqueda en tiempo real y paginación. Diseñada pensando en usuarios no técnicos: interfaz limpia, respuesta rápida, sin fricción."
+            },
             "skills": [
                 "React",
                 "TypeScript",
@@ -95,7 +133,10 @@
         },
         {
             "title": "Geodata Dashboard",
-            "description": "Interactive dashboard for exploring and visualizing geospatial data. Built for public administrators and decision-makers who need spatial insights without technical knowledge.",
+            "description": {
+                "en": "Interactive dashboard for exploring and visualizing geospatial data. Built for public administrators and decision-makers who need spatial insights without technical knowledge.",
+                "es": "Dashboard interactivo para explorar y visualizar datos geoespaciales. Creado para administradores públicos y decisores que necesitan información espacial sin conocimientos técnicos."
+            },
             "skills": [
                 "React",
                 "TypeScript",
@@ -108,7 +149,10 @@
         },
         {
             "title": "Resume Printable",
-            "description": "Responsive digital resume that maintains its layout and style when printed directly from any browser. Optimized for a clean, professional presentation in both digital and paper formats.",
+            "description": {
+                "en": "Responsive digital resume that maintains its layout and style when printed directly from any browser. Optimized for a clean, professional presentation in both digital and paper formats.",
+                "es": "Currículum digital responsivo que mantiene su layout y estilo al imprimir directamente desde cualquier navegador. Optimizado para una presentación limpia y profesional tanto en formato digital como en papel."
+            },
             "skills": [
                 "React",
                 "CSS"
@@ -121,7 +165,10 @@
         {
             "title": "Visaflow",
             "company": "Visaflow",
-            "description": "B2B and B2C platform for German visa applications. The HR portal lets companies manage employee visa processes at scale, while the consumer app guides individuals through each step of their application.",
+            "description": {
+                "en": "B2B and B2C platform for German visa applications. The HR portal lets companies manage employee visa processes at scale, while the consumer app guides individuals through each step of their application.",
+                "es": "Plataforma B2B y B2C para solicitudes de visado alemán. El portal HR permite a las empresas gestionar procesos de visado de empleados a escala, mientras que la app para particulares guía a cada usuario paso a paso en su solicitud."
+            },
             "skills": [
                 "React",
                 "Next.js",
@@ -136,7 +183,10 @@
         {
             "title": "Proppit Backoffice",
             "company": "Lifull Connect",
-            "description": "Backoffice system for real estate agents to manage and distribute property listings across multiple public portals. Built and maintained full-stack features in React, Redux, PHP and Symfony, applying TDD throughout.",
+            "description": {
+                "en": "Backoffice system for real estate agents to manage and distribute property listings across multiple public portals. Built and maintained full-stack features in React, Redux, PHP and Symfony, applying TDD throughout.",
+                "es": "Sistema backoffice para agentes inmobiliarios para gestionar y distribuir anuncios de propiedades en múltiples portales públicos. Desarrollé y mantuve funcionalidades full-stack en React, Redux, PHP y Symfony, aplicando TDD en todo el proceso."
+            },
             "skills": [
                 "React",
                 "Redux",
@@ -152,7 +202,10 @@
         {
             "title": "Hipflat Portal",
             "company": "Lifull Connect",
-            "description": "Public real estate portal operating across Southeast Asia. Maintained and refactored Ruby on Rails backend services, improved data sync with third-party listing providers, and optimized performance for high-traffic pages.",
+            "description": {
+                "en": "Public real estate portal operating across Southeast Asia. Maintained and refactored Ruby on Rails backend services, improved data sync with third-party listing providers, and optimized performance for high-traffic pages.",
+                "es": "Portal inmobiliario público operando en el Sudeste Asiático. Mantuve y refactoricé servicios backend en Ruby on Rails, mejoré la sincronización de datos con proveedores externos de anuncios y optimicé el rendimiento en páginas de alto tráfico."
+            },
             "skills": [
                 "Ruby on Rails",
                 "MongoDB"
@@ -163,7 +216,10 @@
         {
             "title": "DotProperty Portal",
             "company": "Lifull Connect",
-            "description": "Property search portal focused on the Thai market. Supported backend stability with PHP and Laravel, improving code quality through refactoring and ensuring reliable data pipelines.",
+            "description": {
+                "en": "Property search portal focused on the Thai market. Supported backend stability with PHP and Laravel, improving code quality through refactoring and ensuring reliable data pipelines.",
+                "es": "Portal de búsqueda de propiedades enfocado en el mercado tailandés. Apoyé la estabilidad del backend con PHP y Laravel, mejorando la calidad del código mediante refactorización y asegurando pipelines de datos fiables."
+            },
             "skills": [
                 "PHP",
                 "Laravel"
@@ -174,7 +230,10 @@
         {
             "title": "VR Surgery Training",
             "company": "Seidor",
-            "description": "Immersive VR training tool for medical students learning surgical pre-op procedures. Built interactive Unity scenes and UI components, and conducted in-headset usability testing to ensure clarity and realism.",
+            "description": {
+                "en": "Immersive VR training tool for medical students learning surgical pre-op procedures. Built interactive Unity scenes and UI components, and conducted in-headset usability testing to ensure clarity and realism.",
+                "es": "Herramienta de formación VR inmersiva para estudiantes de medicina que aprenden procedimientos quirúrgicos preoperatorios. Desarrollé escenas interactivas en Unity y componentes de UI, y realicé pruebas de usabilidad en visor para garantizar claridad y realismo."
+            },
             "skills": [
                 "Unity",
                 "C#",
@@ -185,7 +244,10 @@
         {
             "title": "Novatilu Product Environment",
             "company": "Seidor",
-            "description": "Interactive 3D product demonstration environment built in Unity for enterprise clients. Designed the UI and simulation logic to showcase products in an immersive, engaging setting.",
+            "description": {
+                "en": "Interactive 3D product demonstration environment built in Unity for enterprise clients. Designed the UI and simulation logic to showcase products in an immersive, engaging setting.",
+                "es": "Entorno de demostración de productos 3D interactivo creado en Unity para clientes empresariales. Diseñé la UI y la lógica de simulación para mostrar los productos en un entorno inmersivo y atractivo."
+            },
             "skills": [
                 "Unity",
                 "C#",

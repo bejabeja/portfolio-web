@@ -1,14 +1,15 @@
 import { useRef, useState } from "react";
 import data from "../../data/data.json";
+import { useLanguage } from "../../context/LanguageContext";
 import ProjectCard from "./ProjectCard";
 import styles from "./Projects.module.css";
 
-const tabs = [
-  { id: "personal", label: "Side Projects" },
-  { id: "professional", label: "Client Work" },
-];
-
 const Projects = () => {
+  const { t } = useLanguage();
+  const tabs = [
+    { id: "personal", label: t.projects.sideProjects },
+    { id: "professional", label: t.projects.clientWork },
+  ];
   const [activeTab, setActiveTab] = useState("personal");
   const tabListRef = useRef(null);
 
@@ -66,15 +67,15 @@ const Projects = () => {
       aria-labelledby="projects-title"
       data-animate
     >
-      <h2 id="projects-title" className={styles.title} data-section-label="03 · Projects">
-        Things I've Built
+      <h2 id="projects-title" className={styles.title} data-section-label={t.projects.label}>
+        {t.projects.title}
       </h2>
 
       <div className={styles.tabsWrapper}>
         <div
           className={styles.tabs}
           role="tablist"
-          aria-label="Project categories"
+          aria-label={t.projects.categories}
           ref={tabListRef}
           onKeyDown={onKeyDown}
         >
