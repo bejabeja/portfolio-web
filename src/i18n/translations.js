@@ -71,6 +71,17 @@ export const translations = {
       message: "Page not found",
       goHome: "Go home",
     },
+    cmd: {
+      placeholder: "Search or jump to...",
+      home: "Go to top",
+      toggleLang: "Switch to Spanish",
+      noResults: "No results",
+      groups: {
+        nav: "Navigation",
+        links: "Links",
+        settings: "Settings",
+      },
+    },
     code: {
       comment: "// life outside the terminal",
       winter: "skiing, always ⛷️",
@@ -151,6 +162,17 @@ export const translations = {
     notFound: {
       message: "Página no encontrada",
       goHome: "Volver al inicio",
+    },
+    cmd: {
+      placeholder: "Buscar o ir a...",
+      home: "Ir al inicio",
+      toggleLang: "Cambiar a inglés",
+      noResults: "Sin resultados",
+      groups: {
+        nav: "Navegación",
+        links: "Enlaces",
+        settings: "Ajustes",
+      },
     },
     code: {
       comment: "// la vida fuera del terminal",

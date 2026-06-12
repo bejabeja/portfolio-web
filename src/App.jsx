@@ -9,6 +9,7 @@ import styles from "./App.module.css";
 import { useEffect } from "react";
 import { LanguageProvider } from "./context/LanguageContext";
 import About from "./components/About/About";
+import CommandPalette from "./components/CommandPalette/CommandPalette";
 import Contact from "./components/Contact/Contact";
 import Experience from "./components/Experience/Experience";
 import Hero from "./components/Hero/Hero";
@@ -65,6 +66,7 @@ const ScrollAnimations = () => {
 const AppRoutes = () => (
   <div className={styles.App}>
     <Navbar />
+    <CommandPalette />
     <ScrollToHash />
     <ScrollAnimations />
 

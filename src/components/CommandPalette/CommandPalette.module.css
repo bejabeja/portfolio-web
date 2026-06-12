@@ -1,0 +1,146 @@
+@import "../../vars.css";
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    z-index: 999;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 14vh;
+    animation: fadeIn 0.12s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.palette {
+    width: 100%;
+    max-width: 560px;
+    margin: 0 1rem;
+    background: rgba(15, 19, 28, 0.98);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 14px;
+    box-shadow: 0 32px 80px rgba(0, 0, 0, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.03);
+    overflow: hidden;
+    animation: slideIn 0.15s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: scale(0.96) translateY(-10px); }
+    to   { opacity: 1; transform: scale(1)    translateY(0); }
+}
+
+.inputWrapper {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.searchIcon {
+    width: 17px;
+    height: 17px;
+    color: rgba(176, 180, 192, 0.45);
+    flex-shrink: 0;
+}
+
+.input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--color-text);
+    font-size: 0.97rem;
+    padding: 1rem 0;
+    font-family: var(--font-body);
+    caret-color: var(--color-secondary);
+}
+
+.input::placeholder {
+    color: rgba(176, 180, 192, 0.35);
+}
+
+.escHint {
+    font-size: 0.65rem;
+    color: rgba(176, 180, 192, 0.35);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 4px;
+    padding: 0.15rem 0.45rem;
+    font-family: var(--font-body);
+    flex-shrink: 0;
+    letter-spacing: 0.03em;
+}
+
+.list {
+    max-height: 360px;
+    overflow-y: auto;
+    padding: 0.4rem 0 0.5rem;
+}
+
+.list::-webkit-scrollbar { width: 3px; }
+.list::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.07);
+    border-radius: 999px;
+}
+
+.group {
+    margin-bottom: 0.15rem;
+}
+
+.groupLabel {
+    display: block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: rgba(176, 180, 192, 0.35);
+    padding: 0.6rem 1rem 0.2rem;
+    font-family: var(--font-body);
+}
+
+.item {
+    all: unset;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    width: 100%;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    font-size: 0.92rem;
+    color: var(--color-text-soft);
+    box-sizing: border-box;
+    border-radius: 0;
+    transition: background 0.08s ease, color 0.08s ease;
+}
+
+.itemSelected {
+    background: rgba(226, 170, 58, 0.08);
+    color: var(--color-text);
+}
+
+.itemSelected .itemIcon {
+    color: var(--color-secondary);
+}
+
+.itemIcon {
+    font-size: 0.85rem;
+    color: rgba(176, 180, 192, 0.4);
+    flex-shrink: 0;
+    transition: color 0.08s ease;
+}
+
+.noResults {
+    text-align: center;
+    color: rgba(176, 180, 192, 0.35);
+    font-size: 0.88rem;
+    padding: 2rem 1rem;
+    margin: 0;
+}

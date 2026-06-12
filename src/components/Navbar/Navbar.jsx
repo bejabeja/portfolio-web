@@ -89,6 +89,14 @@ const Navbar = () => {
         </ul>
 
         <button
+          className={styles.cmdHint}
+          onClick={() => document.dispatchEvent(new CustomEvent("open-command-palette"))}
+          aria-label="Open command palette"
+        >
+          <span>⌘K</span>
+        </button>
+
+        <button
           className={styles.langToggle}
           onClick={toggleLanguage}
           aria-label={language === "en" ? "Switch to Spanish" : "Switch to English"}
