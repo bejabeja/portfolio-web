@@ -161,6 +161,10 @@
     border-right: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+.stats span:first-child {
+    padding-left: 0;
+}
+
 .stats span:last-child {
     border-right: none;
 }

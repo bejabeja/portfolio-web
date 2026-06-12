@@ -47,6 +47,7 @@ const Contact = () => {
           <div className={styles.stats} ref={statsRef} aria-label="Quick facts">
             <span><strong>{count}+</strong> {t.contact.years}</span>
             <span>{t.contact.stack}</span>
+            <span>{t.contact.available}</span>
           </div>
           <a href="mailto:miriam.abella211@gmail.com" className={styles.ctaBtn}>
             {t.contact.cta} <FaPaperPlane aria-hidden="true" />

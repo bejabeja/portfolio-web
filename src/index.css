@@ -99,6 +99,7 @@ body::after {
   letter-spacing: 0.18em;
   text-transform: uppercase;
   color: var(--color-secondary);
+  -webkit-text-fill-color: var(--color-secondary);
   opacity: 0.75;
   margin-bottom: 0.75rem;
   font-family: var(--font-body);
