@@ -115,7 +115,7 @@ export const translations = {
       title2: "y vuelta.",
       p1: "Mi camino en la ingeniería empezó en animación 3D y producción audiovisual.",
       p2: "Ahí aprendí a mirar un producto desde los dos lados: cómo funciona y cómo se siente.",
-      p3: "En más de 5 años he desarrollado productos full-stack en una multinacional inmobiliaria y una startup de visa tech.",
+      p3: "En más de 6 años he desarrollado productos full-stack en una multinacional inmobiliaria y una startup de visa tech.",
       p4: "A veces como única ingeniera de frontend, a veces liderando decisiones de arquitectura y mentorizando al equipo.",
       frontend: {
         title: "Frontend",
