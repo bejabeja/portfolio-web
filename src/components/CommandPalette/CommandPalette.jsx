@@ -12,11 +12,14 @@ import {
   FaUser,
 } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { SOCIAL_LINKS } from "../../constants/links";
+import { COMMAND_PALETTE_FOCUS_DELAY_MS } from "../../constants/timing";
 import { useLanguage } from "../../context/LanguageContext";
+import { openExternal } from "../../utils/openExternal";
 import styles from "./CommandPalette.module.css";
 
 const CommandPalette = () => {
-  const { t, language, toggleLanguage } = useLanguage();
+  const { t, toggleLanguage } = useLanguage();
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [query, setQuery] = useState("");
@@ -48,10 +51,11 @@ const CommandPalette = () => {
   }, []);
 
   useEffect(() => {
-    if (isOpen) setTimeout(() => inputRef.current?.focus(), 30);
+    if (isOpen) setTimeout(() => inputRef.current?.focus(), COMMAND_PALETTE_FOCUS_DELAY_MS);
   }, [isOpen]);
 
   const goTo = (id) => { navigate(`/#${id}`); close(); };
+  const goToExternal = (url) => { openExternal(url); close(); };
 
   const commands = [
     { id: "hero",       group: "nav",      label: t.cmd.home,           icon: FaHome,          action: () => goTo("hero") },
@@ -59,9 +63,9 @@ const CommandPalette = () => {
     { id: "experience", group: "nav",      label: t.nav.experience,     icon: FaBriefcase,     action: () => goTo("experience") },
     { id: "projects",   group: "nav",      label: t.nav.projects,       icon: FaCode,          action: () => goTo("projects") },
     { id: "contact",    group: "nav",      label: t.nav.contact,        icon: FaEnvelope,      action: () => goTo("contact") },
-    { id: "github",     group: "links",    label: "GitHub",              icon: FaGithub,        action: () => { window.open("https://github.com/bejabeja", "_blank", "noopener,noreferrer"); close(); } },
-    { id: "linkedin",   group: "links",    label: "LinkedIn",            icon: FaLinkedin,      action: () => { window.open("https://www.linkedin.com/in/miriamabella/", "_blank", "noopener,noreferrer"); close(); } },
-    { id: "resume",     group: "links",    label: t.hero.btn2,          icon: FaExternalLinkAlt, action: () => { window.open("https://resume.mabella.dev", "_blank", "noopener,noreferrer"); close(); } },
+    { id: "github",     group: "links",    label: "GitHub",              icon: FaGithub,        action: () => goToExternal(SOCIAL_LINKS.github) },
+    { id: "linkedin",   group: "links",    label: "LinkedIn",            icon: FaLinkedin,      action: () => goToExternal(SOCIAL_LINKS.linkedin) },
+    { id: "resume",     group: "links",    label: t.hero.btn2,          icon: FaExternalLinkAlt, action: () => goToExternal(SOCIAL_LINKS.resume) },
     { id: "lang",       group: "settings", label: t.cmd.toggleLang,     icon: FaGlobe,         action: () => { toggleLanguage(); close(); } },
   ];
 

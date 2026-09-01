@@ -1,7 +1,9 @@
-import { useEffect, useRef, useState } from "react";
-import { FaExternalLinkAlt, FaFigma, FaGithub, FaPlay } from "react-icons/fa";
+import { useState } from "react";
+import { PROJECT_PREVIEW_BASE_WIDTH_PX } from "../../constants/timing";
 import { useLanguage } from "../../context/LanguageContext";
+import { useResponsiveScale } from "../../hooks/useResponsiveScale";
 import styles from "./ProjectCard.module.css";
+import ProjectLinks from "./ProjectLinks";
 
 const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) => {
   const { t, language } = useLanguage();
@@ -12,7 +14,6 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
     skills = [],
     demo,
     repository,
-    company,
     years,
     link,
     figma,
@@ -23,18 +24,8 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
   const description = typeof rawDescription === "object" ? (rawDescription[language] || rawDescription.en) : rawDescription;
   const highlights = Array.isArray(rawHighlights) ? rawHighlights : (rawHighlights[language] || rawHighlights.en || []);
 
-  const wrapperRef = useRef(null);
-  const [scale, setScale] = useState(0.25);
+  const { ref: wrapperRef, scale } = useResponsiveScale(PROJECT_PREVIEW_BASE_WIDTH_PX);
   const [previewReady, setPreviewReady] = useState(false);
-
-  useEffect(() => {
-    if (!wrapperRef.current) return;
-    const observer = new ResizeObserver(([entry]) => {
-      setScale(entry.contentRect.width / 1280);
-    });
-    observer.observe(wrapperRef.current);
-    return () => observer.disconnect();
-  }, []);
 
   const handleKeyDown = (e) => {
     if (e.key === "Enter" || e.key === " ") {
@@ -42,14 +33,6 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
       if (target) window.open(target, "_blank", "noopener,noreferrer");
     }
   };
-
-  const primaryLabel = demo
-    ? t.projects.demo
-    : repository
-      ? t.projects.repo
-      : link
-        ? t.projects.visitSite
-        : null;
 
   const showPreview = !isProfessional && link;
 
@@ -123,23 +106,15 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
             ))}
           </ul>
 
-          <div className={styles.links}>
-            {demo && (
-              <a aria-label={`${primaryLabel} for ${title}`} href={demo} className={styles.link} target="_blank" rel="noopener noreferrer">{t.projects.demo} <FaPlay aria-hidden="true" /></a>
-            )}
-            {link && (
-              <a aria-label={`Visit ${title}`} href={link} className={styles.link} target="_blank" rel="noopener noreferrer">{t.projects.visitSite} <FaExternalLinkAlt aria-hidden="true" /></a>
-            )}
-            {repository && (
-              <a aria-label={`Repository for ${title}`} href={repository} className={styles.linkGhost} target="_blank" rel="noopener noreferrer"><FaGithub aria-hidden="true" /> {t.projects.repo}</a>
-            )}
-            {figma && (
-              <a aria-label={`Figma for ${title}`} href={figma} className={styles.linkGhost} target="_blank" rel="noopener noreferrer"><FaFigma aria-hidden="true" /> Figma</a>
-            )}
-            {video && (
-              <a aria-label={`Video for ${title}`} href={video} className={styles.linkGhost} target="_blank" rel="noopener noreferrer"><FaPlay aria-hidden="true" /> {t.projects.video}</a>
-            )}
-          </div>
+          <ProjectLinks
+            title={title}
+            demo={demo}
+            link={link}
+            repository={repository}
+            figma={figma}
+            video={video}
+            t={t}
+          />
         </div>
       </div>
     </article>

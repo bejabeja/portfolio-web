@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { FaBars, FaGlobe, FaTimes } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { useLanguage } from "../../context/LanguageContext";
+import { useNavbarScroll } from "../../hooks/useNavbarScroll";
 import styles from "./Navbar.module.css";
 
 const SECTIONS = ["hero", "about", "experience", "projects", "contact"];
@@ -11,9 +12,7 @@ const Navbar = () => {
   const navigate = useNavigate();
   const menuRef = useRef(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-  const [activeSection, setActiveSection] = useState("hero");
-  const [progress, setProgress] = useState(0);
+  const { scrolled, progress, activeSection } = useNavbarScroll(SECTIONS);
 
   useEffect(() => {
     if (!isMenuOpen) return;
@@ -25,29 +24,6 @@ const Navbar = () => {
     document.addEventListener("mousedown", handleClickOutside);
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [isMenuOpen]);
-
-  useEffect(() => {
-    const onScroll = () => {
-      setScrolled(window.scrollY > 20);
-
-      const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
-      const total = scrollHeight - clientHeight;
-      setProgress(total > 0 ? (scrollTop / total) * 100 : 0);
-
-      const threshold = window.innerHeight * 0.35;
-      let current = "hero";
-      for (const id of SECTIONS) {
-        const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top <= threshold) {
-          current = id;
-        }
-      }
-      setActiveSection(current);
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
-  }, []);
 
   const handleNavigation = (sectionId) => {
     navigate(`/#${sectionId}`);

@@ -1,32 +1,14 @@
-import { useEffect, useRef, useState } from "react";
 import { FaGithub, FaLinkedin, FaPaperPlane } from "react-icons/fa";
+import { MAILTO_LINK, SOCIAL_LINKS } from "../../constants/links";
+import { YEARS_OF_EXPERIENCE } from "../../constants/timing";
 import { useLanguage } from "../../context/LanguageContext";
+import { useCountUp } from "../../hooks/useCountUp";
+import ExternalLink from "../common/ExternalLink";
 import styles from "./Contact.module.css";
 
 const Contact = () => {
   const { t } = useLanguage();
-  const [count, setCount] = useState(0);
-  const statsRef = useRef(null);
-
-  useEffect(() => {
-    const el = statsRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (!entry.isIntersecting) return;
-        observer.disconnect();
-        let n = 0;
-        const interval = setInterval(() => {
-          n++;
-          setCount(n);
-          if (n >= 5) clearInterval(interval);
-        }, 180);
-      },
-      { threshold: 0.4 }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+  const { count, ref: statsRef } = useCountUp(YEARS_OF_EXPERIENCE);
 
   return (
     <footer className={styles.container} id="contact" data-animate>
@@ -49,28 +31,24 @@ const Contact = () => {
             <span>{t.contact.stack}</span>
             <span>{t.contact.available}</span>
           </div>
-          <a href="mailto:miriam.abella211@gmail.com" className={styles.ctaBtn}>
+          <a href={MAILTO_LINK} className={styles.ctaBtn}>
             {t.contact.cta} <FaPaperPlane aria-hidden="true" />
           </a>
           <div className={styles.socials}>
-            <a
-              href="https://www.linkedin.com/in/miriamabella/"
-              target="_blank"
-              rel="noopener noreferrer"
+            <ExternalLink
+              href={SOCIAL_LINKS.linkedin}
               className={styles.socialLink}
               aria-label="LinkedIn"
             >
               <FaLinkedin />
-            </a>
-            <a
-              href="https://github.com/bejabeja"
-              target="_blank"
-              rel="noopener noreferrer"
+            </ExternalLink>
+            <ExternalLink
+              href={SOCIAL_LINKS.github}
               className={styles.socialLink}
               aria-label="GitHub"
             >
               <FaGithub />
-            </a>
+            </ExternalLink>
           </div>
         </div>
       </div>

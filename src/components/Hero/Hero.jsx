@@ -1,28 +1,14 @@
-import { useEffect, useState } from "react";
 import { FaExternalLinkAlt, FaPaperPlane } from "react-icons/fa";
+import { MAILTO_LINK, SOCIAL_LINKS } from "../../constants/links";
 import { useLanguage } from "../../context/LanguageContext";
+import { useTypewriter } from "../../hooks/useTypewriter";
+import ExternalLink from "../common/ExternalLink";
 import Marquee from "../Marquee/Marquee";
 import styles from "./Hero.module.css";
 
 const Hero = () => {
   const { t } = useLanguage();
-  const [typed, setTyped] = useState("");
-  const [showCursor, setShowCursor] = useState(true);
-
-  useEffect(() => {
-    setTyped("");
-    setShowCursor(true);
-    let i = 0;
-    const interval = setInterval(() => {
-      setTyped(t.hero.role.slice(0, i + 1));
-      i++;
-      if (i >= t.hero.role.length) {
-        clearInterval(interval);
-        setTimeout(() => setShowCursor(false), 1800);
-      }
-    }, 42);
-    return () => clearInterval(interval);
-  }, [t.hero.role]);
+  const { typed, showCursor } = useTypewriter(t.hero.role);
 
   return (
     <section className={styles.heroSection} id="hero">
@@ -51,20 +37,12 @@ const Hero = () => {
         </p>
 
         <div className={styles.heroActions}>
-          <a
-            href="mailto:miriam.abella211@gmail.com"
-            className={styles.contactBtn}
-          >
+          <a href={MAILTO_LINK} className={styles.contactBtn}>
             {t.hero.btn1} <FaPaperPlane aria-hidden="true" />
           </a>
-          <a
-            href="https://resume.mabella.dev"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.cvBtn}
-          >
+          <ExternalLink href={SOCIAL_LINKS.resume} className={styles.cvBtn}>
             {t.hero.btn2} <FaExternalLinkAlt aria-hidden="true" />
-          </a>
+          </ExternalLink>
         </div>
       </div>
       <div className={styles.codeBlock}>
