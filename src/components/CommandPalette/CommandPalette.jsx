@@ -26,22 +26,30 @@ const CommandPalette = () => {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const inputRef = useRef(null);
   const listRef = useRef(null);
+  const triggerRef = useRef(null);
 
   const close = () => {
     setIsOpen(false);
     setQuery("");
     setSelectedIndex(0);
+    triggerRef.current?.focus?.();
   };
 
   useEffect(() => {
     const onKey = (e) => {
       if ((e.metaKey || e.ctrlKey) && e.key === "k") {
         e.preventDefault();
-        setIsOpen((prev) => !prev);
+        setIsOpen((prev) => {
+          if (!prev) triggerRef.current = document.activeElement;
+          return !prev;
+        });
       }
       if (e.key === "Escape") close();
     };
-    const onOpen = () => setIsOpen(true);
+    const onOpen = () => {
+      triggerRef.current = document.activeElement;
+      setIsOpen(true);
+    };
     document.addEventListener("keydown", onKey);
     document.addEventListener("open-command-palette", onOpen);
     return () => {
@@ -82,6 +90,11 @@ const CommandPalette = () => {
   const flat = Object.values(groups).flat();
 
   const handleKeyDown = (e) => {
+    if (e.key === "Tab") {
+      e.preventDefault();
+      inputRef.current?.focus();
+      return;
+    }
     if (e.key === "ArrowDown") {
       e.preventDefault();
       setSelectedIndex((i) => (i + 1) % flat.length);
@@ -115,7 +128,7 @@ const CommandPalette = () => {
       onMouseDown={close}
       role="dialog"
       aria-modal="true"
-      aria-label="Command palette"
+      aria-label={t.cmd.paletteLabel}
     >
       <div
         className={styles.palette}

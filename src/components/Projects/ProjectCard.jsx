@@ -27,11 +27,22 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
   const { ref: wrapperRef, scale } = useResponsiveScale(PROJECT_PREVIEW_BASE_WIDTH_PX);
   const [previewReady, setPreviewReady] = useState(false);
 
+  const openPrimaryTarget = () => {
+    const target = demo || repository || link;
+    if (target) window.open(target, "_blank", "noopener,noreferrer");
+  };
+
   const handleKeyDown = (e) => {
+    if (e.target.closest("a, button")) return;
     if (e.key === "Enter" || e.key === " ") {
-      const target = demo || repository || link;
-      if (target) window.open(target, "_blank", "noopener,noreferrer");
+      e.preventDefault();
+      openPrimaryTarget();
     }
+  };
+
+  const handleClick = (e) => {
+    if (e.target.closest("a, button")) return;
+    openPrimaryTarget();
   };
 
   const showPreview = !isProfessional && link;
@@ -41,6 +52,7 @@ const ProjectCard = ({ project, isProfessional = false, isFeatured = false }) =>
       className={`${styles.container} ${isFeatured ? styles.featured : ""} ${isProfessional ? styles.professional : ""}`}
       tabIndex={0}
       onKeyDown={handleKeyDown}
+      onClick={handleClick}
       aria-labelledby={`project-${title}`}
     >
       {isFeatured && <span className={styles.featuredBadge}>{t.projects.featuredBadge}</span>}

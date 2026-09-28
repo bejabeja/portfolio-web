@@ -26,7 +26,7 @@ const Contact = () => {
           <p className={styles.subtitle}>
             {t.contact.subtitle}
           </p>
-          <div className={styles.stats} ref={statsRef} aria-label="Quick facts">
+          <div className={styles.stats} ref={statsRef} aria-label={t.contact.quickFacts}>
             <span><strong>{count}+</strong> {t.contact.years}</span>
             <span>{t.contact.stack}</span>
             <span>{t.contact.available}</span>

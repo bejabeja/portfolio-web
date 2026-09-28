@@ -5,11 +5,13 @@ export const translations = {
       experience: "Experience",
       projects: "Projects",
       contact: "Contact",
+      toggleMenu: "Toggle menu",
+      openCommandPalette: "Open command palette",
     },
     hero: {
       hi: "Hi",
       badge: "Open to chat",
-      role: "Full-Stack Developer · Technical Lead · Design Background",
+      role: "Technical Lead · Full-Stack Developer · Design Background",
       subtitle1: "Several years shipping full-stack products across",
       subtitle2: "startup and enterprise",
       subtitle3: "environments, from API design to user interface.",
@@ -66,6 +68,7 @@ export const translations = {
       available: "Available",
       cta: "Say Hello",
       credit: "Designed & built by Miriam Abella",
+      quickFacts: "Quick facts",
     },
     notFound: {
       message: "Page not found",
@@ -73,6 +76,7 @@ export const translations = {
     },
     cmd: {
       placeholder: "Search or jump to...",
+      paletteLabel: "Command palette",
       home: "Go to top",
       toggleLang: "Switch to Spanish",
       noResults: "No results",
@@ -97,11 +101,13 @@ export const translations = {
       experience: "Experiencia",
       projects: "Proyectos",
       contact: "Contacto",
+      toggleMenu: "Abrir/cerrar menú",
+      openCommandPalette: "Abrir paleta de comandos",
     },
     hero: {
       hi: "Hola",
       badge: "Abierta a conversar",
-      role: "Desarrolladora Full-Stack · Tech Lead · Background en Diseño",
+      role: "Tech Lead · Desarrolladora Full-Stack · Background en Diseño",
       subtitle1: "Varios años desarrollando productos full-stack en entornos",
       subtitle2: "startup y empresa",
       subtitle3: "desde el diseño de APIs hasta la interfaz de usuario.",
@@ -158,6 +164,7 @@ export const translations = {
       available: "Disponible",
       cta: "Escríbeme",
       credit: "Diseñado y desarrollado por Miriam Abella",
+      quickFacts: "Datos rápidos",
     },
     notFound: {
       message: "Página no encontrada",
@@ -165,6 +172,7 @@ export const translations = {
     },
     cmd: {
       placeholder: "Buscar o ir a...",
+      paletteLabel: "Paleta de comandos",
       home: "Ir al inicio",
       toggleLang: "Cambiar a inglés",
       noResults: "Sin resultados",

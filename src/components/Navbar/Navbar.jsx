@@ -44,6 +44,7 @@ const Navbar = () => {
 
       <div className={styles.menu} ref={menuRef}>
         <ul
+          id="navbar-menu-items"
           className={`${styles.menuItems} ${isMenuOpen ? styles.menuOpen : ""}`}
         >
           {[
@@ -67,7 +68,7 @@ const Navbar = () => {
         <button
           className={styles.cmdHint}
           onClick={() => document.dispatchEvent(new CustomEvent("open-command-palette"))}
-          aria-label="Open command palette"
+          aria-label={t.nav.openCommandPalette}
         >
           <span>⌘K</span>
         </button>
@@ -85,7 +86,9 @@ const Navbar = () => {
         <button
           className={styles.menuBtn}
           onClick={toggleMenu}
-          aria-label="Toggle menu"
+          aria-label={t.nav.toggleMenu}
+          aria-expanded={isMenuOpen}
+          aria-controls="navbar-menu-items"
         >
           {isMenuOpen ? <FaTimes aria-hidden="true" /> : <FaBars aria-hidden="true" />}
         </button>
